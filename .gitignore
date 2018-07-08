@@ -1,5 +1,6 @@
 .DS_Store
 package-lock.json
+apps/config/*
 apps/cache/*
 !apps/cache/index.html
 
