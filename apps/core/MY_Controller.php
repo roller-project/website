@@ -173,7 +173,7 @@ class Frontend extends BaseController
 	{
 		defined('BASEPATH') OR exit('No direct script access allowed');
 		parent::__construct();
-		if(!$this->checkLogin()); 
+		
 		$this->setLayout("home-layout");
 	}
 }
@@ -188,6 +188,7 @@ class Admin extends BaseController
 	{
 		defined('ADMIN') OR exit('No direct script access allowed');
 		parent::__construct();
+		$this->checkLogin(); 
 		$this->setLayout("home-layout");
 	}
 }

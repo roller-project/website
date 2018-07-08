@@ -1,12 +1,12 @@
 .DS_Store
 package-lock.json
-application/cache/*
-!application/cache/index.html
+apps/cache/*
+!apps/cache/index.html
 
-application/logs/*
-!application/logs/index.html
+apps/logs/*
+!apps/logs/index.html
 
-!application/*/.htaccess
+!apps/*/.htaccess
 
 composer.lock
 
