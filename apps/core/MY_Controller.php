@@ -97,7 +97,7 @@ class BaseController extends CI_Controller{
 		if($this->getLayout()){
 
 			$data = $this->load->view($layout, $data, true);
-			$menu = $this->db->get("wallet_services")->result();
+			$menu = [];
 			return $this->load->view($this->layout,["content" => $data, "flash" => $this->get_flash(), "header" => $this->make_meta($data), "menu" => $menu, "is_login" => $this->isLogin()]);
 		}else{
 			return $this->load->view($layout, $data);
