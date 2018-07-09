@@ -6,14 +6,14 @@ class Template extends Admin {
 	function __construct()
 	{
 		parent::__construct();
-		$this->load->model("template_model");
+		
 	}
 	
 	public function index()
 	{
 		$this->view('dashboard');
 	}
-	public function manager(){
+	public function manager($id=0){
 		$eff = ['bounce',
 				'flash',
 				'pulse',
@@ -91,15 +91,27 @@ class Template extends Admin {
 				'slideOutRight',
 				'slideOutUp'];
 
-		
-		$this->view('template/manager',["eff" => $eff]);
+		$getFileStores = $this->template_model->getFileStores();
+		$getListBlock = $this->template_model->getListBlock();
+		$getInfo = $this->template_model->getInfo($id);
+		$this->view('template/manager',["eff" => $eff, "id" => $id,"getFileStores" => $getFileStores, "getListBlock" => $getListBlock, "getInfo" => $getInfo]);
 	}
 
-	public function validate_update(){
+	public function validate_update($id){
 		$arv = [];
 		$arv["name"] = $this->input->post("name");
+		$arv["description"]	= $this->input->post("description");
 		$arv["options"] = json_encode($this->input->post("json"));
-		$data = $this->template_model->CreateOrUpdate($arv);
+		$data = $this->template_model->CreateOrUpdate($id,$arv);
 		$this->setFlash($data);
+		redirect(admin_url("template/manager/{$id}"));
+	}
+
+	public function addblock(){
+		$paths = $this->input->get("paths");
+		$name = ucfirst(str_replace('.php','',basename($paths)));
+		$data =$this->template_model->addBlock($name, $paths);
+		$this->setFlash($data);
+		redirect(admin_url("template/manager/{$data}"));
 	}
 }

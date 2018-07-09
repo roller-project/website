@@ -13,64 +13,89 @@
     <script src="<?php echo template_url("js/main.js");?>"></script>
   </head>
     <body>
-        <nav class="navbar navbar-expand-md fixed-top navbar-dark bg-dark">
-          <a class="navbar-brand" href="#">Offcanvas navbar</a>
+        <nav class="navbar navbar-expand-md fixed-top navbar-none bg-none">
+          <a class="navbar-brand" href="<?php echo store_url("");?>"><img src="<?php echo template_url("image/logo.png");?>" style="height: 50px;"></a>
           <button class="navbar-toggler p-0 border-0" type="button" data-toggle="offcanvas">
             <span class="navbar-toggler-icon"></span>
           </button>
 
-          <div class="navbar-collapse offcanvas-collapse" id="navbarsExampleDefault">
-            <ul class="navbar-nav mr-auto">
+         
+
+          <div class="navbar-collapse offcanvas-collapse py-0" id="navbarsExampleDefault">
+            <ul class="navbar-nav ml-lg-auto">
               <li class="nav-item active">
-                <a class="nav-link" href="#">Dashboard <span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Notifications</a>
+                <a class="nav-link" href="#">Exploder</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Profile</a>
+                <a class="nav-link" href="#">Wallet</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Switch account</a>
+                <a class="nav-link" href="#">Account</a>
               </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Settings</a>
-                <div class="dropdown-menu" aria-labelledby="dropdown01">
-                  <a class="dropdown-item" href="#">Action</a>
-                  <a class="dropdown-item" href="#">Another action</a>
-                  <a class="dropdown-item" href="#">Something else here</a>
-                </div>
-              </li>
+              
             </ul>
-            <form class="form-inline my-2 my-lg-0">
-              <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-              <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-            </form>
+            
           </div>
         </nav>
 
-        <div class="nav-scroller bg-white box-shadow">
-          <nav class="nav nav-underline">
-            <a class="nav-link active" href="#">Dashboard</a>
-            <a class="nav-link" href="#">
-              Friends
-              <span class="badge badge-pill bg-light align-text-bottom">27</span>
-            </a>
-            <a class="nav-link" href="#">Explore</a>
-            <a class="nav-link" href="#">Suggestions</a>
-            <a class="nav-link" href="#">Link</a>
-            <a class="nav-link" href="#">Link</a>
-            <a class="nav-link" href="#">Link</a>
-            <a class="nav-link" href="#">Link</a>
-            <a class="nav-link" href="#">Link</a>
-          </nav>
-        </div>
+    
 
-          <main role="main" class="container">
+          <main role="main">
                   <?php echo $flash;?>
                   <?php echo $content;?>
           </main>
 
-
+        <footer>
+          <div class="container">
+            <div class="row wow fadeInUp">
+              <div class="col-12">
+                <p class="social">
+                  <span data-i18n="footer.heading">Follow us</span>
+                  <a href="https://twitter.com/Contentbox_one" target="_blank">
+                    <img src="img/social/tw.png" width="30" height="30">
+                  </a>
+                  <a href="https://medium.com/contentbox" target="_blank">
+                    <img src="img/social/me.png" width="30" height="30">
+                  </a>
+                              <a class="wechat" target="_blank">
+                    <img src="img/social/weixin.png" width="30" height="30">
+                    <span>
+                      <img src="img/qrcode.jpg">
+                    </span>
+                  </a>
+                  <a href="https://t.me/BoxCommunity" target="_blank">
+                    <img src="img/social/te.png" width="30" height="30">
+                  </a>
+                  <a href="https://github.com/BOXFoundation" target="_blank">
+                    <img src="img/social/git.png" width="30" height="30">
+                  </a>
+                  <a href="https://weibo.com/contentbox" target="_blank">
+                    <img src="img/social/weibo.png" width="30" height="30">
+                  </a>
+                  <a href="https://www.youtube.com/channel/UCzxIFF-xaejf5PlV78trqUw" target="_blank">
+                    <img src="img/social/youtube.png" width="30" height="30">
+                  </a>
+                  <a href="https://www.linkedin.com/company/contentbox-foundation" target="_blank">
+                    <img src="img/social/link.png" width="30" height="30">
+                  </a>
+                  <a href="https://www.facebook.com/contentboxone/" target="_blank">
+                    <img src="img/social/fb.png" width="30" height="30">
+                  </a>
+                  <a href="https://www.reddit.com/r/ContentBoxOfficial/" target="_blank">
+                    <img src="img/social/reddit.png" width="30" height="30">
+                  </a>
+                </p>
+              </div>
+              <div class="col-12">
+                <!--copyright-->
+                <p class="copyright">© Copyright ContentBox. All Rights Reserved</p>
+                <!--/copyright-->
+              </div>
+            </div>
+          </div>
+        </footer>
     </body>
 </html>

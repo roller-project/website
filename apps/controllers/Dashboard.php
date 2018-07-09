@@ -6,6 +6,7 @@ class Dashboard extends Frontend {
 	
 	public function index()
 	{
-		$this->view('dashboard');
+		$content = $this->template_model->getContent();
+		$this->view('dashboard',["content" => $content]);
 	}
 }

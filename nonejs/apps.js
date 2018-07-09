@@ -2,7 +2,7 @@ import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'animate.css';
 import 'socket.io-client';
-
+import 'moment';
 $.fn.extend({
   animateCss: function(animationName, callback) {
     var animationEnd = (function(el) {
