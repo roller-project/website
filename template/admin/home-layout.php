@@ -13,7 +13,7 @@
     <script src="<?php echo template_url("js/main.js");?>"></script>
   </head>
     <body>
-        <nav class="navbar navbar-expand-md fixed-top navbar-dark bg-dark">
+        <nav class="navbar navbar-expand-md fixed-top navbar-dark bg-blue">
           <a class="navbar-brand" href="#">Offcanvas navbar</a>
           <button class="navbar-toggler p-0 border-0" type="button" data-toggle="offcanvas">
             <span class="navbar-toggler-icon"></span>
@@ -25,22 +25,25 @@
                 <a class="nav-link" href="#">Dashboard <span class="sr-only">(current)</span></a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Notifications</a>
+                <a class="nav-link" href="#">Contents</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#">Profile</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Switch account</a>
+                <a class="nav-link" href="<?php echo admin_url("template/manager");?>">Templates</a>
               </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Settings</a>
-                <div class="dropdown-menu" aria-labelledby="dropdown01">
-                  <a class="dropdown-item" href="#">Action</a>
-                  <a class="dropdown-item" href="#">Another action</a>
-                  <a class="dropdown-item" href="#">Something else here</a>
-                </div>
+
+              <li class="nav-item">
+                <a class="nav-link" href="#">Application</a>
               </li>
+
+
+              <li class="nav-item">
+                <a class="nav-link" href="#">Settings</a>
+              </li>
+
+              
             </ul>
             <form class="form-inline my-2 my-lg-0">
               <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
@@ -66,11 +69,11 @@
           </nav>
         </div>
 
-          <main role="main" class="container">
+          <main role="main" class="container-fluid">
                   <?php echo $flash;?>
                   <?php echo $content;?>
           </main>
-
+        <footer></footer>
 
     </body>
 </html>
