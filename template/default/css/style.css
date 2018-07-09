@@ -101,6 +101,17 @@ body {
 .header-title{
   margin-bottom: 30px;
 }
+#count_down{
+border:1px solid #ddd;
+padding: 15px;
+font-size: 24px;
+border-radius: 100px;
+text-align: center;
+fill: #377dff;
+color: #fff;
+background-color: #dc3545;
+border-color: #dc3545;
+}
 footer{
   background-color: #333;
   padding-top: 50px;

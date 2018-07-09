@@ -57,4 +57,9 @@ figure {
 	position: absolute;
 	top:0;
 	right: 0;
-  </style>}
+  }
+
+.u-fill-primary {
+    fill: #377dff;
+}
+</style>
