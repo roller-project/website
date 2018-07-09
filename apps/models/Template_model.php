@@ -66,6 +66,7 @@ class Template_model extends CI_Model{
 	public function getInfo($id){
 		$this->db->where("id",$id);
 		$row = $this->db->get("template")->row();
+		if(!$row) return false;
 		$row->json = json_decode($row->options);
 		return $row;
 	}

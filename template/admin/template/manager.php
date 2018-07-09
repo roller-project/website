@@ -24,6 +24,9 @@
 	<div class="col-lg-8">
 		<div class="card">
 			<div class="card-body">
+				<?php if(!$getInfo){ ?>
+					Select block Controller
+				<?php }else { ?>
 				<?php echo form_open(admin_url("template/validate_update/{$id}"));?>
 				  <div class="form-group">
 				    <label for="exampleInputEmail1">Name Block</label>
@@ -57,21 +60,30 @@
 
 				  	<div class="row">
 				  		<div class="col">
-				  			<select class="form-control form-control-sm" name="json[effslipt]">
-				  				<option value="">Slipt</option>
-				  				<option value="yes" <?php echo (@$getInfo->json->effslipt == "yes" ? "selected" : "");?>>Yes</option>
-				  				<option value="no" <?php echo (@$getInfo->json->effslipt == "no" ? "selected" : "");?>>No</option>
-				  			</select>
-				  		</div>
-
-				  		<div class="col">
-				  			<select class="form-control form-control-sm" name="json[effin]">
+				  			<select class="form-control form-control-sm" name="json[effin][]">
 				  				<option value="">Eff IN</option>
 				  				<?php
 				  				foreach ($eff as $key => $value) {
 									if(strpos($value,"In")){
 										?>
-										<option value="<?php echo $value;?>" <?php echo (@$getInfo->json->effin == $value ? "selected" : "");?>><?php echo $value;?></option>
+										<option value="<?php echo $value;?>" <?php echo (@$getInfo->json->effin[0] == $value ? "selected" : "");?>><?php echo $value;?></option>
+										<?php
+									}
+									
+								}
+								?>
+				  			</select>
+				  		</div>
+
+
+				  		<div class="col">
+				  			<select class="form-control form-control-sm" name="json[effin][]">
+				  				<option value="">Eff IN</option>
+				  				<?php
+				  				foreach ($eff as $key => $value) {
+									if(strpos($value,"In")){
+										?>
+										<option value="<?php echo $value;?>" <?php echo (@$getInfo->json->effin[1] == $value ? "selected" : "");?>><?php echo $value;?></option>
 										<?php
 									}
 									
@@ -81,13 +93,29 @@
 				  		</div>
 
 				  		<div class="col">
-				  			<select class="form-control form-control-sm" name="json[effout]">
-				  				<option value="">Eff Out</option>
+				  			<select class="form-control form-control-sm" name="json[effin][]">
+				  				<option value="">Eff IN</option>
 				  				<?php
 				  				foreach ($eff as $key => $value) {
-									if(strpos($value,"Out")){
+									if(strpos($value,"In")){
 										?>
-										<option value="<?php echo $value;?>" <?php echo (@$getInfo->json->effout == $value ? "selected" : "");?>><?php echo $value;?></option>
+										<option value="<?php echo $value;?>" <?php echo (@$getInfo->json->effin[2] == $value ? "selected" : "");?>><?php echo $value;?></option>
+										<?php
+									}
+									
+								}
+								?>
+				  			</select>
+				  		</div>
+
+				  		<div class="col">
+				  			<select class="form-control form-control-sm" name="json[effin][]">
+				  				<option value="">Eff IN</option>
+				  				<?php
+				  				foreach ($eff as $key => $value) {
+									if(strpos($value,"In")){
+										?>
+										<option value="<?php echo $value;?>" <?php echo (@$getInfo->json->effin[3] == $value ? "selected" : "");?>><?php echo $value;?></option>
 										<?php
 									}
 									
@@ -102,6 +130,7 @@
 
 				  <button type="submit" class="btn btn-primary">Submit</button>
 				</form>
+			<?php } ?>
 			</div>
 		</div>
 	</div>

@@ -21,7 +21,7 @@ $.fn.extend({
     })(document.createElement('div'));
 
     this.addClass('animated ' + animationName).one(animationEnd, function() {
-      $(this).removeClass('animated ' + animationName);
+      //$(this).removeClass('animated ' + animationName);
 
       if (typeof callback === 'function') callback();
     });
@@ -34,9 +34,12 @@ $.fn.extend({
     var window_top_position = $window.scrollTop();
     var window_bottom_position = (window_top_position + window_height);
     
+    
+
 
     $(this).each(function(k, v){
       var $element = $(this);
+      if(!$element.attr('data-in')) return;
       var element_height = $element.outerHeight();
       var element_top_position = $element.offset().top;
       var element_bottom_position = (element_top_position + element_height);
@@ -44,9 +47,13 @@ $.fn.extend({
       //check to see if this current container is within viewport
       if ((element_bottom_position >= window_top_position) &&
           (element_top_position <= window_bottom_position)) {
-        $element.animateCss($element.attr('data-in'));
+        if($element.hasClass("animated") == false){
+          $element.animateCss( $element.attr('data-in'));
+        }
       } else {
-        $element.animateCss($element.attr('data-out'));
+        if(window_top_position < 50){
+          $element.removeClass("animated " + $element.attr('data-in'));
+        }
       }
      
     });
