@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Jul 09, 2018 at 01:02 AM
+-- Generation Time: Jul 09, 2018 at 10:09 AM
 -- Server version: 5.6.38
 -- PHP Version: 7.2.1
 
@@ -70,42 +70,8 @@ INSERT INTO `account_history` (`id`, `account_id`, `lastlogin`, `lastlogin_ip`, 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `settings`
+-- Table structure for table `category`
 --
-
-CREATE TABLE `settings` (
-  `id` int(10) NOT NULL,
-  `key_config` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
-  `value_config` text COLLATE utf8_unicode_ci NOT NULL,
-  `language` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
-  `stores` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
-  `plugins` varchar(255) COLLATE utf8_unicode_ci NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
-
---
--- Dumping data for table `settings`
---
-
-INSERT INTO `settings` (`id`, `key_config`, `value_config`, `language`, `stores`, `plugins`) VALUES
-(1, 'site_name', 'Roller Coins', '', '', '');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `template`
---
-
-CREATE TABLE `template` (
-  `id` int(10) NOT NULL,
-  `language` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
-  `stores` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
-  `plugins` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
-  `name` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
-  `options` text COLLATE utf8_unicode_ci NOT NULL,
-  `paths` varchar(255) COLLATE utf8_unicode_ci NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
-
-
 
 CREATE TABLE `category` (
   `cat_id` int(10) NOT NULL,
@@ -139,6 +105,56 @@ CREATE TABLE `contents` (
   `category_map` varchar(255) COLLATE utf8_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `settings`
+--
+
+CREATE TABLE `settings` (
+  `id` int(10) NOT NULL,
+  `key_config` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `value_config` text COLLATE utf8_unicode_ci NOT NULL,
+  `language` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `stores` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `plugins` varchar(255) COLLATE utf8_unicode_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Dumping data for table `settings`
+--
+
+INSERT INTO `settings` (`id`, `key_config`, `value_config`, `language`, `stores`, `plugins`) VALUES
+(1, 'site_name', 'Roller Coins', '', '', '');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `template`
+--
+
+CREATE TABLE `template` (
+  `id` int(10) NOT NULL,
+  `language` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `stores` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `plugins` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `name` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `description` text COLLATE utf8_unicode_ci NOT NULL,
+  `options` text COLLATE utf8_unicode_ci NOT NULL,
+  `paths` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `sorts` int(10) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Dumping data for table `template`
+--
+
+INSERT INTO `template` (`id`, `language`, `stores`, `plugins`, `name`, `description`, `options`, `paths`, `sorts`) VALUES
+(1, '', '', '', 'Slider', '', '{\"url\":\"\",\"limit\":\"8\",\"effslipt\":\"\",\"effin\":\"\",\"effout\":\"\"}', 'resource/blocks/Slider.php', 0),
+(2, '', '', '', 'News Project', '', '{\"url\":\"\",\"limit\":\"8\",\"effslipt\":\"\",\"effin\":\"\",\"effout\":\"\"}', 'resource/blocks/News.php', 1),
+(3, '', '', '', 'Develop', '', '{\"url\":\"\",\"limit\":\"4\",\"effslipt\":\"\",\"effin\":\"\",\"effout\":\"\"}', 'resource/blocks/news.php', 3),
+(4, '', '', '', 'Timeline', '', '{\"url\":\"\",\"limit\":\"5\",\"effslipt\":\"\",\"effin\":\"\",\"effout\":\"\"}', 'resource/blocks/timeline.php', 2);
+
 --
 -- Indexes for dumped tables
 --
@@ -154,6 +170,20 @@ ALTER TABLE `account`
 --
 ALTER TABLE `account_history`
   ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `category`
+--
+ALTER TABLE `category`
+  ADD PRIMARY KEY (`cat_id`);
+
+--
+-- Indexes for table `contents`
+--
+ALTER TABLE `contents`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `url_rewrite` (`url_rewrite`),
+  ADD KEY `title` (`title`);
 
 --
 -- Indexes for table `settings`
@@ -184,6 +214,18 @@ ALTER TABLE `account_history`
   MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
+-- AUTO_INCREMENT for table `category`
+--
+ALTER TABLE `category`
+  MODIFY `cat_id` int(10) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `contents`
+--
+ALTER TABLE `contents`
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+
+--
 -- AUTO_INCREMENT for table `settings`
 --
 ALTER TABLE `settings`
@@ -193,30 +235,4 @@ ALTER TABLE `settings`
 -- AUTO_INCREMENT for table `template`
 --
 ALTER TABLE `template`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT;
-
-ALTER TABLE `category`
-  ADD PRIMARY KEY (`cat_id`);
-
---
--- Indexes for table `contents`
---
-ALTER TABLE `contents`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `url_rewrite` (`url_rewrite`),
-  ADD KEY `title` (`title`);
-
---
--- AUTO_INCREMENT for dumped tables
---
-
---
--- AUTO_INCREMENT for table `category`
---
-ALTER TABLE `category`
-  MODIFY `cat_id` int(10) NOT NULL AUTO_INCREMENT;
---
--- AUTO_INCREMENT for table `contents`
---
-ALTER TABLE `contents`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;

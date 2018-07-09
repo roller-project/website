@@ -8,7 +8,7 @@
 			if(isset($value->json->limit) && intval($value->json->limit) > 0){
 			for($i=1; $i<=$value->json->limit; $i++){ ?>
 			<div class="col-lg-3" style="margin-bottom: 30px;">
-				<div class="card">
+				<div class="card" sroll-eff data-in="rollIn" data-out="rollOut">
 					<div class="card-body item">
 						<h5 class="title">Lorem ipsum dolor sit amet</h5>
 						<div class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed porttitor gravida aliquam. Morbi orci urna, iaculis in ligula et, posuere interdum lectus.</div>

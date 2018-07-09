@@ -3,6 +3,8 @@
     <h2 class="pb-3 pt-2 border-bottom mb-5"><?php echo $value->name;?></h2>
     <p><?php echo $value->description;?></p>
     <!--first section-->
+    
+
     <div class="row align-items-center how-it-works d-flex">
       <div class="col-2 text-center bottom d-inline-flex justify-content-center align-items-center">
         <div class="circle font-weight-bold">1</div>
@@ -24,6 +26,7 @@
         <div class="corner left-bottom"></div>
       </div>
     </div>
+
     <!--second section-->
     <div class="row align-items-center justify-content-end how-it-works d-flex">
       <div class="col-6 text-right">
