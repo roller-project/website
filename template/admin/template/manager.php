@@ -22,37 +22,49 @@
 				    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
 				  </div>
 				  
-				  	<div class="row">
-				  		<div class="col-lg-2">
-				  			<div class="form-group">
-							    <label for="exampleInputEmail1">Type</label>
-				  				<select class="form-control form-control-sm"></select>
-				  			</div>
-				  		</div>
-				  		<div class="col">
-				  			<div class="form-group">
-							    <label for="exampleInputEmail1">Content URL</label>
-							    <input type="email" class="form-control form-control-sm">
-							</div>
-				  		</div>
-				  	</div>
+				  	<div class="form-group">
+					    <label for="exampleInputEmail1">Content URL</label>
+					    <input type="email" class="form-control form-control-sm">
+					</div>
 
 				  	<div class="row">
 				  		<div class="col">
 				  			<select class="form-control form-control-sm">
 				  				<option>Slipt</option>
+				  				<option value="yes">Yes</option>
+				  				<option value="no">No</option>
 				  			</select>
 				  		</div>
 
 				  		<div class="col">
 				  			<select class="form-control form-control-sm">
 				  				<option>Eff IN</option>
+				  				<?php
+				  				foreach ($eff as $key => $value) {
+									if(strpos($value,"In")){
+										?>
+										<option value="<?php echo $value;?>"><?php echo $value;?></option>
+										<?php
+									}
+									
+								}
+								?>
 				  			</select>
 				  		</div>
 
 				  		<div class="col">
 				  			<select class="form-control form-control-sm">
 				  				<option>Eff Out</option>
+				  				<?php
+				  				foreach ($eff as $key => $value) {
+									if(strpos($value,"Out")){
+										?>
+										<option value="<?php echo $value;?>"><?php echo $value;?></option>
+										<?php
+									}
+									
+								}
+								?>
 				  			</select>
 				  		</div>
 

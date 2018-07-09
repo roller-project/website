@@ -105,6 +105,40 @@ CREATE TABLE `template` (
   `paths` varchar(255) COLLATE utf8_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
+
+
+CREATE TABLE `category` (
+  `cat_id` int(10) NOT NULL,
+  `cat_name` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `cat_parent_id` int(10) NOT NULL,
+  `cat_url` int(255) NOT NULL,
+  `cat_content` text COLLATE utf8_unicode_ci NOT NULL,
+  `cat_language` varchar(255) COLLATE utf8_unicode_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `contents`
+--
+
+CREATE TABLE `contents` (
+  `id` bigint(20) NOT NULL,
+  `type` varchar(255) COLLATE utf8_unicode_ci NOT NULL DEFAULT 'blog',
+  `title` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `url_rewrite` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `content` tinytext COLLATE utf8_unicode_ci NOT NULL,
+  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `updated_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `display_form` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `display_to` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `status` int(1) NOT NULL,
+  `views` int(1) NOT NULL,
+  `language` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `category_id` int(10) NOT NULL,
+  `category_map` varchar(255) COLLATE utf8_unicode_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
 --
 -- Indexes for dumped tables
 --
@@ -160,3 +194,29 @@ ALTER TABLE `settings`
 --
 ALTER TABLE `template`
   MODIFY `id` int(10) NOT NULL AUTO_INCREMENT;
+
+ALTER TABLE `category`
+  ADD PRIMARY KEY (`cat_id`);
+
+--
+-- Indexes for table `contents`
+--
+ALTER TABLE `contents`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `url_rewrite` (`url_rewrite`),
+  ADD KEY `title` (`title`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `category`
+--
+ALTER TABLE `category`
+  MODIFY `cat_id` int(10) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT for table `contents`
+--
+ALTER TABLE `contents`
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;

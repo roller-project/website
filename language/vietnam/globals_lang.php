@@ -9,3 +9,8 @@ $lang["wallet_limit"]		=	"Can't create wallet. Wallet limit";
 $lang["balancer_error"]		=	"You balancer Error";
 $lang["success_transaction"] = "Success transaction";
 $lang["wallet_create"]		=	"Wallet Create";
+$lang["success_update"]		=	"Update success";
+$lang["error_update"]		=	"Update error";
+
+$lang["success_insert"]		=	"Insert success";
+$lang["error_insert"]		=	"Insert error";

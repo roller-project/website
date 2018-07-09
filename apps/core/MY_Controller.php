@@ -26,6 +26,14 @@ class BaseController extends CI_Controller{
 		$this->session->set_flashdata($key, $content);
 	}
 
+	public function setFlash($data=false, $key="update"){
+		if($data){
+			$this->flash("success",lang("success_{$key}"));
+		}else{
+			$this->flash("error",lang("error_{$key}"));
+		}
+	}
+
 	public function get_flash(){
 		$html = "";
 		if($this->session->flashdata("error")){
