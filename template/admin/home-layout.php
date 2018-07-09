@@ -25,7 +25,7 @@
                 <a class="nav-link" href="#">Dashboard <span class="sr-only">(current)</span></a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Contents</a>
+                <a class="nav-link" href="<?php echo admin_url("content/manager");?>">Contents</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#">Profile</a>

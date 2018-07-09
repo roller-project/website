@@ -94,7 +94,16 @@ class Template extends Admin {
 		$getFileStores = $this->template_model->getFileStores();
 		$getListBlock = $this->template_model->getListBlock();
 		$getInfo = $this->template_model->getInfo($id);
-		$this->view('template/manager',["eff" => $eff, "id" => $id,"getFileStores" => $getFileStores, "getListBlock" => $getListBlock, "getInfo" => $getInfo]);
+
+		$file = basename($getInfo->paths);
+		$options_file = str_replace($file, "options/{$file}", $getInfo->paths);
+
+		$append_file = "";
+		if(file_exists(FCPATH.$options_file)){
+			$append_file = FCPATH.$options_file;
+		}
+
+		$this->view('template/manager',["eff" => $eff, "id" => $id,"getFileStores" => $getFileStores, "getListBlock" => $getListBlock, "getInfo" => $getInfo, "append_file" => $append_file]);
 	}
 
 	public function validate_update($id){

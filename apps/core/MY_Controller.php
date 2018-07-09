@@ -7,7 +7,7 @@ class BaseController extends CI_Controller{
 		$this->load->library(['session','email','user_agent']);
 		$this->load->helper(['url','function','form','language','string']);
 		$this->config();
-		$this->load->model(["account_model","template_model"]);
+		$this->load->model(["account_model","template_model","content_model"]);
 
 		$this->lang->load("globals",'vietnam',false, true, FCPATH);
 		

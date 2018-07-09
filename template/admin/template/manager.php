@@ -31,7 +31,7 @@
 				  <div class="form-group">
 				    <label for="exampleInputEmail1">Name Block</label>
 				    <input type="text" class="form-control form-control-sm" required="" name="name" value="<?php echo @$getInfo->name;?>">
-				    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+				    
 				  </div>
 				  
 				  <div class="form-group">
@@ -125,7 +125,18 @@
 				  		</div>
 
 				  	</div>
-				  	
+				  	<br>
+				  	<div class="row">
+				  		<div class="col">
+				  			Append ID
+				  			<input type="text" class="form-control form-control-sm" name="json[id]" value="<?php echo @$getInfo->json->id;?>">
+				  		</div>
+				  		<div class="col">
+				  			Append Class
+				  			<input type="text" class="form-control form-control-sm" name="json[class]" value="<?php echo @$getInfo->json->class;?>">
+				  		</div>
+				  	</div>
+				  	<?php if($append_file) include $append_file;?>
 				  	<hr>
 
 				  <button type="submit" class="btn btn-primary">Submit</button>

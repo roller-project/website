@@ -4,7 +4,7 @@ body {
 }
 
 body {
-  padding-top: 56px;
+  /*padding-top: 56px;*/
 }
 
 @media (max-width: 767.98px) {
@@ -82,6 +82,25 @@ body {
   float: right;
 }
 
+.fixed-theme{
+  position: fixed;
+  top:0;
+  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+  width: 100%;
+  background: #FFF;
+  z-index: 99;
+}
+#header{
+  /*position: fixed;*/
+  top:0;
+  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+  width: 100%;
+  z-index: 99;
+}
+
+.header-title{
+  margin-bottom: 30px;
+}
 footer{
   background-color: #333;
   padding-top: 50px;

@@ -1,8 +1,9 @@
 <div class="news">
 	<div class="container">
-		<h2><?php echo $value->name;?></h2>
-		<div><?php echo $value->description;?></div>
-
+		<div class="text-center header-title">
+			<h2><?php echo $value->name;?></h2>
+			<div style="max-width: 60%; margin: auto;"><?php echo $value->description;?></div>
+		</div>
 		<div class="row">
 			<?php 
 			if(isset($value->json->limit) && intval($value->json->limit) > 0){
@@ -13,7 +14,7 @@
 				if($i%4 == 0) $eff = (@$value->json->effin[3] ? @$value->json->effin[3] : $eff);
 			?>
 			<div class="col-lg-3" style="margin-bottom: 30px;">
-				<div class="card" sroll-eff data-in="<?php echo @$eff;?>">
+				<div class="card" sroll-data data-in="<?php echo @$eff;?>">
 					<div class="card-body item">
 						<h5 class="title">Lorem ipsum dolor sit amet</h5>
 						<div class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed porttitor gravida aliquam. Morbi orci urna, iaculis in ligula et, posuere interdum lectus.</div>

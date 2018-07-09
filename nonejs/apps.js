@@ -58,6 +58,13 @@ $.fn.extend({
      
     });
     
+  },
+  animatePlay : function(){
+    $(this).each(function(k, v){
+      var $element = $(this);
+      if(!$element.attr('data-in')) return;
+      $element.animateCss( $element.attr('data-in'));
+    });
   }
 });
 
@@ -69,8 +76,9 @@ $(document).ready(function(){
     var dataJson = $('[data-json]');
   }
 
+  $('[play-eff]').animatePlay();
   
   $(window).on('scroll resize', function(){
-    $("[sroll-eff]").animateSroll();
+    $("[sroll-data]").animateSroll();
   });
 });

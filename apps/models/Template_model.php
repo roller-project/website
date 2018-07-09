@@ -49,16 +49,30 @@ class Template_model extends CI_Model{
 
 	public function getContent(){
 		$list = $this->getListBlock();
+		$content = [];
 		ob_start();
 		foreach ($list as $key => $value) {
 			if(file_exists(FCPATH.$value->paths)){
 				$value->json = json_decode($value->options);
-				echo '<div data-json="'.@$value->json->url.'" id="block_'.$value->id.'">';
+				
+				$makeid = (isset($value->json->id) && $value->json->id ? $value->json->id : "block_".$value->id);
+				$makeclass = (isset($value->json->class) && $value->json->class ? $value->json->class : "block_".$value->id);
+
+				echo '<div data-json="json'.@$value->id.'" id="'.$makeid.'" class="'.$makeclass.'">';
 				include FCPATH.$value->paths;
 				echo '</div>';
+
+				if(@$value->json->url){
+					$content[] = $value->json->url;
+				}
 			}
 		}
 		$data = ob_get_clean();
+		$vcon = [];
+		foreach ($content as $key => $value) {
+			$vcon[] = $this->content_model->getContent($value);
+		}
+		$data .= '<script type="">'.json_encode($vcon).'</script>';
 		return $data;
 	}
 
