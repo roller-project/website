@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Jul 09, 2018 at 10:09 AM
+-- Generation Time: Jul 09, 2018 at 11:01 PM
 -- Server version: 5.6.38
 -- PHP Version: 7.2.1
 
@@ -65,7 +65,8 @@ INSERT INTO `account_history` (`id`, `account_id`, `lastlogin`, `lastlogin_ip`, 
 (7, 1, '2018-07-06 21:39:30', '127.0.0.1', 'Firefox 61.0 Mac OS X'),
 (8, 1, '2018-07-07 21:35:21', '127.0.0.1', 'Firefox 61.0 Mac OS X'),
 (9, 1, '2018-07-08 00:39:50', '127.0.0.1', 'Firefox 61.0 Mac OS X'),
-(10, 1, '2018-07-07 20:06:52', '127.0.0.1', 'Firefox 61.0 Mac OS X');
+(10, 1, '2018-07-07 20:06:52', '127.0.0.1', 'Firefox 61.0 Mac OS X'),
+(11, 1, '2018-07-08 21:29:56', '127.0.0.1', 'Firefox 61.0 Mac OS X');
 
 -- --------------------------------------------------------
 
@@ -150,9 +151,9 @@ CREATE TABLE `template` (
 --
 
 INSERT INTO `template` (`id`, `language`, `stores`, `plugins`, `name`, `description`, `options`, `paths`, `sorts`) VALUES
-(1, '', '', '', 'Slider', '', '{\"url\":\"\",\"limit\":\"8\",\"effslipt\":\"\",\"effin\":\"\",\"effout\":\"\"}', 'resource/blocks/Slider.php', 0),
-(2, '', '', '', 'News Project', '', '{\"url\":\"\",\"limit\":\"8\",\"effslipt\":\"\",\"effin\":\"\",\"effout\":\"\"}', 'resource/blocks/News.php', 1),
-(3, '', '', '', 'Develop', '', '{\"url\":\"\",\"limit\":\"4\",\"effslipt\":\"\",\"effin\":\"\",\"effout\":\"\"}', 'resource/blocks/news.php', 3),
+(1, '', '', '', 'Slider', '<h1>Roller Platform</h1>\r\n<p>Xây dựng trên nền tảng Ethereum. Roller Platform cung cấp cho người dùng tất cả các ứng dụng chạy trên smart contract và coin base</p>\r\n<p>\r\nTên : Roller Network<br>\r\nViết tắt: ROL<br>\r\nLoại : Proof-of-Work<br>\r\nThuật toán : Ethash<br>\r\nThời gian tối đa 1 block : 15 secs<br>\r\nSố coin 1 block : 10<br>\r\nKhông sử dụng tạo coin cho develop<br>\r\nKhông vận hành bán ICO<br>\r\nNguyên lý dựa trên nguyên tắt cộng đồng sử dụng\r\n</p>\r\n<br>\r\n<h4>Dự kiến vận hành 12/7/2018</h4>\r\n<br>\r\n<div id=\"count_down\"></div>', '{\"url\":\"\",\"limit\":\"8\",\"effin\":[\"\",\"\",\"\",\"\"],\"id\":\"\",\"class\":\"\",\"backgroundurl\":\"https:\\/\\/htmlstream.com\\/preview\\/front-v1.2\\/assets\\/img\\/750x750\\/img2.jpg\"}', 'resource/blocks/slider.php', 0),
+(2, '', '', '', 'News Project', '', '{\"url\":\"\",\"limit\":\"8\",\"effin\":[\"slideInDown\",\"\",\"\",\"\"],\"id\":\"\",\"class\":\"\"}', 'resource/blocks/news.php', 1),
+(3, '', '', '', 'Thành viên phát triển dự án', 'Một số thành viên tiêu biểu phái triển dự án này tại quốc gia của bạn', '{\"url\":\"\",\"limit\":\"4\",\"effin\":[\"\",\"\",\"\",\"\"],\"id\":\"\",\"class\":\"\"}', 'resource/blocks/news.php', 3),
 (4, '', '', '', 'Timeline', '', '{\"url\":\"\",\"limit\":\"5\",\"effslipt\":\"\",\"effin\":\"\",\"effout\":\"\"}', 'resource/blocks/timeline.php', 2);
 
 --
@@ -211,7 +212,7 @@ ALTER TABLE `account`
 -- AUTO_INCREMENT for table `account_history`
 --
 ALTER TABLE `account_history`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT for table `category`
@@ -223,7 +224,7 @@ ALTER TABLE `category`
 -- AUTO_INCREMENT for table `contents`
 --
 ALTER TABLE `contents`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `settings`
@@ -235,4 +236,4 @@ ALTER TABLE `settings`
 -- AUTO_INCREMENT for table `template`
 --
 ALTER TABLE `template`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
