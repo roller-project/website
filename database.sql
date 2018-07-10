@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.7.7
+-- version 4.7.3
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost
--- Generation Time: Jul 09, 2018 at 11:01 PM
--- Server version: 5.6.38
--- PHP Version: 7.2.1
+-- Host: localhost:3306
+-- Generation Time: Jul 10, 2018 at 08:12 AM
+-- Server version: 5.6.35
+-- PHP Version: 7.1.8
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -66,7 +66,8 @@ INSERT INTO `account_history` (`id`, `account_id`, `lastlogin`, `lastlogin_ip`, 
 (8, 1, '2018-07-07 21:35:21', '127.0.0.1', 'Firefox 61.0 Mac OS X'),
 (9, 1, '2018-07-08 00:39:50', '127.0.0.1', 'Firefox 61.0 Mac OS X'),
 (10, 1, '2018-07-07 20:06:52', '127.0.0.1', 'Firefox 61.0 Mac OS X'),
-(11, 1, '2018-07-08 21:29:56', '127.0.0.1', 'Firefox 61.0 Mac OS X');
+(11, 1, '2018-07-08 21:29:56', '127.0.0.1', 'Firefox 61.0 Mac OS X'),
+(12, 1, '2018-07-09 18:28:15', '::1', 'Firefox 61.0 Mac OS X');
 
 -- --------------------------------------------------------
 
@@ -93,6 +94,7 @@ CREATE TABLE `contents` (
   `id` bigint(20) NOT NULL,
   `type` varchar(255) COLLATE utf8_unicode_ci NOT NULL DEFAULT 'blog',
   `title` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `thumbnail` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `url_rewrite` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `content` tinytext COLLATE utf8_unicode_ci NOT NULL,
   `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
@@ -102,9 +104,18 @@ CREATE TABLE `contents` (
   `status` int(1) NOT NULL,
   `views` int(1) NOT NULL,
   `language` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `stores` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `category_id` int(10) NOT NULL,
   `category_map` varchar(255) COLLATE utf8_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Dumping data for table `contents`
+--
+
+INSERT INTO `contents` (`id`, `type`, `title`, `thumbnail`, `url_rewrite`, `content`, `created_at`, `updated_at`, `display_form`, `display_to`, `status`, `views`, `language`, `stores`, `category_id`, `category_map`) VALUES
+(1, 'blog', 'Test Content', 'uploads/apple-icon-57x57.png', '', '', '2018-07-10 05:19:33', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 0, 0, 'english', '', 0, ''),
+(2, 'blog', 'test 356', 'uploads/apple-icon-57x57.png', '', '', '2018-07-10 05:30:35', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 0, 0, 'english', '', 0, '');
 
 -- --------------------------------------------------------
 
@@ -126,7 +137,10 @@ CREATE TABLE `settings` (
 --
 
 INSERT INTO `settings` (`id`, `key_config`, `value_config`, `language`, `stores`, `plugins`) VALUES
-(1, 'site_name', 'Roller Coins', '', '', '');
+(1, 'site_name', 'Roller Coins', '', '', ''),
+(2, 'site_description', '', '', '', ''),
+(3, 'site_keywords', '', '', '', ''),
+(4, 'url_prefix', '.html', '', '', '');
 
 -- --------------------------------------------------------
 
@@ -152,8 +166,8 @@ CREATE TABLE `template` (
 
 INSERT INTO `template` (`id`, `language`, `stores`, `plugins`, `name`, `description`, `options`, `paths`, `sorts`) VALUES
 (1, '', '', '', 'Slider', '<h1>Roller Platform</h1>\r\n<p>Xây dựng trên nền tảng Ethereum. Roller Platform cung cấp cho người dùng tất cả các ứng dụng chạy trên smart contract và coin base</p>\r\n<p>\r\nTên : Roller Network<br>\r\nViết tắt: ROL<br>\r\nLoại : Proof-of-Work<br>\r\nThuật toán : Ethash<br>\r\nThời gian tối đa 1 block : 15 secs<br>\r\nSố coin 1 block : 10<br>\r\nKhông sử dụng tạo coin cho develop<br>\r\nKhông vận hành bán ICO<br>\r\nNguyên lý dựa trên nguyên tắt cộng đồng sử dụng\r\n</p>\r\n<br>\r\n<h4>Dự kiến vận hành 12/7/2018</h4>\r\n<br>\r\n<div id=\"count_down\"></div>', '{\"url\":\"\",\"limit\":\"8\",\"effin\":[\"\",\"\",\"\",\"\"],\"id\":\"\",\"class\":\"\",\"backgroundurl\":\"https:\\/\\/htmlstream.com\\/preview\\/front-v1.2\\/assets\\/img\\/750x750\\/img2.jpg\"}', 'resource/blocks/slider.php', 0),
-(2, '', '', '', 'News Project', '', '{\"url\":\"\",\"limit\":\"8\",\"effin\":[\"slideInDown\",\"\",\"\",\"\"],\"id\":\"\",\"class\":\"\"}', 'resource/blocks/news.php', 1),
-(3, '', '', '', 'Thành viên phát triển dự án', 'Một số thành viên tiêu biểu phái triển dự án này tại quốc gia của bạn', '{\"url\":\"\",\"limit\":\"4\",\"effin\":[\"\",\"\",\"\",\"\"],\"id\":\"\",\"class\":\"\"}', 'resource/blocks/news.php', 3),
+(2, '', '', '', 'News Project', '', '{\"url\":\"type=blog&sort=DESC&limit=5\",\"limit\":\"20\",\"effin\":[\"flipInY\",\"flipInX\",\"fadeInLeft\",\"fadeInUpBig\"],\"id\":\"\",\"class\":\"\",\"backgroundeff\":\"\",\"backgroundurl\":\"\"}', 'resource/blocks/news.php', 1),
+(3, '', '', '', 'Thành viên phát triển dự án', 'Một số thành viên tiêu biểu phái triển dự án này tại quốc gia của bạn', '{\"url\":\"\",\"limit\":\"4\",\"effin\":[\"\",\"\",\"\",\"\"],\"id\":\"\",\"class\":\"\",\"backgroundeff\":\"\",\"backgroundurl\":\"\"}', 'resource/blocks/news.php', 3),
 (4, '', '', '', 'Timeline', '', '{\"url\":\"\",\"limit\":\"5\",\"effslipt\":\"\",\"effin\":\"\",\"effout\":\"\"}', 'resource/blocks/timeline.php', 2);
 
 --
@@ -207,31 +221,26 @@ ALTER TABLE `template`
 --
 ALTER TABLE `account`
   MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
-
 --
 -- AUTO_INCREMENT for table `account_history`
 --
 ALTER TABLE `account_history`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
-
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 --
 -- AUTO_INCREMENT for table `category`
 --
 ALTER TABLE `category`
   MODIFY `cat_id` int(10) NOT NULL AUTO_INCREMENT;
-
 --
 -- AUTO_INCREMENT for table `contents`
 --
 ALTER TABLE `contents`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT;
-
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 --
 -- AUTO_INCREMENT for table `settings`
 --
 ALTER TABLE `settings`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
-
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 --
 -- AUTO_INCREMENT for table `template`
 --
