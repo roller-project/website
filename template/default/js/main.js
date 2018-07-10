@@ -3,9 +3,12 @@ $(function () {
 
   $('[data-toggle="offcanvas"]').on('click', function () {
     $('.offcanvas-collapse').toggleClass('open')
-  })
+  });
 
-
+  var jsonContent = $.parseJSON($("#jsonContent").html());
+  $.each(jsonContent,function(k,v){
+    alert(k);
+  });
 
   // Set the date we're counting down to
 var countDownDate = new Date("July 12, 2018 0:0:0").getTime();

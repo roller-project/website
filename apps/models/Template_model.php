@@ -63,16 +63,17 @@ class Template_model extends CI_Model{
 				echo '</div>';
 
 				if(@$value->json->url){
-					$content[] = $value->json->url;
+					$content["json".$value->id] = $value->json->url;
 				}
 			}
 		}
 		$data = ob_get_clean();
 		$vcon = [];
 		foreach ($content as $key => $value) {
-			$vcon[] = $this->content_model->getContent($value);
+			$vcon[$key] = $this->content_model->getContent($value);
 		}
-		$data .= '<script type="">'.json_encode($vcon).'</script>';
+		//print_r(json_encode($vcon));exit();
+		$data .= '<script type="application/json" id="jsonContent">'.json_encode($vcon).'</script>';
 		return $data;
 	}
 

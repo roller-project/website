@@ -88,6 +88,22 @@ main{
   min-height: 500px;
   padding-top: 30px;
 }
+.fullscreen .modal-dialog {
+    width: 98%;
+  height: 92%;
+  padding: 0;
+}
+.fullscreen .modal-content {
+   height: 99%;
+}
+.modal-body iframe{
+  width: 100%;
+  height: 100%;
+  border:1px solid #ddd;
+}
+@media (min-width: 576px) {
+  .fullscreen .modal-dialog { max-width: none; }
+}
 footer{
   min-height: 50px;
   border-top: 1px solid #ddd;

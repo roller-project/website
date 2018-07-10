@@ -127,13 +127,32 @@
 				  	</div>
 				  	<br>
 				  	<div class="row">
-				  		<div class="col">
+				  		<div class="col-lg-2">
 				  			Append ID
 				  			<input type="text" class="form-control form-control-sm" name="json[id]" value="<?php echo @$getInfo->json->id;?>">
 				  		</div>
-				  		<div class="col">
+				  		<div class="col-lg-2">
 				  			Append Class
 				  			<input type="text" class="form-control form-control-sm" name="json[class]" value="<?php echo @$getInfo->json->class;?>">
+				  		</div>
+
+				  		
+
+				  		<div class="col-lg-2">
+				  			Effice
+				  			<input type="text" class="form-control form-control-sm" name="json[backgroundeff]" value="<?php echo @$getInfo->json->backgroundeff;?>">
+				  		</div>
+
+				  		<div class="col-lg-6">
+				  			Background Image
+				  			
+				  			<div class="input-group input-group-sm mb-2">
+						        
+						        <input type="text" class="form-control form-control-sm" id="backgroundurl" name="json[backgroundurl]" value="<?php echo @$getInfo->json->backgroundurl;?>">
+						        <div class="input-group-prepend">
+						          <button type="button" class="btn btn-info" data-target-input="#backgroundurl" data-toggle="modal" data-target="#UploadIDModel">Select</button>
+						        </div>
+						    </div>
 				  		</div>
 				  	</div>
 				  	<?php if($append_file) include $append_file;?>
@@ -154,3 +173,6 @@
 		</ul>
 	</div>
 </div>
+
+
+<?php echo $this->bootstrap->upload();?>

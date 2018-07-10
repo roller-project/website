@@ -95,12 +95,15 @@ class Template extends Admin {
 		$getListBlock = $this->template_model->getListBlock();
 		$getInfo = $this->template_model->getInfo($id);
 
-		$file = basename($getInfo->paths);
-		$options_file = str_replace($file, "options/{$file}", $getInfo->paths);
-
 		$append_file = "";
-		if(file_exists(FCPATH.$options_file)){
-			$append_file = FCPATH.$options_file;
+		if($getInfo){
+			$file = basename($getInfo->paths);
+			$options_file = str_replace($file, "options/{$file}", $getInfo->paths);
+
+			
+			if(file_exists(FCPATH.$options_file)){
+				$append_file = FCPATH.$options_file;
+			}
 		}
 
 		$this->view('template/manager',["eff" => $eff, "id" => $id,"getFileStores" => $getFileStores, "getListBlock" => $getListBlock, "getInfo" => $getInfo, "append_file" => $append_file]);

@@ -4,15 +4,18 @@ class BaseController extends CI_Controller{
 	function __construct()
 	{
 		parent::__construct();
-		$this->load->library(['session','email','user_agent']);
+		$this->load->library(['session','email','user_agent','bootstrap']);
 		$this->load->helper(['url','function','form','language','string']);
 		$this->config();
 		$this->load->model(["account_model","template_model","content_model"]);
 
-		$this->lang->load("globals",'vietnam',false, true, FCPATH);
+		$this->lang("globals");
 		
 	}
 
+	/*
+	Create Settings
+	*/
 	public function config(){
 		$this->db->where("language","");
 		$this->db->where("stores","");
@@ -22,10 +25,17 @@ class BaseController extends CI_Controller{
 			$this->config->item($value->key_config, $value->value_config);
 		}
 	}
+
+	/*
+	Create flash report
+	*/
 	public function flash($key, $content=""){
 		$this->session->set_flashdata($key, $content);
 	}
 
+	/*
+	Set flash report yes/no
+	*/
 	public function setFlash($data=false, $key="update"){
 		if($data){
 			$this->flash("success",lang("success_{$key}"));
@@ -145,6 +155,17 @@ class BaseController extends CI_Controller{
 		
 	}
 
+	/*
+	Load Language
+	*/
+
+	public function lang($name=""){
+		$file = FCPATH . "language/".$this->config->item("language")."/{$name}_lang.php";
+
+		if(file_exists($file)){
+			$this->lang->load($name,$this->config->item("language"),false, true, FCPATH);
+		}
+	}
 	public function platform(){
 		if ($this->agent->is_browser())
 		{
@@ -181,7 +202,7 @@ class Frontend extends BaseController
 	{
 		defined('BASEPATH') OR exit('No direct script access allowed');
 		parent::__construct();
-		
+		$this->lang->load("globals",'vietnam',false, true, FCPATH);
 		$this->setLayout("home-layout");
 	}
 }
@@ -196,6 +217,7 @@ class Admin extends BaseController
 	{
 		defined('ADMIN') OR exit('No direct script access allowed');
 		parent::__construct();
+		//$this->lang->load("globals",'vietnam/admin',false, true, FCPATH);
 		$this->checkLogin(); 
 		$this->setLayout("home-layout");
 	}

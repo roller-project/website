@@ -1,16 +1,13 @@
 <?php
-$lang["error"] = "Error";
-$lang["success"]	= "Success";
-$lang["warning"]	=	"Warning";
-$lang["account_ready"]	=	"Email register not exists";
-$lang["success_register"]	= "Account has create. You can login";
-$lang["success_login"]		=	"Login Success";
-$lang["wallet_limit"]		=	"Can't create wallet. Wallet limit";
-$lang["balancer_error"]		=	"You balancer Error";
-$lang["success_transaction"] = "Success transaction";
-$lang["wallet_create"]		=	"Wallet Create";
-$lang["success_update"]		=	"Update success";
-$lang["error_update"]		=	"Update error";
+$lang["error"] = "Lỗi";
+$lang["success"]	= "Hoàn thành";
+$lang["warning"]	=	"Cảnh bảo";
+$lang["account_ready"]	=	"Email đăng ký đã tồn tại";
+$lang["success_register"]	= "Tài khoản được tạo. Bạn có thể đăng nhập";
+$lang["success_login"]		=	"Đăng nhập thành công";
 
-$lang["success_insert"]		=	"Insert success";
-$lang["error_insert"]		=	"Insert error";
+$lang["success_update"]		=	"Cập nhập thành công";
+$lang["error_update"]		=	"Lỗi cập nhập vui lòng kiểm tra lại";
+
+$lang["success_insert"]		=	"Dữ liệu được thêm thành công";
+$lang["error_insert"]		=	"Lỗi khi thêm dữ liệu";
