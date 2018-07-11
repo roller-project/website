@@ -144,6 +144,14 @@ class BaseController extends CI_Controller{
 		}
 	}
 
+	public function isAdmin(){
+		if($this->session->userdata("is_login") && $this->account_model->validate_login()){
+			return true;
+		}else{
+			return false;
+		}
+	}
+
 	public function checkLogin(){
 		if(!$this->isLogin()){
 			redirect(store_url("account/login?ref=".current_url()));

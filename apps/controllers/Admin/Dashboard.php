@@ -6,9 +6,12 @@ class Dashboard extends Admin {
 	
 	public function index()
 	{
+		
 		$this->view('dashboard');
+		
+		
 	}
-	public function test(){
-		echo "Khoa";
+	public function maintenance(){
+		$this->view('maintenance');
 	}
 }
