@@ -7,7 +7,7 @@
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Jekyll v3.7.0">
     <link rel="icon" href="<?php echo resource_url("favicon.ico");?>">
-    <title><?php echo @$header["title"];?></title>
+    <title>Roller Platform</title>
     <script src="<?php echo resource_url("js/apps.js");?>"></script>
     <link rel="stylesheet" href="<?php echo template_url("css/style.css");?>">
     <script src="<?php echo template_url("js/main.js");?>"></script>
@@ -69,7 +69,7 @@
                 </clipPath>
                 <g style="clip-path:url(#phoneFrameID2);">
                   <!-- Apply your (282px width to 500px height) image here -->
-                  <image style="overflow:visible;" width="282" height="500" xlink:href="https://htmlstream.com/preview/front-v1.2/assets/img/282x500/img6.jpg" transform="matrix(1 0 0 1 18 81)"></image>
+                  <image style="overflow:visible;" width="282" height="500" xlink:href="<?php echo template_url("image/img6.jpg");?>" transform="matrix(1 0 0 1 18 81)"></image>
                 </g>
                 <use class="u-fill-none u-stroke-light-blue-125" xlink:href="#phoneFrameID1" stroke-miterlimit="10" style="overflow: visible;"></use>
               </g>
@@ -94,7 +94,7 @@
                 </clipPath>
                 <g style="clip-path:url(#tabletFrameID2);">
                   <!-- Apply your (533px width to 711px height) image here -->
-                  <image style="overflow:visible;" width="533" height="711" xlink:href="https://htmlstream.com/preview/front-v1.2/assets/img/533x711/img3.jpg" transform="matrix(1 0 0 1 36 86)"></image>
+                  <image style="overflow:visible;" width="533" height="711" xlink:href="<?php echo template_url("image/img3.jpg");?>" transform="matrix(1 0 0 1 36 86)"></image>
                 </g>
                 <use class="u-fill-none u-stroke-light-blue-125" xlink:href="#tabletFrameID1" stroke-miterlimit="10" style="overflow: visible;"></use>
               </g>
