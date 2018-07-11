@@ -6,6 +6,7 @@ class Template_model extends CI_Model{
 		$arvs["name"] = $arv["name"];
 		$arvs["description"] = $arv["description"];
 		$arvs["options"] = $arv["options"];
+
 		$this->db->update("template",$arvs,["id" => $id]);
 			
 		return true;
@@ -25,18 +26,22 @@ class Template_model extends CI_Model{
 
 	}
 
-	public function getListBlock($plugins=""){
-		$this->db->where("language","");
-		$this->db->or_where("language",config_item("language"));
-		$this->db->where("stores","");
-		$this->db->or_where("stores",config_item("stores"));
+	public function getListBlock($plugins="", $status=null){
+		$this->db->where("(language = '' OR language = '".config_item("language")."')");
+		//$this->db->or_where("language",config_item("language"));
+		//$this->db->where("stores","");
+		//$this->db->or_where("stores",config_item("stores"));
 
 		
 		if($plugins){
-			$this->db->where("plugins",$plugins);
+			//$this->db->where("plugins",$plugins);
 		}else{
-			$this->db->where("plugins","");
+			//$this->db->where("plugins","");
 		}
+		if($status){
+			$this->db->where("status",$status);
+		}
+
 		$this->db->order_by("sorts","ASC");
 
 		return $this->db->get("template")->result();
@@ -48,7 +53,7 @@ class Template_model extends CI_Model{
 	*/
 
 	public function getContent(){
-		$list = $this->getListBlock();
+		$list = $this->getListBlock(null, 1);
 		$content = [];
 		ob_start();
 		foreach ($list as $key => $value) {
@@ -58,8 +63,13 @@ class Template_model extends CI_Model{
 				$makeid = (isset($value->json->id) && $value->json->id ? $value->json->id : "block_".$value->id);
 				$makeclass = (isset($value->json->class) && $value->json->class ? $value->json->class : "block_".$value->id);
 
-				echo '<div data-json="json'.@$value->id.'" id="'.$makeid.'" class="'.$makeclass.'">';
+				echo '<div data-json="json'.@$value->id.'" id="'.$makeid.'" class="fixBlock '.$makeclass.'" data-background="'.@$value->json->backgroundurl.'">';
 				include FCPATH.$value->paths;
+
+				if(@$value->json->svn){
+					echo $this->bootstrap->svgLoad($value->json->svn,@$value->json->backgroundurl);
+				}
+
 				echo '</div>';
 
 				if(@$value->json->url){
@@ -95,7 +105,34 @@ class Template_model extends CI_Model{
 		$arv = [];
 		$arv["name"] = $name;
 		$arv["paths"] = $paths;
+		$arv["status"] = 1;
 		$this->db->insert("template", $arv);
 		return $this->db->insert_id();
+	}
+
+	public function sorttable($id, $lv){
+		$this->db->update("template",["sorts" => $lv],["id" => $id]);
+	}
+
+	/*
+	On Off Status
+	*/
+	public function status($id){
+		$data = $this->getInfo($id);
+		$lv = 0;
+		if($data->status == 1){
+			$lv = 0;
+		}else{
+			$lv = 1;
+		}
+		$this->db->update("template",["status" => $lv],["id" => $id]);
+		return $id;
+	}
+
+
+
+	public function removeBlock($id){
+		$this->db->delete("template", ["id" => $id]);
+		return true;
 	}
 }

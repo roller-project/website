@@ -13,6 +13,18 @@
     <script src="<?php echo template_url("js/main.js");?>"></script>
   </head>
     <body>
+      <div>
+        <div class="container">
+          <div class="row">
+            <div class="col">
+                Language : English | Vietnam
+            </div>
+            <div class="col text-right">
+              Social
+            </div>
+          </div>
+        </div>
+      </div>
       <header  id="header">
         <nav class="navbar navbar-expand-md navbar-none bg-none container">
           <a class="navbar-brand" href="<?php echo store_url("");?>"><img src="<?php echo template_url("image/logo.png");?>" style="height: 50px;"></a>
@@ -25,16 +37,32 @@
           <div class="navbar-collapse offcanvas-collapse py-0" id="navbarsExampleDefault">
             <ul class="navbar-nav ml-lg-auto">
               <li class="nav-item active">
-                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="<?php echo store_url("");?>">Home <span class="sr-only">(current)</span></a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Exploder</a>
+                <a class="nav-link" href="http://explorer.roller.today:3000/home" target="_blank">Exploder</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Wallet</a>
+                <a class="nav-link" href="http://wallet.roller.today" target="_blank">Wallet</a>
               </li>
+
               <li class="nav-item">
-                <a class="nav-link" href="#">Account</a>
+                <a class="nav-link" href="http://explorer.roller.today:3000/home" target="_blank">Develop</a>
+              </li>
+
+
+              <li class="nav-item">
+                <a class="nav-link" href="http://explorer.roller.today:3000/home" target="_blank">Solution</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="http://explorer.roller.today:3000/home" target="_blank">Products</a>
+              </li>
+
+
+
+              <li class="nav-item">
+                <a class="nav-link btn btn-primary" href="<?php echo store_url("account");?>">Account</a>
               </li>
               
             </ul>
@@ -55,10 +83,37 @@
               <div class="col-12">
                 <p class="social">
                   <span data-i18n="footer.heading">Follow us</span>
-                  <a href="https://twitter.com/Contentbox_one" target="_blank">
-                    <img src="img/social/tw.png" width="30" height="30">
+                  <a href="#" target="_blank">
+                    <img src="<?php echo template_url("image/tw.png");?>" width="30" height="30">
                   </a>
-                  
+                  <a href="#" target="_blank">
+                    <img src="<?php echo template_url("image/me.png");?>" width="30" height="30">
+                  </a>
+                  <a class="wechat" target="_blank">
+                    <img src="<?php echo template_url("image/weixin.png");?>" width="30" height="30">
+                    
+                  </a>
+                  <a href="#" target="_blank">
+                    <img src="<?php echo template_url("image/te.png");?>" width="30" height="30">
+                  </a>
+                  <a href="#" target="_blank">
+                    <img src="<?php echo template_url("image/git.png");?>" width="30" height="30">
+                  </a>
+                  <a href="#" target="_blank">
+                    <img src="<?php echo template_url("image/weibo.png");?>" width="30" height="30">
+                  </a>
+                  <a href="#" target="_blank">
+                    <img src="<?php echo template_url("image/youtube.png");?>" width="30" height="30">
+                  </a>
+                  <a href="#" target="_blank">
+                    <img src="<?php echo template_url("image/link.png");?>" width="30" height="30">
+                  </a>
+                  <a href="#" target="_blank">
+                    <img src="<?php echo template_url("image/fb.png");?>" width="30" height="30">
+                  </a>
+                  <a href="#" target="_blank">
+                    <img src="<?php echo template_url("image/reddit.png");?>" width="30" height="30">
+                  </a>
                 </p>
               </div>
               <div class="col-12">
@@ -112,9 +167,7 @@
                * that we want to change when the scroll goes down
                */
               myNavBar.init(  [
-                  "header",
-                  "header-container",
-                  "brand"
+                  "header"
               ]);
 
               /**

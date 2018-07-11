@@ -13,13 +13,13 @@
 				if($i%3 == 0) $eff = (@$value->json->effin[2] ? @$value->json->effin[2] : $eff);
 				if($i%4 == 0) $eff = (@$value->json->effin[3] ? @$value->json->effin[3] : $eff);
 			?>
-			<div class="col-lg-3" style="margin-bottom: 30px;">
+			<div class="col-lg-3 lock fixlayout" data-json-item style="margin-bottom: 30px;">
 				<div class="card" sroll-data data-in="<?php echo @$eff;?>">
 					<div class="card-body item">
-						<h5 class="title">Lorem ipsum dolor sit amet</h5>
-						<div class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed porttitor gravida aliquam. Morbi orci urna, iaculis in ligula et, posuere interdum lectus.</div>
+						<h5 class="title" data-title></h5>
+						<div class="content" data-content></div>
 						<br>
-						<a class="btn btn-info btn-sm btn-rate btn-block" href="#">Detail</a>
+						<a data-url_rewrite class="btn btn-info btn-sm btn-rate btn-block" href="<?php echo store_url('{url}.html');?>">Detail</a>
 					</div>
 				</div>
 			</div>
@@ -33,4 +33,23 @@
 	.news .btn-rate{
 		border-radius: 100px;
 	}
+	
+	.lock .content, .lock .title{
+		
+		background-color: #f3f3f3;
+		
+	}
+	.fixlayout .title{
+		word-wrap: normal;
+		
+		height: 25px;
+		overflow: hidden;
+	}
+	.fixlayout .content{
+		word-wrap: normal;
+		
+		height: 100px;
+		overflow: hidden;
+	}
+	
 </style>

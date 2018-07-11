@@ -71,9 +71,32 @@ $.fn.extend({
 
 
 $(document).ready(function(){
-  var jsonContent = $("#jsonContent").html();
-  if(jsonContent){
-    var dataJson = $('[data-json]');
+  var jsonContents = $("#jsonContent").html();
+  if(jsonContents){
+    
+    var jsonContent = $.parseJSON(jsonContents);
+    $.each(jsonContent,function(k,v){
+        $.each(v, function(kk, vv){
+          var item = $('[data-json="'+k+'"] [data-json-item]:eq('+kk+')');
+          item.removeClass("lock");
+          $.each(vv, function(kkk, vvv){
+            var items = item.find("[data-"+kkk+"]");
+            if(items.prop('tagName') == "A"){
+              var hf = items.attr("href");
+              hf = hf.replace('{url}',vvv);
+              items.attr("href",hf);
+              //alert(href);
+
+            } else if(items.prop('tagName') == "IMG"){
+              var hf = items.attr("src");
+              hf = hf.replace('{url}',vvv);
+              items.attr("src",hf);
+            }else{
+              items.html(vvv);
+            }
+          });
+        });
+    });
   }
 
   $('[play-eff]').animatePlay();

@@ -1,3 +1,4 @@
+<script type="text/javascript" src="<?php echo template_url("js/jquery.sortable.js");?>"></script>
 <h5>Template Manager
 	<div class="pull-right">
 		<a class="btn btn-sm btn-info">Home Design</a>
@@ -14,9 +15,9 @@
 			</div>
 		</div>
 		<br>
-		<ul class="list-group">
+		<ul class="list-group sortable">
 			<?php foreach ($getListBlock as $key => $value) { ?>
-				<li class="list-group-item"><a href="<?php echo admin_url("template/manager/{$value->id}");?>"><?php echo $value->name;?></a></li>
+				<li class="list-group-item" id="item-<?php echo $value->id;?>"><a href="<?php echo admin_url("template/manager/{$value->id}");?>"><?php echo $value->name;?></a></li>
 			<?php } ?>
 			
 		</ul>
@@ -28,6 +29,15 @@
 					Select block Controller
 				<?php }else { ?>
 				<?php echo form_open(admin_url("template/validate_update/{$id}"));?>
+				<h4>
+					Manager
+					<div class="pull-right">
+						<?php echo $this->bootstrap->button("save","submit");?>
+				  		<?php echo $this->bootstrap->link("delete",admin_url("template/remove/{$id}"));?>
+				  		<?php echo $this->bootstrap->link("status",admin_url("template/status/{$id}"));?>
+					</div>
+				</h4>
+				<hr>
 				  <div class="form-group">
 				    <label for="exampleInputEmail1">Name Block</label>
 				    <input type="text" class="form-control form-control-sm" required="" name="name" value="<?php echo @$getInfo->name;?>">
@@ -139,11 +149,26 @@
 				  		
 
 				  		<div class="col-lg-2">
+				  			HTML 5
+				  			<select class="form-control form-control-sm" name="json[svn]">
+				  				<optgroup label="No Select">
+				  					<option value="">No select</option>
+				  				</optgroup>
+				  				<optgroup label="HTML Design">
+				  				<?php foreach ($this->bootstrap->svgList() as $key => $value) { ?>
+				  					<option value="<?php echo $value;?>" <?php echo (@$getInfo->json->svn == $value ? "selected" : "");?>><?php echo $value;?></option>
+				  				<?php } ?>
+				  				</optgroup>
+				  			</select>
+				  			
+				  		</div>
+
+				  		<div class="col-lg-2">
 				  			Effice
 				  			<input type="text" class="form-control form-control-sm" name="json[backgroundeff]" value="<?php echo @$getInfo->json->backgroundeff;?>">
 				  		</div>
 
-				  		<div class="col-lg-6">
+				  		<div class="col-lg-4">
 				  			Background Image
 				  			
 				  			<div class="input-group input-group-sm mb-2">
@@ -158,7 +183,9 @@
 				  	<?php if($append_file) include $append_file;?>
 				  	<hr>
 
-				  <button type="submit" class="btn btn-primary">Submit</button>
+				  
+				  <?php echo $this->bootstrap->button("save","submit");?>
+				  <?php echo $this->bootstrap->link("delete",admin_url("template/remove/{$id}"));?>
 				</form>
 			<?php } ?>
 			</div>
@@ -173,6 +200,22 @@
 		</ul>
 	</div>
 </div>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$(".list-group.sortable").sortable({
+			    axis: 'y',
+			    update: function (event, ui) {
+			        var data = $(this).sortable('serialize');
 
+			        // POST to server using $.post or $.ajax
+			        $.ajax({
+			            data: data,
+			            type: 'POST',
+			            url: '<?php echo admin_url("template/sorttable");?>'
+			        });
+			    }
+			});
+	});
+</script>
 
 <?php echo $this->bootstrap->upload();?>

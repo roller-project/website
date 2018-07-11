@@ -24,6 +24,11 @@
               <li class="nav-item active">
                 <a class="nav-link" href="#">Dashboard <span class="sr-only">(current)</span></a>
               </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="<?php echo admin_url("page/manager");?>">Pages</a>
+              </li>
+
               <li class="nav-item">
                 <a class="nav-link" href="<?php echo admin_url("content/manager");?>">Contents</a>
               </li>

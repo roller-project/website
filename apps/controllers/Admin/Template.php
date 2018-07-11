@@ -122,8 +122,29 @@ class Template extends Admin {
 	public function addblock(){
 		$paths = $this->input->get("paths");
 		$name = ucfirst(str_replace('.php','',basename($paths)));
-		$data =$this->template_model->addBlock($name, $paths);
+		$data = $this->template_model->addBlock($name, $paths);
 		$this->setFlash($data);
 		redirect(admin_url("template/manager/{$data}"));
+	}
+
+	public function sorttable(){
+		$id = $this->input->post("item");
+		foreach ($id as $key => $value) {
+			$this->template_model->sorttable($value, $key);
+		}
+	}
+
+
+	public function remove($id){
+		$data = $this->template_model->removeBlock($id);
+		$this->setFlash($data);
+		redirect(admin_url("template/manager"));
+	}
+
+
+	public function status($id){
+		$data = $this->template_model->status($id);
+		$this->setFlash($data);
+		redirect(admin_url("template/manager/{$id}"));
 	}
 }

@@ -4,11 +4,15 @@ $(function () {
   $('[data-toggle="offcanvas"]').on('click', function () {
     $('.offcanvas-collapse').toggleClass('open')
   });
-
-  var jsonContent = $.parseJSON($("#jsonContent").html());
-  $.each(jsonContent,function(k,v){
-    alert(k);
+  /*
+  $("[data-background]").each(function(){
+      var item = $(this).attr("data-background");
+      if(item){
+        $(this).append('<div class="bgeff" style="background-image:url(\''+item+'\');"></div>');
+        item = "";
+      }
   });
+  */
 
   // Set the date we're counting down to
 var countDownDate = new Date("July 12, 2018 0:0:0").getTime();
