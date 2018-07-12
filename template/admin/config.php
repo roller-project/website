@@ -47,6 +47,12 @@
 	    </div>
 	</div>
 
+	<div class="form-group row">
+	    <label class="col-sm-2 col-form-label text-right">Maintenance</label>
+	    <div class="col-sm-10">
+	      <input type="text" class="form-control" name="config[maintenance]" value="<?php echo $this->config->item("maintenance");?>">
+	    </div>
+	</div>
 
 
 	<div class="form-group row">
