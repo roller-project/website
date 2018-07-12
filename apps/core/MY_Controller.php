@@ -7,7 +7,7 @@ class BaseController extends CI_Controller{
 		$this->load->library(['session','email','user_agent','bootstrap']);
 		$this->load->helper(['url','function','form','language','string']);
 		$this->config();
-		$this->load->model(["account_model","template_model","content_model","page_model"]);
+		$this->load->model(["account_model","template_model","content_model","page_model","settings_model"]);
 
 		if($this->input->get("language")){
 			$this->session->set_userdata("language",$this->input->get("language"));
@@ -31,7 +31,7 @@ class BaseController extends CI_Controller{
 		$this->db->where("plugins",$plugins);
 		$data = $this->db->get("settings")->result();
 		foreach ($data as $key => $value) {
-			$this->config->item($value->key_config, $value->value_config);
+			$this->config->set_item($value->key_config, $value->value_config);
 		}
 	}
 

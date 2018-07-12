@@ -11,6 +11,10 @@
     <script src="<?php echo resource_url("js/apps.js");?>"></script>
     <link rel="stylesheet" href="<?php echo template_url("css/style.css");?>">
     <script src="<?php echo template_url("js/main.js");?>"></script>
+
+    <link rel="stylesheet" href="<?php echo resource_url("bootstrap/css/bootstrap-extension.css");?>">
+    <script src="<?php echo resource_url("bootstrap/js/bootstrap-extension.js");?>"></script>
+    
   </head>
     <body>
         <nav class="navbar navbar-expand-md fixed-top navbar-dark bg-blue">
@@ -45,7 +49,7 @@
 
 
               <li class="nav-item">
-                <a class="nav-link" href="#">Settings</a>
+                <a class="nav-link" href="<?php echo admin_url("settings/manager");?>">Settings</a>
               </li>
 
               

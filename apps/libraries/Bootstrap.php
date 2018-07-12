@@ -9,9 +9,15 @@ class Bootstrap{
 			$c = "btn-danger";
 			$l = "Delete";
 		}
-		if($key == "create"){
+		if($key == "create" || $key == "status"){
 			$c = "btn-success";
 			$l = "Create";
+		}
+
+
+		if($key == "status"){
+			$c = "btn-success";
+			$l = "Status";
 		}
 
 		if($key == "edit"){
@@ -33,11 +39,11 @@ class Bootstrap{
 		return ($lang ? $l : $c);
 	}
 	public function link($key="", $url=""){
-		return '<a class="btn '.$this->getStyle($key).'" href="'.$url.'">'.$this->getStyle($key, true).'</a>';
+		return '<a class="btn btn-capsule px-4 '.$this->getStyle($key).'" href="'.$url.'">'.$this->getStyle($key, true).'</a>';
 	}
 
 	public function button($key="", $type="button"){
-		return '<button type="'.$type.'" class="btn '.$this->getStyle($key).'">'.$this->getStyle($key,true).'</button>';
+		return '<button type="'.$type.'" class="btn btn-capsule px-4 '.$this->getStyle($key).'">'.$this->getStyle($key,true).'</button>';
 	}
 
 
@@ -94,7 +100,7 @@ class Bootstrap{
 
 
 	public function svgLoad($path="", $url=""){
-		$file = FCPATH."resource/svg/{$path}.svg";
+		$file = FCPATH."resource/svg/{$path}";
 		if(file_exists($file)){
 			ob_start();
 			include $file;

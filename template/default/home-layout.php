@@ -11,20 +11,13 @@
     <script src="<?php echo resource_url("js/apps.js");?>"></script>
     <link rel="stylesheet" href="<?php echo template_url("css/style.css");?>">
     <script src="<?php echo template_url("js/main.js");?>"></script>
+
+    <link rel="stylesheet" href="<?php echo resource_url("bootstrap/css/bootstrap-extension.css");?>">
+    <script src="<?php echo resource_url("bootstrap/js/bootstrap-extension.js");?>"></script>
+
   </head>
     <body>
-      <div>
-        <div class="container">
-          <div class="row">
-            <div class="col">
-                Language : English | Vietnam
-            </div>
-            <div class="col text-right">
-              Social
-            </div>
-          </div>
-        </div>
-      </div>
+      
       <header  id="header">
         <nav class="navbar navbar-expand-md navbar-none bg-none container">
           <a class="navbar-brand" href="<?php echo store_url("");?>"><img src="<?php echo template_url("image/logo.png");?>" style="height: 50px;"></a>
@@ -62,7 +55,7 @@
 
 
               <li class="nav-item">
-                <a class="nav-link btn btn-primary" href="<?php echo store_url("account");?>">Account</a>
+                <a class="nav-link btn btn-outline-danger btn-capsule px-4" href="<?php echo store_url("account");?>">Account</a>
               </li>
               
             </ul>
@@ -77,7 +70,7 @@
                   <?php echo $content;?>
           </main>
 
-        <footer>
+        <footer class="bg-gray">
           <div class="container">
             <div class="row wow fadeInUp">
               <div class="col-12">
@@ -116,6 +109,13 @@
                   </a>
                 </p>
               </div>
+
+              <div class="col-12">
+                <!--copyright-->
+                <p class="copyright">Language : English | Vietnam | China | Russia | Korea</p>
+                <!--/copyright-->
+              </div>
+
               <div class="col-12">
                 <!--copyright-->
                 <p class="copyright">© Copyright Roller Project. All Rights Reserved</p>
