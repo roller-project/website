@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Jul 11, 2018 at 11:42 AM
+-- Generation Time: Jul 12, 2018 at 11:21 AM
 -- Server version: 5.6.38
 -- PHP Version: 7.2.1
 
@@ -26,6 +26,7 @@ CREATE TABLE `account` (
   `password` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `token` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `status` int(1) NOT NULL,
+  `is_admin` int(1) NOT NULL,
   `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `updated_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
@@ -34,8 +35,8 @@ CREATE TABLE `account` (
 -- Dumping data for table `account`
 --
 
-INSERT INTO `account` (`id`, `email`, `password`, `token`, `status`, `created_at`, `updated_at`) VALUES
-(1, 'thietkewebvip@gmail.com', 'a4c5a16a6fe4f39355cdd07021d0ef3c ', 'tokenID', 1, '2018-07-07 15:58:55', '0000-00-00 00:00:00');
+INSERT INTO `account` (`id`, `email`, `password`, `token`, `status`, `is_admin`, `created_at`, `updated_at`) VALUES
+(1, 'thietkewebvip@gmail.com', 'a4c5a16a6fe4f39355cdd07021d0ef3c ', 'tokenID', 1, 0, '2018-07-07 15:58:55', '0000-00-00 00:00:00');
 
 -- --------------------------------------------------------
 
@@ -69,7 +70,9 @@ INSERT INTO `account_history` (`id`, `account_id`, `lastlogin`, `lastlogin_ip`, 
 (11, 1, '2018-07-08 21:29:56', '127.0.0.1', 'Firefox 61.0 Mac OS X'),
 (12, 1, '2018-07-09 18:28:15', '::1', 'Firefox 61.0 Mac OS X'),
 (13, 1, '2018-07-09 23:40:23', '127.0.0.1', 'Firefox 61.0 Mac OS X'),
-(14, 1, '2018-07-11 00:56:53', '127.0.0.1', 'Firefox 61.0 Mac OS X');
+(14, 1, '2018-07-11 00:56:53', '127.0.0.1', 'Firefox 61.0 Mac OS X'),
+(15, 1, '2018-07-10 20:34:58', '127.0.0.1', 'Firefox 61.0 Mac OS X'),
+(16, 1, '2018-07-12 00:55:06', '127.0.0.1', 'Firefox 61.0 Mac OS X');
 
 -- --------------------------------------------------------
 
@@ -191,7 +194,9 @@ INSERT INTO `settings` (`id`, `key_config`, `value_config`, `language`, `stores`
 (1, 'site_name', 'Roller Coins', '', '', ''),
 (2, 'site_description', '', '', '', ''),
 (3, 'site_keywords', '', '', '', ''),
-(4, 'url_prefix', '.html', '', '', '');
+(4, 'url_prefix', '.html', '', '', ''),
+(10, 'site_email', '', '', '', ''),
+(11, 'language', 'english', '', '', '');
 
 -- --------------------------------------------------------
 
@@ -220,7 +225,7 @@ INSERT INTO `template` (`id`, `language`, `stores`, `plugins`, `name`, `descript
 (1, '', '', '', 'Slider', '<h1>Roller Platform</h1>\r\n<p>Xây dựng trên nền tảng Ethereum. Roller Platform cung cấp cho người dùng tất cả các ứng dụng chạy trên smart contract và coin base</p>\r\n<p>\r\nTên : Roller Network<br>\r\nViết tắt: ROL<br>\r\nLoại : Proof-of-Work<br>\r\nThuật toán : Ethash<br>\r\nThời gian tối đa 1 block : 15 secs<br>\r\nSố coin 1 block : 10<br>\r\nKhông sử dụng tạo coin cho develop<br>\r\nKhông vận hành bán ICO<br>\r\nNguyên lý dựa trên nguyên tắt cộng đồng sử dụng\r\n</p>\r\n<br>\r\n<h4>Dự kiến vận hành 12/7/2018</h4>\r\n<br>\r\n<div id=\"count_down\"></div>', '{\"url\":\"\",\"limit\":\"8\",\"effin\":[\"\",\"\",\"\",\"\"],\"id\":\"\",\"class\":\"clear-padding\",\"svn\":\"\",\"backgroundeff\":\"\",\"backgroundurl\":\"https:\\/\\/htmlstream.com\\/preview\\/front-v1.2\\/assets\\/img\\/750x750\\/img2.jpg\"}', 'resource/blocks/slider.php', 0, 1),
 (2, '', '', '', 'Hướng dẫn người dùng', 'Các bài hướng dẫn căn bản khai thác Roller', '{\"url\":\"type=blog&sort=DESC&limit=5\",\"limit\":\"4\",\"effin\":[\"flipInY\",\"flipInX\",\"fadeInLeft\",\"fadeInUpBig\"],\"id\":\"\",\"class\":\"bg-primary\",\"svn\":\"stline.svg\",\"backgroundeff\":\"\",\"backgroundurl\":\"\"}', 'resource/blocks/news.php', 3, 1),
 (3, '', '', '', 'Thành viên phát triển dự án', 'Một số thành viên tiêu biểu phái triển dự án này tại quốc gia của bạn', '{\"url\":\"\",\"limit\":\"8\",\"effin\":[\"\",\"\",\"\",\"\"],\"id\":\"\",\"class\":\"\",\"svn\":\"\",\"backgroundeff\":\"\",\"backgroundurl\":\"\"}', 'resource/blocks/news.php', 5, 0),
-(4, '', '', '', 'Lịch trình dự kiến', 'Lịch trình phát triển dự án đang diển ra trên hệ thống vận hành của chúng tôi', '{\"url\":\"type=timeline&limit=5\",\"limit\":\"5\",\"effin\":[\"bounceInLeft\",\"bounceInRight\",\"\",\"\"],\"id\":\"timeline\",\"class\":\"timeline\",\"svn\":\"\",\"backgroundeff\":\"\",\"backgroundurl\":\"\"}', 'resource/blocks/timeline.php', 2, 0),
+(4, '', '', '', 'Lịch trình dự kiến', 'Lịch trình phát triển dự án đang diển ra trên hệ thống vận hành của chúng tôi', '{\"url\":\"type=timeline&limit=5\",\"limit\":\"5\",\"effin\":[\"bounceInLeft\",\"bounceInRight\",\"\",\"\"],\"id\":\"timeline\",\"class\":\"timeline\",\"svn\":\"\",\"backgroundeff\":\"\",\"backgroundurl\":\"\"}', 'resource/blocks/timeline.php', 2, 1),
 (5, '', '', '', 'Điều hành dự án', 'Các thành viên đang tham gia điều hành dự án Roller Platform', '{\"url\":\"type=team\",\"limit\":\"4\",\"effin\":[\"zoomInDown\",\"\",\"\",\"\"],\"id\":\"\",\"class\":\"padding-bottom-50\",\"svn\":\"svn_bottom_kline\",\"backgroundeff\":\"\",\"backgroundurl\":\"\"}', 'resource/blocks/team.php', 4, 0),
 (8, '', '', '', 'Text-info', '', '{\"url\":\"\",\"limit\":\"\",\"effin\":[\"\",\"\",\"\",\"\"],\"id\":\"\",\"class\":\"\",\"svn\":\"\",\"backgroundeff\":\"\",\"backgroundurl\":\"\"}', 'resource/blocks/text-info.php', 1, 0);
 
@@ -288,7 +293,7 @@ ALTER TABLE `account`
 -- AUTO_INCREMENT for table `account_history`
 --
 ALTER TABLE `account_history`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- AUTO_INCREMENT for table `category`
@@ -312,7 +317,7 @@ ALTER TABLE `pages`
 -- AUTO_INCREMENT for table `settings`
 --
 ALTER TABLE `settings`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT for table `template`
