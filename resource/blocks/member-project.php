@@ -19,7 +19,7 @@
 						<h5 class="title" data-title></h5>
 						<div class="content" data-content></div>
 						<br>
-						<a data-url_rewrite class="btn btn-outline-info btn-capsule px-4" href="<?php echo store_url('{url}.html');?>">Detail</a>
+						<a data-url_rewrite class="btn btn-info btn-sm btn-rate btn-block" href="<?php echo store_url('{url}.html');?>">Detail</a>
 					</div>
 				</div>
 			</div>
@@ -29,27 +29,3 @@
 		</div>
 	</div>
 </div>
-<style type="text/css">
-	.news .btn-rate{
-		border-radius: 100px;
-	}
-	
-	.lock .content, .lock .title{
-		
-		background-color: #f3f3f3;
-		
-	}
-	.fixlayout .title{
-		word-wrap: normal;
-		
-		height: 25px;
-		overflow: hidden;
-	}
-	.fixlayout .content{
-		word-wrap: normal;
-		
-		height: 100px;
-		overflow: hidden;
-	}
-	
-</style>

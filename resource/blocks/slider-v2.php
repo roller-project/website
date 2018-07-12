@@ -4,10 +4,10 @@
         <!-- Title -->
         <div class="text-center mb-7">
           <div class="w-lg-80 mx-auto">
-            <h1 class="text-white display-4 font-size-48--md-down mb-3">Say <span class="font-weight-bold">Hello</span> to all businesses</h1>
+            <h1 class="text-white display-4 font-size-48--md-down mb-3"><?php echo $value->name;?></h1>
           </div>
           <div class="w-md-80 w-lg-60 mx-auto">
-            <p class="lead u-text-light">Achieve virtually any look and layout from within the one template. Covert more visitors, and win more business with Front template.</p>
+            <p class="lead u-text-light"><?php echo $value->description;?></p>
           </div>
         </div>
         <!-- End Title -->

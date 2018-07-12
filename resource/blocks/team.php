@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container team">
 	<div class="text-center header-title">
 		<h2><?php echo $value->name;?></h2>
 		<div style="max-width: 60%; margin: auto;"><?php echo $value->description;?></div>
@@ -17,7 +17,7 @@
 				<div class="card-body item text-center">
 					<img data-thumbnail src="<?php echo store_url('{url}');?>" class="" width="128" height="128">
 					<h5 class="title" data-title></h5>
-					<a data-url_rewrite class="btn btn-info btn-sm btn-rate" href="<?php echo store_url('{url}.html');?>">Detail</a>
+					<a data-url_rewrite class="btn btn-outline-info btn-capsule px-4" href="<?php echo store_url('{url}.html');?>">Facebook</a>
 				</div>
 			</div>
 		</div>

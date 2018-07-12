@@ -30,6 +30,12 @@ body {
   background: #FFF;
   z-index: 99;
 }
+#header.fixed-theme a{
+  color: #333;
+}
+#header.fixed-theme .btn-outline-light{
+  border-color:green;
+}
 #header{
   position: fixed;
   top:0;
@@ -38,8 +44,13 @@ body {
   width: 100%;
   z-index: 99;
 }
-header a{
+header a, header a:hover{
   color: #FFF;
+  font-size: 16px; 
+ 
+}
+header a:hover{
+  color: #f3f3f3;
 }
 .header-title{
   margin-bottom: 30px;
@@ -65,7 +76,10 @@ Background Eff
   padding-bottom: 0px !important;
 }
 .bgeff{
-  
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: red;
 }
 .fixBlock{
   position: relative;
@@ -73,7 +87,10 @@ Background Eff
   padding-top: 30px;
   padding-bottom: 30px;
 }
-
+.team .card{
+  border: 0px;
+  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
 
 .social img {
     width: 2rem;

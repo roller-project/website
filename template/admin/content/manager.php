@@ -54,8 +54,8 @@
 			<td><?php echo $value->display_form;?></td>
 			<td><?php echo $value->views;?></td>
 			<td class="text-right">
-				<?php echo $this->bootstrap->link("edit",admin_url("content/create/{$type}/".$value->id));?>
-				<?php echo $this->bootstrap->link("delete",admin_url("content/delete/{$type}/".$value->id));?>
+				<?php echo $this->bootstrap->link("edit",admin_url("content/create/{$type}/".$value->id),"btn-sm");?>
+				<?php echo $this->bootstrap->link("delete",admin_url("content/delete/{$type}/".$value->id),"btn-sm");?>
 			</td>
 		</tr>
 	<?php } ?>

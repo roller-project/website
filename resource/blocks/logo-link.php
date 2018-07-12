@@ -13,13 +13,13 @@
 				if($i%3 == 0) $eff = (@$value->json->effin[2] ? @$value->json->effin[2] : $eff);
 				if($i%4 == 0) $eff = (@$value->json->effin[3] ? @$value->json->effin[3] : $eff);
 			?>
-			<div class="col-lg-3 lock fixlayout" data-json-item style="margin-bottom: 30px;">
+			<div class="col-lg-2 lock fixlayout" data-json-item style="margin-bottom: 30px;">
 				<div class="card" sroll-data data-in="<?php echo @$eff;?>">
 					<div class="card-body item">
-						<h5 class="title" data-title></h5>
-						<div class="content" data-content></div>
-						<br>
-						<a data-url_rewrite class="btn btn-outline-info btn-capsule px-4" href="<?php echo store_url('{url}.html');?>">Detail</a>
+						
+						<a data-url_rewrite href="<?php echo store_url('{url}.html');?>">
+							<img src="" data-thumbnail>
+						</a>
 					</div>
 				</div>
 			</div>
@@ -29,27 +29,3 @@
 		</div>
 	</div>
 </div>
-<style type="text/css">
-	.news .btn-rate{
-		border-radius: 100px;
-	}
-	
-	.lock .content, .lock .title{
-		
-		background-color: #f3f3f3;
-		
-	}
-	.fixlayout .title{
-		word-wrap: normal;
-		
-		height: 25px;
-		overflow: hidden;
-	}
-	.fixlayout .content{
-		word-wrap: normal;
-		
-		height: 100px;
-		overflow: hidden;
-	}
-	
-</style>

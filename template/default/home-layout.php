@@ -58,7 +58,7 @@
 
 
               <li class="nav-item">
-                <a class="nav-link btn btn-outline-danger btn-capsule px-4" href="<?php echo store_url("account");?>">Account</a>
+                <a class="nav-link btn btn-outline-light btn-capsule px-4" href="<?php echo store_url("account");?>">Account</a>
               </li>
               
             </ul>

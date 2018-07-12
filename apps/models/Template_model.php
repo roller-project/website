@@ -64,12 +64,14 @@ class Template_model extends CI_Model{
 				$makeclass = (isset($value->json->class) && $value->json->class ? $value->json->class : "block_".$value->id);
 
 				echo '<div data-json="json'.@$value->id.'" id="'.$makeid.'" class="fixBlock '.$makeclass.'" data-background="'.@$value->json->backgroundurl.'">';
-				include FCPATH.$value->paths;
+				
 
 				if(@$value->json->svn){
 					echo $this->bootstrap->svgLoad($value->json->svn,@$value->json->backgroundurl);
 				}
 
+				include FCPATH.$value->paths;
+				
 				echo '</div>';
 
 				if(@$value->json->url){

@@ -38,12 +38,12 @@ class Bootstrap{
 
 		return ($lang ? $l : $c);
 	}
-	public function link($key="", $url=""){
-		return '<a class="btn btn-capsule px-4 '.$this->getStyle($key).'" href="'.$url.'">'.$this->getStyle($key, true).'</a>';
+	public function link($key="", $url="", $size=""){
+		return '<a class="btn '.$size.' btn-capsule px-4 '.$this->getStyle($key).'" href="'.$url.'">'.$this->getStyle($key, true).'</a>';
 	}
 
-	public function button($key="", $type="button"){
-		return '<button type="'.$type.'" class="btn btn-capsule px-4 '.$this->getStyle($key).'">'.$this->getStyle($key,true).'</button>';
+	public function button($key="", $type="button",$size=""){
+		return '<button type="'.$type.'" class="btn '.$size.' btn-capsule px-4 '.$this->getStyle($key).'">'.$this->getStyle($key,true).'</button>';
 	}
 
 
