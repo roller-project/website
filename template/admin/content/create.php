@@ -34,8 +34,19 @@
 		</div>
 	</div>
 	<div class="col-lg-3">
+		<?php if(@$getInfo->thumbnail){ ?>
+			<div class="card">
+				<div class="card-body">
+					
+						<img src="<?php echo store_url(@$getInfo->thumbnail);?>" style="width: 100%;">
+					
+				</div>
+			</div>
+			<br>
+		<?php } ?>
 		<div class="card">
 			<div class="card-body">
+				
 				Thumnail
 				  			
 	  			<div class="input-group input-group-sm mb-2">

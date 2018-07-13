@@ -1,13 +1,13 @@
 
 <?php echo form_open(admin_url("content/validate_post/{$id}"));?>
 <h3>
-	Manager Contents
+	Page Contents
 	<div class="pull-right">
-		<?php echo $this->bootstrap->link("back",admin_url("content/manager"));?>
+		<?php echo $this->bootstrap->link("back",admin_url("page/manager"));?>
 		<?php echo $this->bootstrap->button("save","submit");?>
 	</div>
 </h3>
-
+<br>
 <div class="row">
 	<div class="col-lg-9">
 		<div class="card">
@@ -18,18 +18,39 @@
 				    
 				</div>
 
+				
+
+				  
+				  <div class="form-group">
+				    <label for="exampleInputDescription">Contents</label>
+				    <textarea class="form-control form-control-sm" rows="18" name="content" id="content"><?php echo @$getInfo->content;?></textarea>
+				    
+				  </div>
+			</div>
+		</div>
+		<br>
+		<div class="card">
+			<div class="card-body">
+				<h4>SEO Panel</h4>
 				<div class="form-group">
 				    <label for="exampleInputEmail1">URL</label>
 				    <input type="text" class="form-control form-control-sm" name="url_rewrite" value="<?php echo @$getInfo->url_rewrite;?>">
 				    
 				</div>
 
-				  
-				  <div class="form-group">
-				    <label for="exampleInputDescription">Contents</label>
-				    <textarea class="form-control form-control-sm" rows="12" name="content" id="content"><?php echo @$getInfo->content;?></textarea>
+
+				<div class="form-group">
+				    <label for="exampleInputEmail1">Description</label>
+				    <input type="text" class="form-control form-control-sm" name="url_rewrite" value="<?php echo @$getInfo->url_rewrite;?>">
 				    
-				  </div>
+				</div>
+
+
+				<div class="form-group">
+				    <label for="exampleInputEmail1">Keyword</label>
+				    <input type="text" class="form-control form-control-sm" name="url_rewrite" value="<?php echo @$getInfo->url_rewrite;?>">
+				    
+				</div>
 			</div>
 		</div>
 	</div>
@@ -50,15 +71,38 @@
 		<br>
 		<div class="card">
 			<div class="card-body">
-				<h5>Publish</h5>
+				<h5>Options</h5>
+				<hr>
+				Status
+				<select class="form-control">
+					<option value="1">Public</option>
+					<option value="0">Private</option>
+				</select>
+				On menu
+				<select class="form-control">
+					<option value="1">On Top</option>
+					<option value="0">On left</option>
+					<option value="1">On bottom</option>
+					<option value="0">On Application</option>
+				</select>
+				On Design
+				<select class="form-control">
+					<option value="1">Content</option>
+					<option value="0">Block Design</option>
+					<option value="1">Application</option>
+					
+				</select>
+				Parent Page
+
+				<select class="form-control">
+					<optgroup label="Root Page">
+						<option value="">Root Page</option>
+					</optgroup>
+				</select>
 			</div>
 		</div>
-		<br>
-		<div class="card">
-			<div class="card-body">
-				<h5>Category</h5>
-			</div>
-		</div>
+		
+
 	</div>
 </div>
 </form>

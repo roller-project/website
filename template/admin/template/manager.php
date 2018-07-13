@@ -11,7 +11,7 @@
 	<div class="col-lg-2">
 		<div class="card">
 			<div class="card-body">
-				<button class="btn btn-sm btn-primary">Make Cache</button>
+				<a class="btn btn-sm btn-outline-primary" href="<?php echo admin_url("template/makecache/home/{$id}");?>">Make Cache</a>
 			</div>
 		</div>
 		<br>
@@ -22,7 +22,7 @@
 			
 		</ul>
 	</div>
-	<div class="col-lg-8">
+	<div class="col-sm-6 col-lg-8">
 		<div class="card">
 			<div class="card-body">
 				<?php if(!$getInfo){ ?>
@@ -191,7 +191,7 @@
 			</div>
 		</div>
 	</div>
-	<div class="col-lg-2">
+	<div class="col-sm-4 col-lg-2">
 		<ul class="list-group">
 			<?php foreach ($getFileStores as $key => $value) { ?>
 				<li class="list-group-item"><?php echo $key;?> <a class="btn btn-sm btn-default pull-right" href="<?php echo admin_url("template/addblock?paths={$value}");?>">+</a></li>

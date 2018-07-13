@@ -7,36 +7,41 @@ class Bootstrap{
 		$l = "Link";
 		if($key == "delete"){
 			$c = "btn-danger";
-			$l = "Delete";
+			$l = "<i class=\"ti-trash\"></i> Delete";
 		}
 		if($key == "create" || $key == "status"){
 			$c = "btn-success";
-			$l = "Create";
+			$l = "<i class=\"ti-plus\"></i> Create";
 		}
 
 
 		if($key == "status"){
 			$c = "btn-success";
-			$l = "Status";
+			$l = "<i class=\"ti-status\"></i> Status";
 		}
 
 		if($key == "edit"){
 			$c = "btn-primary";
-			$l = "Edit";
+			$l = "<i class=\"ti-pencil-alt\"></i> Edit";
+		}
+
+		if($key == "search"){
+			$c = "btn-primary";
+			$l = "<i class=\"ti-search\"></i> Search";
 		}
 
 		if($key == "save"){
 			$c = "btn-primary";
-			$l = "Save";
+			$l = "<i class=\"ti-save\"></i> Save";
 		}
 
 		if($key == "back"){
 			$c = "btn-secondary";
-			$l = "Back";
+			$l = "<i class=\"ti-back\"></i> Back";
 		}
 
 		$ht = ($lang ? $l : $c);
-		if($size == "outline" && !$lang){
+		if((strpos($size,"outline") || $size == "outline") && !$lang) {
 			$ht = str_replace('btn-', 'btn-outline-', $ht);
 		}
 		return $ht;

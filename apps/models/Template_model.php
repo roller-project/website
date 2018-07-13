@@ -52,40 +52,63 @@ class Template_model extends CI_Model{
 	Display Content Client
 	*/
 
-	public function getContent(){
-		$list = $this->getListBlock(null, 1);
+	public function getContent($page="home",$ingoreJson=false, $getJsonArrayData = false){
+		
 		$content = [];
+		$ingoreRead = false;
 		ob_start();
-		foreach ($list as $key => $value) {
-			if(file_exists(FCPATH.$value->paths)){
-				$value->json = json_decode($value->options);
-				
-				$makeid = (isset($value->json->id) && $value->json->id ? $value->json->id : "block_".$value->id);
-				$makeclass = (isset($value->json->class) && $value->json->class ? $value->json->class : "block_".$value->id);
 
-				echo '<div data-json="json'.@$value->id.'" id="'.$makeid.'" class="fixBlock '.$makeclass.'" data-background="'.@$value->json->backgroundurl.'">';
-				
+		$file = FCPATH."resource/cache/{$page}-".$this->config->item("language").".php";
+		if(file_exists($file) && !$ingoreJson && !$getJsonArrayData ){
+			include $file;
+			$ingoreRead = true;
+			$filejson = FCPATH."resource/cache/{$page}-".$this->config->item("language")."-json.php";
+			if(file_exists($filejson)){
+				include_once $filejson;
+			}
+		}
 
-				if(@$value->json->svn){
-					echo $this->bootstrap->svgLoad($value->json->svn,@$value->json->backgroundurl);
-				}
+		if(!$ingoreRead){
+			$list = $this->getListBlock(null, 1);
 
-				include FCPATH.$value->paths;
-				
-				echo '</div>';
+			foreach ($list as $key => $value) {
+				if(file_exists(FCPATH.$value->paths)){
+					$value->json = json_decode($value->options);
+					
+					$makeid = (isset($value->json->id) && $value->json->id ? $value->json->id : "block_".$value->id);
+					$makeclass = (isset($value->json->class) && $value->json->class ? $value->json->class : "block_".$value->id);
 
-				if(@$value->json->url){
-					$content["json".$value->id] = $value->json->url;
+					echo '<div data-json="json'.@$value->id.'" id="'.$makeid.'" class="fixBlock '.$makeclass.'" data-background="'.@$value->json->backgroundurl.'">';
+					
+
+					if(@$value->json->svn){
+						echo $this->bootstrap->svgLoad($value->json->svn,@$value->json->backgroundurl);
+					}
+
+					include FCPATH.$value->paths;
+					
+					echo '</div>';
+
+					if(@$value->json->url){
+						$content["json".$value->id] = $value->json->url;
+					}
 				}
 			}
 		}
 		$data = ob_get_clean();
 		$vcon = [];
+		if($getJsonArrayData){
+			return $content;
+		}
 		foreach ($content as $key => $value) {
 			$vcon[$key] = $this->content_model->getContent($value);
 		}
 		//print_r(json_encode($vcon));exit();
-		$data .= '<script type="application/json" id="jsonContent">'.json_encode($vcon).'</script>';
+		if(!$ingoreJson){
+			$data .= '<script type="application/json" id="jsonContent">'.json_encode($vcon).'</script>';
+		}
+
+		
 		return $data;
 	}
 

@@ -20,21 +20,22 @@
 		</div>
 	</div>
 
-	<div class="col-lg-8">
+	<div class="col-lg-8 col-md-6">
 		<div class="input-group mb-3">
 		  <input type="text" class="form-control" placeholder="Enter Keyword">
 		  <div class="input-group-append">
-		    <button class="btn btn-outline-primary" type="button">Search</button>
+		   
+		    <?php echo $this->bootstrap->button("search","button","outline");?>
 		  </div>
 		</div>
 	</div>
 
 
-	<div class="col-lg-2">
+	<div class="col-lg-2 col-md-4">
 		<div class="input-group mb-3">
 		  <input type="text" class="form-control">
 		  <div class="input-group-append">
-		    <button class="btn btn-outline-danger" type="button">Create Type</button>
+		    <?php echo $this->bootstrap->button("create","button","outline");?>
 		  </div>
 		</div>
 	</div>
@@ -62,8 +63,8 @@
 			<td><?php echo $value->display_form;?></td>
 			<td><?php echo $value->views;?></td>
 			<td class="text-right">
-				<?php echo $this->bootstrap->link("edit",admin_url("content/create/{$type}/".$value->id),"btn-sm");?>
-				<?php echo $this->bootstrap->link("delete",admin_url("content/delete/{$type}/".$value->id),"btn-sm");?>
+				<?php echo $this->bootstrap->link("edit",admin_url("content/create/{$type}/".$value->id),"btn-sm outline");?>
+				<?php echo $this->bootstrap->link("delete",admin_url("content/delete/{$type}/".$value->id),"btn-sm outline");?>
 			</td>
 		</tr>
 	<?php } ?>

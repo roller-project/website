@@ -9,12 +9,13 @@
     <link rel="icon" href="<?php echo resource_url("favicon.ico");?>">
     <title><?php echo $header["title"];?></title>
     <script src="<?php echo resource_url("js/apps.js");?>"></script>
+    <link rel="stylesheet" href="<?php echo resource_url("bootstrap/css/bootstrap-extension.css");?>">
+    <script src="<?php echo resource_url("bootstrap/js/bootstrap-extension.js");?>"></script>
     <link rel="stylesheet" href="<?php echo template_url("css/style.css");?>">
     <script src="<?php echo template_url("js/main.js");?>"></script>
 
-    <link rel="stylesheet" href="<?php echo resource_url("bootstrap/css/bootstrap-extension.css");?>">
-    <script src="<?php echo resource_url("bootstrap/js/bootstrap-extension.js");?>"></script>
     
+    <link rel="stylesheet" href="<?php echo resource_url("icons/themify/themify-icons.css");?>">
   </head>
     <body>
         <nav class="navbar navbar-expand-md fixed-top navbar-dark bg-blue">
@@ -82,6 +83,7 @@
                   <?php echo $flash;?>
                   <?php echo $content;?>
           </main>
+          <br>
         <footer></footer>
 
     </body>

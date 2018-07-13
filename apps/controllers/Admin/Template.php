@@ -147,4 +147,23 @@ class Template extends Admin {
 		$this->setFlash($data);
 		redirect(admin_url("template/manager/{$id}"));
 	}
+
+
+	public function makecache($page="home",$id=null){
+		$this->load->helper(['file']);
+		$this->setFlash(true);
+		$file = FCPATH."resource/cache/{$page}-".$this->config->item("language").".php";
+		$file_json = FCPATH."resource/cache/{$page}-".$this->config->item("language")."-json.php";
+		$content = $this->template_model->getContent($page,true);
+		write_file($file, $content);
+
+		$content = $this->template_model->getContent($page,true,true);
+		$arv = [];
+		$arv[] = '<?php';
+		foreach ($content as $key => $value) {
+			$arv[] = '$content["'.$key.'"] = "'.$value.'";';
+		}
+		write_file($file_json, implode($arv, "\n"));
+		redirect(admin_url("template/manager/{$id}"));
+	}
 }
