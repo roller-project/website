@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Jul 12, 2018 at 03:48 PM
+-- Generation Time: Jul 13, 2018 at 09:08 AM
 -- Server version: 5.6.38
 -- PHP Version: 7.2.1
 
@@ -73,7 +73,8 @@ INSERT INTO `account_history` (`id`, `account_id`, `lastlogin`, `lastlogin_ip`, 
 (14, 1, '2018-07-11 00:56:53', '127.0.0.1', 'Firefox 61.0 Mac OS X'),
 (15, 1, '2018-07-10 20:34:58', '127.0.0.1', 'Firefox 61.0 Mac OS X'),
 (16, 1, '2018-07-12 00:55:06', '127.0.0.1', 'Firefox 61.0 Mac OS X'),
-(17, 1, '2018-07-11 18:44:29', '127.0.0.1', 'Firefox 61.0 Mac OS X');
+(17, 1, '2018-07-11 18:44:29', '127.0.0.1', 'Firefox 61.0 Mac OS X'),
+(18, 1, '2018-07-13 01:20:43', '127.0.0.1', 'Firefox 61.0 Mac OS X');
 
 -- --------------------------------------------------------
 
@@ -199,7 +200,8 @@ INSERT INTO `settings` (`id`, `key_config`, `value_config`, `language`, `stores`
 (4, 'url_prefix', '.html', '', '', ''),
 (10, 'site_email', '', '', '', ''),
 (11, 'language', 'english', '', '', ''),
-(12, 'maintenance', 'off', '', '', '');
+(12, 'maintenance', 'off', '', '', ''),
+(13, 'post_type', 'team=Team|exchange=Exchange List', '', '', '');
 
 -- --------------------------------------------------------
 
@@ -298,7 +300,7 @@ ALTER TABLE `account`
 -- AUTO_INCREMENT for table `account_history`
 --
 ALTER TABLE `account_history`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
 -- AUTO_INCREMENT for table `category`
@@ -322,7 +324,7 @@ ALTER TABLE `pages`
 -- AUTO_INCREMENT for table `settings`
 --
 ALTER TABLE `settings`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT for table `template`
