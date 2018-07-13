@@ -21,4 +21,8 @@ class Page extends Admin {
 	public function create($id=null){
 		$this->view("page/create",["id" => $id]);
 	}
+
+	public function validate_post(){
+		redirect(admin_url("page/manager"));
+	}
 }
