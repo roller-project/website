@@ -17,4 +17,8 @@ class Page extends Admin {
 	public function manager(){
 		$this->view("page/manager",["data" => []]);
 	}
+
+	public function create(){
+		
+	}
 }

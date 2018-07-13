@@ -111,6 +111,23 @@ class Bootstrap{
 		return "";
 	}
 
+
+	public function editer($name=""){
+		$html = '<script src="'.resource_url("ckedit/ckeditor.js").'"></script>
+		<script>
+		    ClassicEditor
+		        .create( document.querySelector( "'.$name.'" ) )
+		        .then(function(){
+		        	$(".ck-editor__editable").css({"height" : $("'.$name.'").height()});
+		        	})
+		        .catch( error => {
+		            console.error( error );
+		        } );
+		</script>
+		';
+		return $html;
+	}
+
 	public function model($title="Model Title", $size="", $content="", $hidebutton = false){
 		return '<!-- Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">

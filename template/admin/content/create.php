@@ -1,3 +1,4 @@
+
 <?php echo form_open(admin_url("content/validate_post/{$type}/{$id}"));?>
 <h3>
 	Manager Contents
@@ -26,7 +27,7 @@
 				  
 				  <div class="form-group">
 				    <label for="exampleInputDescription">Contents</label>
-				    <textarea class="form-control form-control-sm" rows="12" name="content"><?php echo @$getInfo->content;?></textarea>
+				    <textarea class="form-control form-control-sm" rows="12" name="content" id="content"><?php echo @$getInfo->content;?></textarea>
 				    
 				  </div>
 			</div>
@@ -62,4 +63,6 @@
 </div>
 </form>
 
+
+<?php echo $this->bootstrap->editer('#content');?>
 <?php echo $this->bootstrap->upload();?>
