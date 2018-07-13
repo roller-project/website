@@ -104,7 +104,12 @@ main{
 @media (min-width: 576px) {
   .fullscreen .modal-dialog { max-width: none; }
 }
+
+.form-control:focus{
+  box-shadow: none;
+}
 footer{
   min-height: 50px;
   border-top: 1px solid #ddd;
 }
+

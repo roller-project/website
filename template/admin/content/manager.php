@@ -5,8 +5,22 @@
 		<?php echo $this->bootstrap->button("delete","submit");?>
 	</div>
 </h3>
+<hr>
 <div class="row">
-	<div class="col-lg-6">
+	<div class="col-lg-2">
+		<div class="input-group mb-3">
+		  <select type="text" class="form-control" onchange="window.location.href='<?php echo admin_url("content/manager/");?>' + this.value;">
+		  	<?php foreach ($listType as $key => $value) { ?>
+		  		<option value="<?php echo $key;?>" <?php echo ($key == $type ? "selected" : "");?>><?php echo $value;?></option>
+		  	<?php } ?>
+		  	
+		  	
+		  </select>
+		  
+		</div>
+	</div>
+
+	<div class="col-lg-8">
 		<div class="input-group mb-3">
 		  <input type="text" class="form-control" placeholder="Enter Keyword">
 		  <div class="input-group-append">
@@ -14,7 +28,9 @@
 		  </div>
 		</div>
 	</div>
-	<div class="col-lg-3">
+
+
+	<div class="col-lg-2">
 		<div class="input-group mb-3">
 		  <input type="text" class="form-control">
 		  <div class="input-group-append">
@@ -23,15 +39,7 @@
 		</div>
 	</div>
 
-	<div class="col-lg-3">
-		<div class="input-group mb-3">
-		  <select type="text" class="form-control">
-		  	<option value="blog">Blog's</option>
-		  	<option value="tearm">Devlops's</option>
-		  </select>
-		  
-		</div>
-	</div>
+	
 
 </div>
 <br>

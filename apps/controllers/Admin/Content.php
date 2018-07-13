@@ -11,7 +11,8 @@ class Content extends Admin {
 
 	public function manager($type="blog", $id=0){
 		$data = $this->content_model->listContent($type);
-		$this->view("content/manager",["type" => $type, "data" => $data, "pages" => ""]);
+		$listType = $this->content_model->getType();
+		$this->view("content/manager",["type" => $type,"listType" => $listType, "data" => $data, "pages" => ""]);
 	}
 
 

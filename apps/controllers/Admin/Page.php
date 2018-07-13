@@ -18,7 +18,7 @@ class Page extends Admin {
 		$this->view("page/manager",["data" => []]);
 	}
 
-	public function create(){
-		
+	public function create($id=null){
+		$this->view("page/create",["id" => $id]);
 	}
 }

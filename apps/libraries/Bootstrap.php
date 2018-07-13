@@ -2,7 +2,7 @@
 class Bootstrap{
 
 
-	public function getStyle($key="",$lang=false){
+	public function getStyle($key="",$lang=false,$size=""){
 		$c = "btn-secondary";
 		$l = "Link";
 		if($key == "delete"){
@@ -35,15 +35,18 @@ class Bootstrap{
 			$l = "Back";
 		}
 
-
-		return ($lang ? $l : $c);
+		$ht = ($lang ? $l : $c);
+		if($size == "outline" && !$lang){
+			$ht = str_replace('btn-', 'btn-outline-', $ht);
+		}
+		return $ht;
 	}
 	public function link($key="", $url="", $size=""){
-		return '<a class="btn '.$size.' btn-capsule px-4 '.$this->getStyle($key).'" href="'.$url.'">'.$this->getStyle($key, true).'</a>';
+		return '<a class="btn '.$size.' btn-capsule px-4 '.$this->getStyle($key,false,$size).'" href="'.$url.'">'.$this->getStyle($key, true).'</a>';
 	}
 
 	public function button($key="", $type="button",$size=""){
-		return '<button type="'.$type.'" class="btn '.$size.' btn-capsule px-4 '.$this->getStyle($key).'">'.$this->getStyle($key,true).'</button>';
+		return '<button type="'.$type.'" class="btn '.$size.' btn-capsule px-4 '.$this->getStyle($key,false,$size).'">'.$this->getStyle($key,true).'</button>';
 	}
 
 

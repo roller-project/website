@@ -31,6 +31,12 @@
 	    </div>
 	</div>
 
+	<div class="form-group row">
+	    <label class="col-sm-2 col-form-label text-right">Post Type</label>
+	    <div class="col-sm-10">
+	      <textarea type="text" class="form-control" name="config[post_type]"><?php echo $this->config->item("post_type");?></textarea>
+	    </div>
+	</div>
 
 	<div class="form-group row">
 	    <label class="col-sm-2 col-form-label text-right">URL Prefix</label>

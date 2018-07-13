@@ -4,6 +4,7 @@ class Content_model extends CI_Model{
 	
 	public function CreateOrUpdate($arv=[], $id=""){
 		$row = $this->getInfoContent($id);
+		$arv["url_rewrite"] = $this->renderURL($arv, @$row->id);
 		if($row){
 			$this->db->update("contents",$arv,["id" => $id]);
 		}else{
@@ -52,6 +53,34 @@ class Content_model extends CI_Model{
 	public function getInfoContent($id=null){
 		$this->db->where("id",$id);
 		return $this->db->get("contents")->row();
+	}
+
+
+	public function renderURL($arv, $id){
+		$url = ($arv["url_rewrite"] ? $arv["url_rewrite"] : $arv["title"]);
+		if($id){
+			return url_title($url,'-',true);
+		}else{
+
+			return url_title($url,'-',true);
+		}
+	}
+
+	/*
+	Render Type
+	*/
+	public function getType(){
+		$arv = ["blog" => "Blog's","service" => "Service"];
+		$arvs = [];
+		if($this->config->item("post_type")){
+			$ex = explode('|', $this->config->item("post_type"));
+			foreach ($ex as $key => $value) {
+				$exF = explode('=', $value);
+				$arvs[$exF[0]] = $exF[1];
+			}
+		}
+		$arv = array_merge($arv, $arvs);
+		return $arv;
 	}
 
 }
