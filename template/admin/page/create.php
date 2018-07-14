@@ -1,5 +1,5 @@
 
-<?php echo form_open(admin_url("content/validate_post/{$id}"));?>
+<?php echo form_open(admin_url("page/validate_post/{$id}"));?>
 <h3>
 	Page Contents
 	<div class="pull-right">
@@ -74,22 +74,21 @@
 				<h5>Options</h5>
 				<hr>
 				Status
-				<select class="form-control">
+				<select class="form-control" name="status">
 					<option value="1">Public</option>
 					<option value="0">Private</option>
 				</select>
 				On menu
-				<select class="form-control">
+				<select class="form-control" name="in_menu">
 					<option value="1">On Top</option>
 					<option value="0">On left</option>
 					<option value="1">On bottom</option>
 					<option value="0">On Application</option>
 				</select>
-				On Design
-				<select class="form-control">
+				Display With Apps Design
+				<select class="form-control" name="apps_display">
 					<option value="1">Content</option>
-					<option value="0">Block Design</option>
-					<option value="1">Application</option>
+					
 					
 				</select>
 				Parent Page

@@ -160,4 +160,36 @@ class Template_model extends CI_Model{
 		$this->db->delete("template", ["id" => $id]);
 		return true;
 	}
+
+	/*
+	Get Application Design
+	*/
+
+	public function application(){
+		$paths = [];
+
+		$paths = glob(FCPATH."resource/apps/*.php");
+		$spath = FCPATH;
+		foreach ($paths as $key => $value) {
+			$files = basename($value);
+			$arvs[$files] = str_replace($spath, '', $value);
+		}
+		
+		if(defined("ADMIN")){
+			$paths = glob(CLIENTPATH."apps/*.php");
+			$spath = CLIENTPATH;
+		}else{
+			$paths = glob(VIEWPATH."apps/*.php");
+			$spath = VIEWPATH;
+		}
+
+		foreach ($paths as $key => $value) {
+			$files = basename($value);
+			$arvs[$files] = str_replace($spath, '', $value);
+		}
+
+
+
+		return $arvs;
+	}
 }

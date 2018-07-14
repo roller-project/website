@@ -33,4 +33,11 @@ class Content extends Admin {
 		$this->setFlash($data);
 		redirect(admin_url("content/manager/{$type}"));
 	}
+
+
+	public function delete($type="", $id=""){
+		$this->content_model->remove($id);
+		$this->setFlash(true);
+		redirect(admin_url("content/manager/{$type}"));
+	}
 }

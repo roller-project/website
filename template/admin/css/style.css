@@ -108,6 +108,20 @@ main{
 .form-control:focus{
   box-shadow: none;
 }
+
+.listMenu{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.listMenu li{
+  border-bottom: 1px solid #ddd;
+  line-height: 30px;
+
+}
+.listMenu li a{
+  display: block;
+}
 footer{
   min-height: 50px;
   border-top: 1px solid #ddd;

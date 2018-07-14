@@ -13,7 +13,11 @@ class Template extends Admin {
 	{
 		$this->view('dashboard');
 	}
-	public function manager($id=0){
+
+	public function manager(){
+		$this->view("template/manager");
+	}
+	public function builder($id=0){
 		$eff = ['bounce',
 				'flash',
 				'pulse',
@@ -106,7 +110,7 @@ class Template extends Admin {
 			}
 		}
 
-		$this->view('template/manager',["eff" => $eff, "id" => $id,"getFileStores" => $getFileStores, "getListBlock" => $getListBlock, "getInfo" => $getInfo, "append_file" => $append_file]);
+		$this->view('template/builder',["eff" => $eff, "id" => $id,"getFileStores" => $getFileStores, "getListBlock" => $getListBlock, "getInfo" => $getInfo, "append_file" => $append_file]);
 	}
 
 	public function validate_update($id){
@@ -116,7 +120,7 @@ class Template extends Admin {
 		$arv["options"] = json_encode($this->input->post("json"));
 		$data = $this->template_model->CreateOrUpdate($id,$arv);
 		$this->setFlash($data);
-		redirect(admin_url("template/manager/{$id}"));
+		redirect(admin_url("template/builder/{$id}"));
 	}
 
 	public function addblock(){
@@ -124,7 +128,7 @@ class Template extends Admin {
 		$name = ucfirst(str_replace('.php','',basename($paths)));
 		$data = $this->template_model->addBlock($name, $paths);
 		$this->setFlash($data);
-		redirect(admin_url("template/manager/{$data}"));
+		redirect(admin_url("template/builder/{$data}"));
 	}
 
 	public function sorttable(){
@@ -138,14 +142,14 @@ class Template extends Admin {
 	public function remove($id){
 		$data = $this->template_model->removeBlock($id);
 		$this->setFlash($data);
-		redirect(admin_url("template/manager"));
+		redirect(admin_url("template/builder"));
 	}
 
 
 	public function status($id){
 		$data = $this->template_model->status($id);
 		$this->setFlash($data);
-		redirect(admin_url("template/manager/{$id}"));
+		redirect(admin_url("template/builder/{$id}"));
 	}
 
 
@@ -164,6 +168,6 @@ class Template extends Admin {
 			$arv[] = '$content["'.$key.'"] = "'.$value.'";';
 		}
 		write_file($file_json, implode($arv, "\n"));
-		redirect(admin_url("template/manager/{$id}"));
+		redirect(admin_url("template/builder/{$id}"));
 	}
 }

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Jul 13, 2018 at 09:08 AM
+-- Generation Time: Jul 14, 2018 at 07:49 AM
 -- Server version: 5.6.38
 -- PHP Version: 7.2.1
 
@@ -74,7 +74,9 @@ INSERT INTO `account_history` (`id`, `account_id`, `lastlogin`, `lastlogin_ip`, 
 (15, 1, '2018-07-10 20:34:58', '127.0.0.1', 'Firefox 61.0 Mac OS X'),
 (16, 1, '2018-07-12 00:55:06', '127.0.0.1', 'Firefox 61.0 Mac OS X'),
 (17, 1, '2018-07-11 18:44:29', '127.0.0.1', 'Firefox 61.0 Mac OS X'),
-(18, 1, '2018-07-13 01:20:43', '127.0.0.1', 'Firefox 61.0 Mac OS X');
+(18, 1, '2018-07-13 01:20:43', '127.0.0.1', 'Firefox 61.0 Mac OS X'),
+(19, 1, '2018-07-12 18:40:03', '127.0.0.1', 'Firefox 61.0 Mac OS X'),
+(20, 1, '2018-07-13 01:03:56', '127.0.0.1', 'Firefox 61.0 Mac OS X');
 
 -- --------------------------------------------------------
 
@@ -157,22 +159,22 @@ CREATE TABLE `pages` (
   `content` tinytext COLLATE utf8_unicode_ci NOT NULL,
   `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   `updated_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
-  `display_form` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
-  `display_to` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
   `status` int(1) NOT NULL,
   `views` int(1) NOT NULL,
   `language` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `stores` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
-  `in_menu` int(1) NOT NULL
+  `in_menu` int(1) NOT NULL,
+  `apps_display` varchar(255) COLLATE utf8_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Dumping data for table `pages`
 --
 
-INSERT INTO `pages` (`id`, `type`, `title`, `site_keywords`, `site_description`, `thumbnail`, `url_rewrite`, `content`, `created_at`, `updated_at`, `display_form`, `display_to`, `status`, `views`, `language`, `stores`, `in_menu`) VALUES
-(1, 'blog', 'Test Content', '', '', 'uploads/apple-icon-57x57.png', 'conbo', '', '2018-07-10 07:06:38', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 0, 0, 'english', '', 0),
-(2, 'blog', 'test 356', '', '', 'uploads/apple-icon-57x57.png', 'conheo', '', '2018-07-10 07:06:42', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 0, 0, 'english', '', 0);
+INSERT INTO `pages` (`id`, `type`, `title`, `site_keywords`, `site_description`, `thumbnail`, `url_rewrite`, `content`, `created_at`, `updated_at`, `status`, `views`, `language`, `stores`, `in_menu`, `apps_display`) VALUES
+(1, 'blog', 'Test Content', '', '', 'uploads/apple-icon-57x57.png', 'conbo', '', '2018-07-10 07:06:38', '0000-00-00 00:00:00', 0, 0, 'english', '', 0, ''),
+(2, 'blog', 'test 356', '', '', 'uploads/apple-icon-57x57.png', 'conheo', '', '2018-07-10 07:06:42', '0000-00-00 00:00:00', 0, 0, 'english', '', 0, ''),
+(3, 'blog', 'fdsa', '', '', '', 'fdsa', '<p>&nbsp;</p>', '2018-07-13 22:45:29', '0000-00-00 00:00:00', 1, 0, 'english', '', 1, '1');
 
 -- --------------------------------------------------------
 
@@ -300,7 +302,7 @@ ALTER TABLE `account`
 -- AUTO_INCREMENT for table `account_history`
 --
 ALTER TABLE `account_history`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 
 --
 -- AUTO_INCREMENT for table `category`
@@ -312,13 +314,13 @@ ALTER TABLE `category`
 -- AUTO_INCREMENT for table `contents`
 --
 ALTER TABLE `contents`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 
 --
 -- AUTO_INCREMENT for table `pages`
 --
 ALTER TABLE `pages`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `settings`

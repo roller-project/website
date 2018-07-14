@@ -83,4 +83,9 @@ class Content_model extends CI_Model{
 		return $arv;
 	}
 
+
+	public function remove($id=""){
+		$this->db->delete("contents",["id" => $id]);
+		return true;
+	}
 }
