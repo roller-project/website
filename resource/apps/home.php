@@ -196,7 +196,7 @@
             <span class="fas ti-control-play text-primary u-icon__inner font-size-32"></span>
           </span>
           <h2 class="h1 text-white">Mục tiêu <span class="font-weight-bold">phát triển</span> của ROL</h2>
-          <p class="lead u-text-light mb-0">Các mốc phát triển dự án của chúng tôi đặt ra từ 20/07/2018 - 2020.</p>
+          <p class="lead u-text-light mb-0">Các mốc phát triển dự án của chúng tôi đặt ra từ 2018 - 2020.</p>
         </div>
         <!-- End Title -->
       </div>
