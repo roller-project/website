@@ -15,11 +15,16 @@ class Page extends Admin {
 	}
 
 	public function manager(){
-		$this->view("page/manager",["data" => []]);
+		$data = $this->page_model->getList();
+		
+		$this->view("page/manager",["data" => $data]);
 	}
 
 	public function create($id=null){
-		$this->view("page/create",["id" => $id]);
+		$data = $this->page_model->getInfoContent($id);
+		$apps = $this->template_model->application();
+		$listParent = $this->page_model->getList();
+		$this->view("page/create",["id" => $id, "data" => $data, "apps" => $apps,"listParent" => $listParent]);
 	}
 
 	public function validate_post($id=null){
@@ -36,7 +41,8 @@ class Page extends Admin {
 				"thumbnail" => (@$arvs["thumbnail"] ? @$arvs["thumbnail"] : ""),
 				"apps_display"	=> @$arvs["apps_display"],
 				"in_menu"	=> @$arvs["in_menu"],
-				"status"	=> @$arvs["status"]
+				"status"	=> @$arvs["status"],
+				"parent_id"	=> @$arvs["parent_id"]
 
 			];
 			$this->page_model->CreateOrUpdate($arv, $id);

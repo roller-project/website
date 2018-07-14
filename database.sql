@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.7.7
+-- version 4.7.3
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost
--- Generation Time: Jul 14, 2018 at 07:49 AM
--- Server version: 5.6.38
--- PHP Version: 7.2.1
+-- Host: localhost:3306
+-- Generation Time: Jul 14, 2018 at 12:05 PM
+-- Server version: 5.6.35
+-- PHP Version: 7.1.8
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -150,7 +150,7 @@ INSERT INTO `contents` (`id`, `type`, `title`, `thumbnail`, `url_rewrite`, `cont
 
 CREATE TABLE `pages` (
   `id` bigint(20) NOT NULL,
-  `type` varchar(255) COLLATE utf8_unicode_ci NOT NULL DEFAULT 'blog',
+  `parent_id` int(10) NOT NULL,
   `title` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `site_keywords` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `site_description` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
@@ -163,7 +163,7 @@ CREATE TABLE `pages` (
   `views` int(1) NOT NULL,
   `language` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `stores` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
-  `in_menu` int(1) NOT NULL,
+  `in_menu` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `apps_display` varchar(255) COLLATE utf8_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
@@ -171,10 +171,10 @@ CREATE TABLE `pages` (
 -- Dumping data for table `pages`
 --
 
-INSERT INTO `pages` (`id`, `type`, `title`, `site_keywords`, `site_description`, `thumbnail`, `url_rewrite`, `content`, `created_at`, `updated_at`, `status`, `views`, `language`, `stores`, `in_menu`, `apps_display`) VALUES
-(1, 'blog', 'Test Content', '', '', 'uploads/apple-icon-57x57.png', 'conbo', '', '2018-07-10 07:06:38', '0000-00-00 00:00:00', 0, 0, 'english', '', 0, ''),
-(2, 'blog', 'test 356', '', '', 'uploads/apple-icon-57x57.png', 'conheo', '', '2018-07-10 07:06:42', '0000-00-00 00:00:00', 0, 0, 'english', '', 0, ''),
-(3, 'blog', 'fdsa', '', '', '', 'fdsa', '<p>&nbsp;</p>', '2018-07-13 22:45:29', '0000-00-00 00:00:00', 1, 0, 'english', '', 1, '1');
+INSERT INTO `pages` (`id`, `parent_id`, `title`, `site_keywords`, `site_description`, `thumbnail`, `url_rewrite`, `content`, `created_at`, `updated_at`, `status`, `views`, `language`, `stores`, `in_menu`, `apps_display`) VALUES
+(1, 0, 'Test Content', '', '', 'uploads/apple-icon-57x57.png', 'conbo', '', '2018-07-10 07:06:38', '0000-00-00 00:00:00', 0, 0, 'english', '', '0', ''),
+(2, 3, 'test 356', '', '', 'uploads/apple-icon-57x57.png', 'conheo', '', '2018-07-14 09:06:08', '0000-00-00 00:00:00', 0, 0, 'english', '', '0', ''),
+(3, 1, 'fdsa', '', '', '', 'khoa', '<p>&nbsp;</p>', '2018-07-14 10:02:12', '0000-00-00 00:00:00', 1, 0, 'english', '', '', '1');
 
 -- --------------------------------------------------------
 
@@ -297,37 +297,31 @@ ALTER TABLE `template`
 --
 ALTER TABLE `account`
   MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
-
 --
 -- AUTO_INCREMENT for table `account_history`
 --
 ALTER TABLE `account_history`
   MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
-
 --
 -- AUTO_INCREMENT for table `category`
 --
 ALTER TABLE `category`
   MODIFY `cat_id` int(10) NOT NULL AUTO_INCREMENT;
-
 --
 -- AUTO_INCREMENT for table `contents`
 --
 ALTER TABLE `contents`
   MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
-
 --
 -- AUTO_INCREMENT for table `pages`
 --
 ALTER TABLE `pages`
   MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
-
 --
 -- AUTO_INCREMENT for table `settings`
 --
 ALTER TABLE `settings`
   MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
-
 --
 -- AUTO_INCREMENT for table `template`
 --

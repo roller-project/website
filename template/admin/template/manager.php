@@ -11,6 +11,9 @@
 			<h5>Page Controller</h5>
 			<ul class="listMenu">
 				<li><a href="<?php echo admin_url("template/manager/home");?>"><i class="ti-page"></i> Home</a></li>
+				<?php foreach ($page as $key => $value) { ?>
+					<li><a href="<?php echo admin_url("template/manager/home");?>"><i class="ti-page"></i> <?php echo $value->title;?></a></li>
+				<?php } ?>
 			</ul>
 		</div>
 	</div>

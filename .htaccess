@@ -1,5 +1,6 @@
 <IfModule mod_rewrite.c>
     RewriteEngine On
+    #Options +FollowSymLinks
     RewriteBase /
 
     #Removes access to the system folder by users.
@@ -23,9 +24,15 @@
     #Checks to see if the user is attempting to access a valid file,
     #such as an image or css document, if this isn't true it sends the
     #request to index.php
+    
+    RewriteCond $1 !^(index\.php|resources|robots\.txt)
+    
     RewriteCond %{REQUEST_FILENAME} !-f
     RewriteCond %{REQUEST_FILENAME} !-d
-    RewriteRule ^(.*)$ index.php?/$1 [L]
+    
+
+    RewriteRule ^(.*)$ index.php?/$1 [L,QSA]
+
 </IfModule>
 
 <IfModule !mod_rewrite.c>

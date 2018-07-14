@@ -15,7 +15,8 @@ class Template extends Admin {
 	}
 
 	public function manager(){
-		$this->view("template/manager");
+		$page = $this->page_model->getList();
+		$this->view("template/manager",["page" => $page]);
 	}
 	public function builder($id=0){
 		$eff = ['bounce',
