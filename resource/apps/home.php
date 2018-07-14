@@ -50,7 +50,7 @@
         <!-- End SVG Shapes v4 -->
 
         <!-- Sidebar -->
-        <div class="col-lg-4 u-bg-img-hero min-height-100vh--lg position-absolute-top-right-0--lg px-lg-0 u-space-2" style="background-image: url(<?php echo store_url("uploads/bg2.jpg");?>);">
+        <div class="col-lg-4 u-bg-img-hero min-height-100vh--lg position-absolute-top-right-0--lg px-lg-0 u-space-2" style="background-image: url(https://bitcoinist.com/wp-content/uploads/2017/12/ss-crypto-future.jpg);">
           <!-- Fancybox -->
           <div class="text-center text-lg-left mb-3 mb-lg-0">
             <a class="js-fancybox u-media-player u-media-player--left-minus-50x-top-50x-lg mb-4" href="javascript:;" data-src="//vimeo.com/167434033" data-speed="700" data-animate-in="zoomIn" data-animate-out="zoomOut" data-caption="Front - Responsive Website Template">
