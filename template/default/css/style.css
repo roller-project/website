@@ -27,30 +27,36 @@ body {
   top:0;
   box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
   width: 100%;
-  background: #FFF;
+  background-color:rgba(255,255,255,1) !important;
   z-index: 99;
 }
 #header.fixed-theme a{
   color: #333;
 }
 #header.fixed-theme .btn-outline-light{
-  border-color:green;
+  border-color:red;
 }
 #header{
   position: fixed;
   top:0;
-  /*box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);*/
+  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
   border-bottom: 0px solid #ddd;
   width: 100%;
   z-index: 99;
+  background-color:rgba(255,255,255,0.8);
+}
+#header .btn-outline-light{
+  border-color:red;
+  color: red;
 }
 header a, header a:hover{
-  color: #FFF;
-  font-size: 16px; 
+  color: #007bff;
+  font-size: 18px;
+  font-weight: bold;
  
 }
 header a:hover{
-  color: #f3f3f3;
+  color: #007bff;
 }
 .header-title{
   margin-bottom: 30px;

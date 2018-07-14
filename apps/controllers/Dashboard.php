@@ -19,8 +19,17 @@ class Dashboard extends Frontend {
 
 	public function home()
 	{
-
-		$content = $this->template_model->getContent();
-		$this->view('dashboard',["content" => $content]);
+		$data = $this->page_model->getContent("home");
+		$content = "";
+		if(isset($data->apps_display) && $data->apps_display != "" && file_exists(FCPATH.$data->apps_display)){
+			ob_start();
+			include_once FCPATH.$data->apps_display;
+			$content = ob_get_clean();
+			$infoApp = $this->template_model->getApplicationInfo($data->id);
+			$content .= '<script type="application/json" id="jsonContent">'.json_encode($infoApp->json).'</script>';
+		}else{
+			$this->setLayout("content-layout");
+		}
+		$this->view('dashboard',["content" => $content, "data" => $data]);
 	}
 }

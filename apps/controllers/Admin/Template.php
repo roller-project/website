@@ -14,10 +14,28 @@ class Template extends Admin {
 		$this->view('dashboard');
 	}
 
-	public function manager(){
+	public function manager($id=""){
 		$page = $this->page_model->getList();
-		$this->view("template/manager",["page" => $page]);
+		$pageInfo = $this->page_model->getInfoContent($id);
+
+		$options = [];
+		if($pageInfo){
+			$pathOptions = FCPATH.str_replace(basename($pageInfo->apps_display), "options/".basename($pageInfo->apps_display), $pageInfo->apps_display);
+			
+			if(file_exists($pathOptions)){
+				include_once $pathOptions;
+			}
+			$info = $this->template_model->getApplicationInfo($id);
+			$options = MergeArrays($options,$info->json);
+		}
+		
+		
+
+		$this->view("template/manager",["page" => $page, "options" => $options,"id" => $id]);
 	}
+
+
+	
 	public function builder($id=0){
 		$eff = ['bounce',
 				'flash',
@@ -170,5 +188,12 @@ class Template extends Admin {
 		}
 		write_file($file_json, implode($arv, "\n"));
 		redirect(admin_url("template/builder/{$id}"));
+	}
+
+
+	public function validate_application($id=""){
+		$data = $this->input->post("json");
+		$this->template_model->CreateOrUpdateApplication($id,$data);
+		redirect(admin_url("template/manager/{$id}"));
 	}
 }

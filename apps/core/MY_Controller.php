@@ -25,9 +25,9 @@ class BaseController extends CI_Controller{
 	/*
 	Create Settings
 	*/
-	public function config($languge="", $stores="", $plugins=""){
+	public function config($languge="",  $plugins=""){
 		$this->db->where("language",$languge);
-		$this->db->where("stores",$stores);
+		
 		$this->db->where("plugins",$plugins);
 		$data = $this->db->get("settings")->result();
 		foreach ($data as $key => $value) {
@@ -124,13 +124,21 @@ class BaseController extends CI_Controller{
 		if($this->getLayout()){
 
 			$data = $this->load->view($layout, $data, true);
-			$menu = [];
+			$menu = $this->makeMenu();
 			return $this->load->view($this->layout,["content" => $data, "flash" => $this->get_flash(), "header" => $this->make_meta($data), "menu" => $menu, "is_login" => $this->isLogin()]);
 		}else{
 			return $this->load->view($layout, $data);
 		}
 	}
 
+	public function makeMenu(){
+		$arv = [];
+		$data = $this->page_model->getPageMenu();
+		foreach ($data as $key => $value) {
+			$arv[$value->url_rewrite.$this->config->item("url_prefix")] = $value->title;
+		}
+		return $arv;
+	}
 
 	/*
 	Access user

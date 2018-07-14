@@ -79,7 +79,7 @@
           </nav>
         </div>
 
-          <main role="main" class="container-fluid">
+          <main id="content" role="main" class="container-fluid">
                   <?php echo $flash;?>
                   <?php echo $content;?>
           </main>

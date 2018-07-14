@@ -91,6 +91,8 @@ $(document).ready(function(){
               var hf = items.attr("src");
               hf = hf.replace('{url}',vvv);
               items.attr("src",hf);
+            } else if(kkk == "backgroundurl"){
+              items.css({"background-url","url('"+vvv+"')"});
             }else{
               items.html(vvv);
             }

@@ -49,6 +49,14 @@ class Page_model extends CI_Model{
 		return $this->db->get("pages")->row();
 	}
 
+	public function getPageMenu($parentID="0", $target="header", $only_parent=false){
+		$this->db->where("language = '' OR language ='".$this->config->item("language")."'");
+		$this->db->where("parent_id", $parentID);
+		$this->db->where("in_menu ", $target);
+		$data =  $this->db->get("pages")->result();
+		return $data;
+	}
+
 
 	public function getContent($url){
 		$this->db->where("url_rewrite",$url);

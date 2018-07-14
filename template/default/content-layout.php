@@ -63,9 +63,19 @@
       </header>
     
 
-          <main id="content" role="main" role="main">
-                  <?php echo $flash;?>
-                  <?php echo $content;?>
+          <main role="main">
+            <div style="background-color: red; height: 120px;"></div>
+                  <div class="container">
+                    <div class="row">
+                      <div class="col-lg-9">
+                          <?php echo $flash;?>
+                          <?php echo $content;?>
+                      </div>
+                      <div class="col-lg-3">
+                        <h4>Plugins Set</h4>
+                      </div>
+                    </div>
+                  </div>
           </main>
 
         <footer class="bg-gray">
@@ -109,7 +119,6 @@
               </div>
 
               <div class="col-12">
-                 <p class="text-left">Các quá trình phát triển của chúng tôi còn phụ thuộc vào sự đóng góp chi phí và công nghệ của cộng đồng sử dụng. Các đóng góp vui lòng gởi về <a href="https://www.blockchain.com/btc/address/18UDydoLS6eckX2aspZLWUWngKkZahWPkK" target="_bank">18UDydoLS6eckX2aspZLWUWngKkZahWPkK</a></p>
                 <!--copyright-->
                 <p class="copyright">Language : English | Vietnam | China | Russia | Korea</p>
                 <!--/copyright-->
@@ -123,7 +132,6 @@
             </div>
           </div>
         </footer>
-        
         <script type="text/javascript">
           $(document).ready(function(){
 

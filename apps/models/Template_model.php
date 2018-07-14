@@ -192,4 +192,47 @@ class Template_model extends CI_Model{
 
 		return $arvs;
 	}
+
+	/*
+	Save Data Config Application
+	*/
+
+	public function CreateOrUpdateApplication($page_id, $json=[]){
+		$arv = [];
+		$arv["page_id"] = $page_id;
+		$arv["language"] = $this->config->item("language");
+		$arv["options"] = json_encode($json);
+		$row = $this->db->get_where("application",["page_id" => $page_id])->row();
+		if(isset($row->id)){
+			$this->db->update("application", $arv,["id" => $row->id]);
+		}else{
+			$this->db->insert("application", $arv);
+		}
+	}
+
+
+	public function getApplicationInfo($page_id){
+		$row = $this->db->get_where("application",["page_id" => $page_id])->row();
+		if(!$row) $row = new stdClass;
+		$row->json = [];
+		if($row && isset($row->options)){
+			$row->json = $this->toArray(json_decode($row->options));
+		}
+		
+		return $row;
+	}
+
+
+	public function toArray($obj){
+		if(!is_object($obj)) return [];
+		$arv = [];
+		foreach ($obj as $key => $value) {
+			foreach ($value as $keyS => $valueS) {
+				$arv[$key][$keyS] = $valueS;
+			}
+			
+		}
+		return $arv;
+	}
+
 }

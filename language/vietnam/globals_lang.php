@@ -1,4 +1,6 @@
 <?php
+$lang["home"]	= "Trang chủ";
+$lang["account"]	=	"Tài khoản";
 $lang["error"] = "Lỗi";
 $lang["success"]	= "Hoàn thành";
 $lang["warning"]	=	"Cảnh bảo";

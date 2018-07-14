@@ -88,9 +88,9 @@
 				</select>
 				Apps Design
 				<select class="form-control" name="apps_display">
-					<option value="1">Content</option>
+					<option value="">Content Default</option>
 					<?php foreach ($apps as $key => $value) { ?>
-						<option value="1"><?php echo $value;?></option>
+						<option value="<?php echo $value;?>" <?php echo (@$data->apps_display == $value ? "selected" : "");?>><?php echo basename($value);?></option>
 					<?php } ?>
 					
 				</select>
@@ -119,5 +119,5 @@
 </form>
 
 
-<?php echo $this->bootstrap->editer('#content');?>
+<?php echo $this->bootstrap->editer('#content3');?>
 <?php echo $this->bootstrap->upload();?>
