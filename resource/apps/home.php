@@ -27,8 +27,8 @@
             <!-- End Info -->
 
             <a class="btn btn-primary u-btn-primary u-btn-wide transition-3d-hover" href="{url}.html">
-              Read More
-              <span class="fa fa-angle-right ml-2"></span>
+              Xem them ..
+              <span class="ti-arrow-right ml-2"></span>
             </a>
           </div>
           <!-- End Blog -->
