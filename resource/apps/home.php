@@ -559,7 +559,7 @@
             <div class="text-center mb-4">
               <span class="u-label u-label--sm u-label--white mb-2">Subscribe</span>
               <h2 class="h1 text-white"><span class="font-weight-bold">Cách </span> đơn giản</h2>
-              <p class="lead u-text-light">Nhập email để trở thành cộng dùng của chúng tôi. Các thông tin mới nhất từ chúng tôi sẽ chuyển đến bạn ngay lập tức.</p>
+              <p class="lead u-text-light">Nhập email để trở thành cộng đồng của chúng tôi. Các thông tin mới nhất từ chúng tôi sẽ chuyển đến bạn ngay lập tức.</p>
             </div>
             <!-- End Title -->
 
