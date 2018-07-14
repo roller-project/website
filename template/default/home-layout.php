@@ -25,7 +25,7 @@
     <body>
       
       <header  id="header">
-        <nav class="navbar navbar-expand-md navbar-none bg-none container">
+        <nav class="navbar navbar-expand-md navbar-light bg-none container">
           <a class="navbar-brand" href="<?php echo store_url("");?>"><img src="<?php echo template_url("image/logo.png");?>" style="height: 50px;"></a>
           <button class="navbar-toggler p-0 border-0" type="button" data-toggle="offcanvas">
             <span class="navbar-toggler-icon"></span>
@@ -33,7 +33,7 @@
 
          
 
-          <div class="navbar-collapse offcanvas-collapse py-0" id="navbarsExampleDefault">
+          <div class="collapse navbar-collapse  offcanvas-collapse py-0" id="navbarsExampleDefault">
             <ul class="navbar-nav ml-lg-auto">
               <li class="nav-item active">
                 <a class="nav-link" href="<?php echo store_url("");?>"><i class="ti-home"></i> <?php echo lang("home");?> <span class="sr-only">(current)</span></a>
@@ -178,12 +178,13 @@
 
                   var yOffset = 0;
                   var currYOffSet = window.pageYOffset;
-
-                  if(yOffset < currYOffSet) {
-                      myNavBar.add();
-                  }
-                  else if(currYOffSet == yOffset){
-                      myNavBar.remove();
+                  if($(window).width() > 780){
+                    if(yOffset < currYOffSet) {
+                        myNavBar.add();
+                    }
+                    else if(currYOffSet == yOffset){
+                        myNavBar.remove();
+                    }
                   }
 
               }
