@@ -348,7 +348,7 @@
             </div>
             <div class="media-body">
               <h3 class="h6">Ứng dụng Masternode (40%)</h3>
-              <p>Cho phép miner khai thách ROL qua Masternode.</p>
+              <p>Cho phép miner khai thác ROL qua Masternode.</p>
             </div>
           </div>
           <!-- End Icon Blocks -->
