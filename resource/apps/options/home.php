@@ -5,17 +5,40 @@ $options["slider"] = [
 	"title" => "Name 1",
 	"description"	=> "",
 	"backgroundurl" => "",
-	"item" => [],
+	"author" => "CEO / VÕ VĂN KHOA",
 ];
 
 
-$options["json2"] = [
-	"name"	=> "Service",
+$options["whatisroller"] = [
+	"name"	=> "What is roller",
+	"title" => "Name 1",
+	"description"	=> "",
+	"pin"	=> "",
+	"item" => [
+		["title","backgroundurl"],
+		["title","backgroundurl"],
+		["title","backgroundurl"],
+		["title","backgroundurl"]
+	],
+];
+
+$options["timeline"] = [
+	"name"	=> "Time Line",
+	"title" => "Name 1",
+	"description"	=> "",
+	"item" => [
+		["title","description"],
+		["title","description"],
+		["title","description"],
+		["title","description"]
+	],
+];
+$options["joingroup"] = [
+	"name"	=> "Join Group",
 	"title" => "Name 1",
 	"description"	=> "",
 	"limit"	=>	4,
 	"content"	=> "",
-	"backgroundurl" => "",
 	"item" => [],
 ];
 

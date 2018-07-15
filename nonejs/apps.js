@@ -1,8 +1,8 @@
 import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'animate.css';
-import 'socket.io-client';
-import 'moment';
+//import 'socket.io-client';
+//import 'moment';
 $.fn.extend({
   animateCss: function(animationName, callback) {
     var animationEnd = (function(el) {
@@ -71,6 +71,7 @@ $.fn.extend({
 
 
 $(document).ready(function(){
+  /*
   var jsonContents = $("#jsonContent").html();
   if(jsonContents){
     
@@ -101,9 +102,11 @@ $(document).ready(function(){
     });
   }
 
+  
   $('[play-eff]').animatePlay();
   
   $(window).on('scroll resize', function(){
     $("[sroll-data]").animateSroll();
   });
+  */
 });
