@@ -26,7 +26,7 @@ class Dashboard extends Frontend {
 			include_once FCPATH.$data->apps_display;
 			$content = ob_get_clean();
 			$infoApp = $this->template_model->getApplicationInfo($data->id);
-			$content .= '<script type="application/json" id="jsonContent2">'.json_encode($infoApp->json).'</script>';
+			$content .= '<script type="application/json" id="jsonContent">'.json_encode($infoApp->json).'</script>';
 		}else{
 			$this->setLayout("content-layout");
 		}

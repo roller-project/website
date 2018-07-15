@@ -4,7 +4,7 @@
           <!-- Blog -->
           <div class="w-lg-50">
             <!-- Author -->
-            <div class="media align-items-center mb-4" data-author>
+            <div class="media align-items-center mb-4">
               <div class="d-flex mr-3">
                 <img class="img-fluid u-sm-avatar rounded-circle" src="http://blog.tribeinc.com/wp-content/uploads/2017/01/CEO.jpg" alt="Image Description">
               </div>
@@ -18,15 +18,18 @@
 
             <!-- Info -->
             <div class="mb-4" data-json-item>
-              <h1 class="text-primary display-4 font-size-48--md-down font-weight-bold" data-title>Roller Platform</h1>
-              <div data-description>
+              <h1 class="text-primary display-4 font-size-48--md-down font-weight-bold" data-name>Roller Platform</h1>
+              <div data-content>
                 <p class="lead">Hệ thống blockchain đơn giản hóa người dùng. Tích hợp các ứng dụng IoT.</p>
                 <p class="lead">Phát triển dựa trên nguyên lý cộng đồng. Được phát triển bởi nhóm Blockchain VietNam</p>
               </div>
             </div>
             <!-- End Info -->
 
-            
+            <a class="btn btn-primary u-btn-primary u-btn-wide transition-3d-hover" href="{url}.html">
+              Xem them ..
+              <span class="ti-arrow-right ml-2"></span>
+            </a>
           </div>
           <!-- End Blog -->
         </div>
@@ -47,7 +50,7 @@
         <!-- End SVG Shapes v4 -->
 
         <!-- Sidebar -->
-        <div class="col-lg-4 u-bg-img-hero min-height-100vh--lg position-absolute-top-right-0--lg px-lg-0 u-space-2" style="background-image: url(https://bitcoinist.com/wp-content/uploads/2017/12/ss-crypto-future.jpg);" data-backgroundurl>
+        <div class="col-lg-4 u-bg-img-hero min-height-100vh--lg position-absolute-top-right-0--lg px-lg-0 u-space-2" style="background-image: url(https://bitcoinist.com/wp-content/uploads/2017/12/ss-crypto-future.jpg);">
           <!-- Fancybox -->
           <div class="text-center text-lg-left mb-3 mb-lg-0">
             <a class="js-fancybox u-media-player u-media-player--left-minus-50x-top-50x-lg mb-4" href="javascript:;" data-src="//vimeo.com/167434033" data-speed="700" data-animate-in="zoomIn" data-animate-out="zoomOut" data-caption="Front - Responsive Website Template">
@@ -69,32 +72,40 @@
     </div>
 
 
-<div class="container u-space-3" data-json="whatisroller">
+<div class="container u-space-3">
       <div class="row justify-content-between align-items-center">
         <div class="col-lg-5 mb-7 mb-lg-0">
           <div class="pr-md-4">
             <!-- Title -->
             <div class="mb-7">
-              <span class="u-label u-label--sm u-label--success mb-2" data-pin>Cái gì là Roller Coind</span>
-              <h2 class="text-primary" data-title>Roller coin <span class="font-weight-bold">là gì</span></h2>
+              <span class="u-label u-label--sm u-label--success mb-2">Cái gì là Roller Coind</span>
+              <h2 class="text-primary">Roller coin <span class="font-weight-bold">là gì</span></h2>
              
-              <div data-description>
-                <p sroll-data data-in="bounceInRight">Roller coin được phát triển trên Roller Platform. Cung cấp cho người dùng tất cả các ứng dụng chạy trên smart contract</p>
-                <p class="row-arrow-put">
-                <p sroll-data data-in="bounceInLeft"><i class="ti-arrow-right"></i> Tên : Roller Network<p>
-                <p sroll-data data-in="bounceInRight"><i class="ti-arrow-right"></i> Viết tắt: ROL<p>
-                <p sroll-data data-in="bounceInLeft"><i class="ti-arrow-right"></i> Loại : Proof-of-Work<p>
-                <p sroll-data data-in="bounceInRight"><i class="ti-arrow-right"></i> Thuật toán : Ethash<p>
-                <p sroll-data data-in="bounceInLeft"><i class="ti-arrow-right"></i> Thời gian tối đa 1 block : 15 secs<p>
-                <p sroll-data data-in="bounceInRight"><i class="ti-arrow-right"></i> Số coin 1 block : 10 ROL<p>
-                <p sroll-data data-in="bounceInLeft"><i class="ti-arrow-right"></i> Tổng số coin phát hành : 100.000.000 ROL<p>
-                <p sroll-data data-in="bounceInRight"><i class="ti-arrow-right"></i> Không sử dụng tạo coin cho develop<p>
-                <p sroll-data data-in="bounceInLeft"><i class="ti-arrow-right"></i> Không vận hành bán ICO<p>
-                <p sroll-data data-in="bounceInRight"><i class="ti-arrow-right"></i> Nguyên lý dựa trên nguyên tắt cộng đồng sử dụng<p>
-                </p>
-              </div>
+              <p sroll-data data-in="bounceInRight">Roller coin được phát triển trên Roller Platform. Cung cấp cho người dùng tất cả các ứng dụng chạy trên smart contract</p>
+              <p class="row-arrow-put">
+              <p sroll-data data-in="bounceInLeft"><i class="ti-arrow-right"></i> Tên : Roller Network<p>
+              <p sroll-data data-in="bounceInRight"><i class="ti-arrow-right"></i> Viết tắt: ROL<p>
+              <p sroll-data data-in="bounceInLeft"><i class="ti-arrow-right"></i> Loại : Proof-of-Work<p>
+              <p sroll-data data-in="bounceInRight"><i class="ti-arrow-right"></i> Thuật toán : Ethash<p>
+              <p sroll-data data-in="bounceInLeft"><i class="ti-arrow-right"></i> Thời gian tối đa 1 block : 15 secs<p>
+              <p sroll-data data-in="bounceInRight"><i class="ti-arrow-right"></i> Số coin 1 block : 10 ROL<p>
+              <p sroll-data data-in="bounceInLeft"><i class="ti-arrow-right"></i> Tổng số coin phát hành : 100.000.000 ROL<p>
+              <p sroll-data data-in="bounceInRight"><i class="ti-arrow-right"></i> Không sử dụng tạo coin cho develop<p>
+              <p sroll-data data-in="bounceInLeft"><i class="ti-arrow-right"></i> Không vận hành bán ICO<p>
+              <p sroll-data data-in="bounceInRight"><i class="ti-arrow-right"></i> Nguyên lý dựa trên nguyên tắt cộng đồng sử dụng<p>
+              </p>
             </div>
-            
+            <style type="text/css">
+            .row-arrow-put{
+              line-height: 30px;
+            }
+              .row-arrow-put i{
+                color: green;
+              }
+            </style>
+            <!-- End Title -->
+
+            <a class="btn btn-sm btn-primary u-btn-primary u-btn-wide transition-3d-hover" href="index.html">Xem thêm  <span class="fa fa-angle-right ml-2"></span></a>
           </div>
         </div>
 
@@ -175,7 +186,7 @@
 
 
 
-<div data-json="timeline">
+
 
 <div class="bg-primary u-devices-v2">
       <div class="container u-space-3 position-relative z-index-2">
@@ -382,8 +393,7 @@
         
     </div>
 
-</div>
-<!--// End Time Line -->    
+    
 
 <hr>
 
