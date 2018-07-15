@@ -11,11 +11,13 @@ if($content){
 		  <li class="col-lg-3 d-flex" style="margin-bottom: 15px;">
 		  	
 		    <div class="card">
+		    <div style="height: 120px; overflow: hidden;">
 			  <img class="card-img-top" src="<?php echo store_url($value->thumbnail);?>" alt="<?php echo $value->title;?>">
+			</div>
 			  <div class="card-body">
-			  	<h5><a href="<?php echo store_url("post-".$value->url_rewrite).config_item("url_prefix");?>"><?php echo $value->title;?></a></h5>
+			  	<h5 style="overflow: hidden;"><a href="<?php echo store_url("post-".$value->url_rewrite).config_item("url_prefix");?>"><?php echo $value->title;?></a></h5>
 		    	
-			    <p class="card-text"><?php echo $value->content;?>.</p>
+			    <p class="card-text"><?php echo word_limiter($value->content,10);?>.</p>
 			  </div>
 			</div>
 		  </li>
