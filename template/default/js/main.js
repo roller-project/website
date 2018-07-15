@@ -23,7 +23,7 @@ $(function () {
 
 
 $(document).ready(function(){
-  var jsonContents = $("#jsonContent2").html();
+  var jsonContents = $("#jsonContent25").html();
   if(jsonContents){
     
     var jsonContent = $.parseJSON(jsonContents);
