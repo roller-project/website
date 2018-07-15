@@ -23,7 +23,7 @@
 				  
 				  <div class="form-group">
 				    <label for="exampleInputDescription">Contents</label>
-				    <textarea class="form-control form-control-sm" rows="18" name="content" id="content"><?php echo @$data->content;?></textarea>
+				    <textarea class="form-control form-control-sm" rows="18" name="content" id="contentEditer"><?php echo @$data->content;?></textarea>
 				    
 				  </div>
 			</div>
@@ -119,5 +119,5 @@
 </form>
 
 
-<?php echo $this->bootstrap->editer('#content3');?>
+<?php echo $this->bootstrap->editer('#contentEditer');?>
 <?php echo $this->bootstrap->upload();?>

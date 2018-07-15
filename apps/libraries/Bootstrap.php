@@ -122,12 +122,12 @@ class Bootstrap{
 
 	public function editer($name=""){
 		$html = '<script src="'.resource_url("ckedit/ckeditor.js").'"></script>
-		<script>
+		<script type="text/javascript">
 		    ClassicEditor
 		        .create( document.querySelector( "'.$name.'" ) )
 		        .then(function(){
 		        	$(".ck-editor__editable").css({"height" : $("'.$name.'").height()});
-		        	})
+		        })
 		        .catch( error => {
 		            console.error( error );
 		        } );

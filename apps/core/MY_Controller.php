@@ -89,10 +89,22 @@ class BaseController extends CI_Controller{
 
 	public function make_meta($arv=[]){
 		$arvs = [];
-		$arvs["title"] = (isset($arv["title"]) ? $arv["title"] : $this->config->item("site_name"));
-		$arvs["description"] = (isset($arv["description"]) ? $arv["description"] : $this->config->item("site_description"));
-		$arvs["keywords"] = (isset($arv["keywords"]) ? $arv["keywords"] : $this->config->item("site_keywords"));
-		$arvs["author"] = (isset($arv["author"]) ? $arv["author"] : $this->config->item("site_author"));
+		if(isset($arv["data"])){
+			$arv = $arv["data"];
+		}
+		if(is_object($arv)){
+
+			$arvs["title"] = (isset($arv->title) ? $arv->title : $this->config->item("site_name"));
+			$arvs["description"] = (isset($arv->site_description) ? $arv->site_description : $this->config->item("site_description"));
+			$arvs["keywords"] = (isset($arv->site_keywords) ? $arv->site_keywords : $this->config->item("site_keywords"));
+			$arvs["author"] = (isset($arv->author) ? $arv->author : $this->config->item("site_author"));
+		}else{
+			$arvs["title"] = (isset($arv["title"]) ? $arv["title"] : $this->config->item("site_name"));
+			$arvs["description"] = (isset($arv["description"]) ? $arv["description"] : $this->config->item("site_description"));
+			$arvs["keywords"] = (isset($arv["keywords"]) ? $arv["keywords"] : $this->config->item("site_keywords"));
+			$arvs["author"] = (isset($arv["author"]) ? $arv["author"] : $this->config->item("site_author"));
+		}
+		
 		return $arvs;
 
 	}
@@ -122,9 +134,9 @@ class BaseController extends CI_Controller{
 		$data = array_merge($data,["is_login" => $this->isLogin()]);
 		if($this->getLayout()){
 
-			$data = $this->load->view($layout, $data, true);
+			$data2 = $this->load->view($layout, $data, true);
 			$menu = $this->makeMenu();
-			return $this->load->view($this->layout,["content" => $data, "flash" => $this->get_flash(), "header" => $this->make_meta($data), "menu" => $menu, "is_login" => $this->isLogin()]);
+			return $this->load->view($this->layout,["content" => $data2, "flash" => $this->get_flash(), "header" => $this->make_meta($data), "menu" => $menu, "is_login" => $this->isLogin()]);
 		}else{
 			return $this->load->view($layout, $data);
 		}

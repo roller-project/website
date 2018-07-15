@@ -18,6 +18,8 @@ class Content_model extends CI_Model{
 		$arv["language"] = config_item("language");
 		$this->db->where("language",config_item("language"));
 		$this->db->where("type",$type);
+		$this->db->limit($limit, $start);
+		
 		return $this->db->get("contents")->result();
 	}
 
@@ -51,10 +53,17 @@ class Content_model extends CI_Model{
 	} 
 
 	public function getInfoContent($id=null){
+
 		$this->db->where("id",$id);
 		return $this->db->get("contents")->row();
 	}
 
+
+	public function getInfoContentURL($url=null){
+		if(!$url) return false;
+		$this->db->where("url_rewrite",$url);
+		return $this->db->get("contents")->row();
+	}
 
 	public function renderURL($arv, $id){
 		$url = ($arv["url_rewrite"] ? $arv["url_rewrite"] : $arv["title"]);

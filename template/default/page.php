@@ -8,7 +8,7 @@ if($content){
 		<ul class="row lisItem">
 		  <?php foreach ($content as $key => $value) { ?>
 		   
-		  <li class="col-lg-3">
+		  <li class="col-lg-3 d-flex" style="margin-bottom: 15px;">
 		  	
 		    <div class="card">
 			  <img class="card-img-top" src="<?php echo store_url($value->thumbnail);?>" alt="<?php echo $value->title;?>">

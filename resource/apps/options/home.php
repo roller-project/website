@@ -33,6 +33,20 @@ $options["timeline"] = [
 		["title" => "","description" => ""]
 	],
 ];
+
+
+$options["developgroup"] = [
+	"name"	=> "Develop Groups",
+	"title" => "Develops",
+	"description"	=> "",
+	"item" => [
+		["title" => "","description" => "","backgroundurl" => ""],
+		["title" => "","description" => "","backgroundurl" => ""],
+		["title" => "","description" => "","backgroundurl" => ""],
+		["title" => "","description" => "","backgroundurl" => ""]
+	],
+];
+
 $options["joingroup"] = [
 	"name"	=> "Join Group",
 	"title" => "Name 1",

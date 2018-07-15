@@ -56,8 +56,8 @@ $(document).ready(function(){
             items.html(vv);
           }
           if(kk == "item"){
-            $.each(v.item, function(kItem, vItem){
-              
+            $.each(vv.item, function(kItem, vItem){
+              alert(vItem);
             });
           }
           /*
