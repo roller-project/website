@@ -68,6 +68,22 @@
 	    </div>
 	</div>
 
+	<hr>
+	<?php
+		$social = [
+			"facebook"
+		];
+	?>
+	<?php foreach ($social as $key => $value) { ?>
+		
+	<div class="form-group row">
+	    <label class="col-sm-2 col-form-label text-right"><?php echo ucfirst($value);?></label>
+	    <div class="col-sm-10">
+	      <input type="text" class="form-control" name="config[<?php echo $value;?>]" value="<?php echo $this->config->item($value);?>">
+	    </div>
+	</div>
+	<?php } ?>
+
 	<div class="form-group row">
 	    <label class="col-sm-2 col-form-label text-right">&nbsp;</label>
 	    <div class="col-sm-10">

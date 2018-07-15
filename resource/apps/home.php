@@ -1,102 +1,9 @@
-<div class="u-space-3-top u-space-0--lg position-relative"  data-json="slider">
-      <div class="d-lg-flex align-items-lg-center min-height-100vh--lg position-relative">
-        <div class="container u-space-2 u-space-bottom-0--lg">
-          <!-- Blog -->
-          <div class="w-lg-50">
-            <!-- Author -->
-            <div class="media align-items-center mb-4" data-author>
-              <div class="d-flex mr-3">
-                <img class="img-fluid u-sm-avatar rounded-circle" src="http://blog.tribeinc.com/wp-content/uploads/2017/01/CEO.jpg" alt="Image Description">
-              </div>
-              <div class="media-body">
-                <h4 class="d-inline-block mb-0">
-                  <a class="d-block h6 mb-0" href="../blog/single-article-classic.html">CEO VÕ VĂN KHOA</a>
-                </h4>
-              </div>
-            </div>
-            <!-- End Author -->
 
-            <!-- Info -->
-            <div class="mb-4" data-json-item>
-              <h1 class="text-primary display-4 font-size-48--md-down font-weight-bold" data-title>Roller Platform</h1>
-              <div data-description>
-                <p class="lead">Hệ thống blockchain đơn giản hóa người dùng. Tích hợp các ứng dụng IoT.</p>
-                <p class="lead">Phát triển dựa trên nguyên lý cộng đồng. Được phát triển bởi nhóm Blockchain VietNam</p>
-              </div>
-            </div>
-            <!-- End Info -->
-
-            
-          </div>
-          <!-- End Blog -->
-        </div>
-
-        <!-- SVG Shapes v4 -->
-        <figure class="w-75 position-absolute-bottom-left-0 z-index-minus-1">
-          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1250 323" style="enable-background:new 0 0 1250 323;" xml:space="preserve">
-            <style type="text/css">
-              .st0{fill:#E4EBF9;}
-              .st1{fill:#EBF2FF;}
-            </style>
-            <path class="u-fill-primary" opacity=".05" d="M1250,322.8c0,0-50.4-39.9-123.7-54.3c-90.3-17.7-210.9-70.1-210.9-70.1S806,129.1,596.6,164
-              c-68.1,11.3-140,7.5-200.6-11.9c-42.2-13.5-77.1-32.8-103.7-53.9c-15.2-12.1-31.2-24-50.7-34.4c-20.6-11.1-43.2-21.3-67.5-30.3
-              C123.6,14.8,63.9,1.3,0.3,0l0,322.8H1250z"></path>
-            <path class="u-fill-primary" opacity=".05" d="M0,73.2c0,0,154.1-11.9,305.5,59.2s421.4,27.9,421.4,27.9s236.3-54.7,388.7,82.6c0,0,59.4,42.6,87.4,80.1H0L0,73.2z"></path>
-          </svg>
-        </figure>
-        <!-- End SVG Shapes v4 -->
-
-        <!-- Sidebar -->
-        <div class="col-lg-4 u-bg-img-hero min-height-100vh--lg position-absolute-top-right-0--lg px-lg-0 u-space-2" style="background-image: url(https://bitcoinist.com/wp-content/uploads/2017/12/ss-crypto-future.jpg);" data-backgroundurl>
-          <!-- Fancybox -->
-          <div class="text-center text-lg-left mb-3 mb-lg-0">
-            <a class="js-fancybox u-media-player u-media-player--left-minus-50x-top-50x-lg mb-4" href="javascript:;" data-src="//vimeo.com/167434033" data-speed="700" data-animate-in="zoomIn" data-animate-out="zoomOut" data-caption="Front - Responsive Website Template">
-             <span class="u-media-player__icon u-media-player__icon--lg u-media-player__icon--box-shadow">
-              <span class="ti-control-play u-media-player__icon-inner"></span>
-             </span>
-            </a>
-          </div>
-          <!-- End Fancybox -->
-
-          <!-- Testimonials -->
-          <div class="position-absolute-bottom-0--lg w-80 w-lg-100 mx-auto p-md-7">
-             <!-- Text Data -->
-          </div>
-          <!-- End Testimonials -->
-        </div>
-        <!-- End Sidebar -->
-      </div>
-    </div>
-
+<?php include __DIR__."/slider/slider3.php"; ?>
 
 <div class="container u-space-3" data-json="whatisroller">
       <div class="row justify-content-between align-items-center">
-        <div class="col-lg-5 mb-7 mb-lg-0">
-          <div class="pr-md-4">
-            <!-- Title -->
-            <div class="mb-7">
-              <span class="u-label u-label--sm u-label--success mb-2" data-pin>Cái gì là Roller Coind</span>
-              <h2 class="text-primary" data-title>Roller coin <span class="font-weight-bold">là gì</span></h2>
-             
-              <div data-description>
-                <p sroll-data data-in="bounceInRight">Roller coin được phát triển trên Roller Platform. Cung cấp cho người dùng tất cả các ứng dụng chạy trên smart contract</p>
-                <p class="row-arrow-put">
-                <p sroll-data data-in="bounceInLeft"><i class="ti-arrow-right"></i> Tên : Roller Network<p>
-                <p sroll-data data-in="bounceInRight"><i class="ti-arrow-right"></i> Viết tắt: ROL<p>
-                <p sroll-data data-in="bounceInLeft"><i class="ti-arrow-right"></i> Loại : Proof-of-Work<p>
-                <p sroll-data data-in="bounceInRight"><i class="ti-arrow-right"></i> Thuật toán : Ethash<p>
-                <p sroll-data data-in="bounceInLeft"><i class="ti-arrow-right"></i> Thời gian tối đa 1 block : 15 secs<p>
-                <p sroll-data data-in="bounceInRight"><i class="ti-arrow-right"></i> Số coin 1 block : 10 ROL<p>
-                <p sroll-data data-in="bounceInLeft"><i class="ti-arrow-right"></i> Tổng số coin phát hành : 100.000.000 ROL<p>
-                <p sroll-data data-in="bounceInRight"><i class="ti-arrow-right"></i> Không sử dụng tạo coin cho develop<p>
-                <p sroll-data data-in="bounceInLeft"><i class="ti-arrow-right"></i> Không vận hành bán ICO<p>
-                <p sroll-data data-in="bounceInRight"><i class="ti-arrow-right"></i> Nguyên lý dựa trên nguyên tắt cộng đồng sử dụng<p>
-                </p>
-              </div>
-            </div>
-            
-          </div>
-        </div>
+        
 
         <div class="col-lg-6 position-relative">
           <!-- Image Gallery -->
@@ -168,6 +75,34 @@
           </figure>
           <!-- End SVG Background Shape -->
         </div>
+
+        <div class="col-lg-5 mb-7 mb-lg-0">
+          <div class="pr-md-4">
+            <!-- Title -->
+            <div class="mb-7">
+              <span class="u-label u-label--sm u-label--success mb-2" data-pin>Cái gì là Roller Coind</span>
+              <h2 class="text-primary" data-title>Roller coin <span class="font-weight-bold">là gì</span></h2>
+             
+              <div data-description>
+                <p sroll-data data-in="bounceInRight">Roller coin được phát triển trên Roller Platform. Cung cấp cho người dùng tất cả các ứng dụng chạy trên smart contract</p>
+                <p class="row-arrow-put">
+                <p sroll-data data-in="bounceInLeft"><i class="ti-arrow-right"></i> Tên : Roller Network<p>
+                <p sroll-data data-in="bounceInRight"><i class="ti-arrow-right"></i> Viết tắt: ROL<p>
+                <p sroll-data data-in="bounceInLeft"><i class="ti-arrow-right"></i> Loại : Proof-of-Work<p>
+                <p sroll-data data-in="bounceInRight"><i class="ti-arrow-right"></i> Thuật toán : Ethash<p>
+                <p sroll-data data-in="bounceInLeft"><i class="ti-arrow-right"></i> Thời gian tối đa 1 block : 15 secs<p>
+                <p sroll-data data-in="bounceInRight"><i class="ti-arrow-right"></i> Số coin 1 block : 10 ROL<p>
+                <p sroll-data data-in="bounceInLeft"><i class="ti-arrow-right"></i> Tổng số coin phát hành : 100.000.000 ROL<p>
+                <p sroll-data data-in="bounceInRight"><i class="ti-arrow-right"></i> Không sử dụng tạo coin cho develop<p>
+                <p sroll-data data-in="bounceInLeft"><i class="ti-arrow-right"></i> Không vận hành bán ICO<p>
+                <p sroll-data data-in="bounceInRight"><i class="ti-arrow-right"></i> Nguyên lý dựa trên nguyên tắt cộng đồng sử dụng<p>
+                </p>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+
       </div>
     </div>
 
@@ -175,76 +110,29 @@
 
 
 
-<div data-json="timeline">
+
 
 <div class="bg-primary u-devices-v2">
       <div class="container u-space-3 position-relative z-index-2">
         <!-- Title -->
         <div class="w-md-80 w-lg-50 text-center mx-auto">
-          <span class="u-icon bg-white u-icon--xl rounded-circle mb-4">
-            <span class="fas ti-control-play text-primary u-icon__inner font-size-32"></span>
-          </span>
-          <h2 class="h1 text-white">Mục tiêu <span class="font-weight-bold">phát triển</span> của ROL</h2>
-          <p class="lead u-text-light mb-0">Các mốc phát triển dự án của chúng tôi đặt ra từ 2018 - 2020.</p>
+         
+          <h2 class="h1 text-white" data-title>Wallet <span class="font-weight-bold">phát triển</span> của ROL</h2>
+          <p class="lead u-text-light mb-0" data-description>Phần mềm quản lý ROL và Smart Contract trên các hệ điều hành</p>
+          <br>
+          <a href="" class="btn btn-outline-light">Window</a> 
+          <a href="" class="btn btn-outline-light">Linux</a> 
+          <a href="" class="btn btn-outline-light">Mac OS</a>
+          <a href="" class="btn btn-outline-light">Androi</a>
+          <a href="" class="btn btn-outline-light">IOS</a>
+          <br>
+          <br>
+          <p class="text-white">Xem thêm hướng dẫn khai thác ROL</p>
         </div>
         <!-- End Title -->
       </div>
 
-      <!-- Devices v2 -->
-      <div class="d-none d-lg-block">
-        <!-- SVG Tablet Mockup -->
-        <div class="u-devices-v2__tablet">
-          <figure class="w-75 u-devices-v2__tablet-svg">
-            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 603 892" style="enable-background:new 0 0 603 892;" xml:space="preserve">
-              <path id="BG_Color" class="u-fill-white" d="M603,51.8v788.5c0,28.5-23.3,51.8-51.8,51.8H51.8C23.3,892,0,868.7,0,840.2L0,51.8
-                C0,23.3,23.3,0,51.8,0l499.5,0C579.7,0,603,23.3,603,51.8z"></path>
-              <circle id="tabletFrameTouchID1" class="u-fill-gray-75" cx="302.5" cy="846.5" r="25.5"></circle>
-              <circle id="tabletFrameCameraID1" class="u-fill-gray-75" cx="301.8" cy="45.9" r="6.2"></circle>
-              <g>
-                <defs>
-                  <rect id="tabletFrameID1" x="36" y="86" width="533" height="711"></rect>
-                </defs>
-                <clipPath id="tabletFrameID2">
-                  <use xlink:href="#tabletFrameID1" style="overflow:visible;"></use>
-                </clipPath>
-                <g style="clip-path:url(#tabletFrameID2);">
-                  <!-- Apply your (533px width to 711px height) image here -->
-                  <image style="overflow:visible;" width="533" height="711" xlink:href="<?php echo store_url("uploads/tablet.jpg");?>" transform="matrix(1 0 0 1 36 86)"></image>
-                </g>
-                <use class="u-fill-none u-stroke-light-blue-125" xlink:href="#tabletFrameID1" stroke-miterlimit="10" style="overflow: visible;"></use>
-              </g>
-            </svg>
-          </figure>
-        </div>
-        <!-- End SVG Tablet Mockup -->
-
-        <!-- SVG Phone Mockup -->
-        <div class="u-devices-v2__phone">
-          <figure class="w-75 u-devices-v2__phone-svg">
-            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 317.5 665" style="enable-background:new 0 0 317.5 665;" xml:space="preserve">
-              <path class="u-fill-white" d="M263,666H54c-29.7,0-54-24.3-54-54V55C0,25.3,24.3,1,54,1h209c29.7,0,54,24.3,54,54v557
-                C317,641.7,292.7,666,263,666z"></path>
-              <circle class="u-fill-gray-75" cx="159.5" cy="619.5" r="25.5"></circle>
-              <path class="u-fill-gray-75" fill-rule="evenodd" clip-rule="evenodd" d="M180,52h-42c-2.2,0-4-1.8-4-4v0c0-2.2,1.8-4,4-4h42c2.2,0,4,1.8,4,4v0C184,50.2,182.2,52,180,52z"></path>
-              <g>
-                <defs>
-                  <rect id="phoneFrameID1" x="19.4" y="81.3" width="280" height="500"></rect>
-                </defs>
-                <clipPath id="phoneFrameID2">
-                  <use xlink:href="#phoneFrameID1" style="overflow:visible;"></use>
-                </clipPath>
-                <g style="clip-path:url(#phoneFrameID2);">
-                  <!-- Apply your (282px width to 500px height) image here -->
-                  <image style="overflow:visible;" width="282" height="500" xlink:href="<?php echo store_url("uploads/mobile.jpg");?>" transform="matrix(1 0 0 1 18 81)"></image>
-                </g>
-                <use class="u-fill-none u-stroke-light-blue-125" xlink:href="#phoneFrameID1" stroke-miterlimit="10" style="overflow: visible;"></use>
-              </g>
-            </svg>
-          </figure>
-        </div>
-        <!-- End SVG Phone Mockup -->
-      </div>
-      <!-- End Devices v2 -->
+     
 
       <!-- SVG Background Shape -->
       <figure class="w-100 u-content-centered-y position-absolute-bottom-right-0">
@@ -264,7 +152,7 @@
             <circle class="u-fill-none u-stroke-white" stroke-width="5" stroke-miterlimit="10" cx="597.1" cy="82.1" r="4.5"></circle>
           </g>
           <g>
-            <circle class="u-fill-none u-stroke-white" stroke-width="12" stroke-miterlimit="10" stroke-opacity=".15" cx="448.1" cy="166.1" r="7.9"></circle>
+            <circle class="u-fill-none u-stroke-white" stroke-width="12" stroke-miterlimit="10" stroke-opacity=".15" cx="448.1" cy="166.1" r="12.9"></circle>
             <circle class="u-fill-none u-stroke-white" stroke-width="5" stroke-miterlimit="10" cx="448.1" cy="166.1" r="4.5"></circle>
           </g>
         </svg>
@@ -274,10 +162,17 @@
 
 
 
-
+<div data-json="timeline">
  <div class="container u-space-1">
       
-
+      <div class="w-md-80 w-lg-50 text-center mx-auto mb-9">
+        <span class="u-label u-label--sm u-label--success mb-2">Benefits</span>
+        <h2 class="text-primary" data-title>Why
+          <span class="font-weight-bold">join us?</span>
+        </h2>
+        <p data-description>The passion and commitment to that mission lives through everything we do.</p>
+      </div>
+      <br>
       <div class="row">
         <div class="col-sm-6 col-lg-4 mb-7">
           <!-- Icon Blocks -->
@@ -537,6 +432,384 @@
 
 
 
+    <div class="position-relative">
+      <div class="container u-space-3">
+        <div class="row align-items-center">
+
+
+          <div class="col-lg-7 position-relative">
+            <!-- Video Block -->
+            <div id="video" class="u-video-player">
+              <!-- Cover Image -->
+              <img class="img-fluid u-video-player__preview" src="<?php echo store_url("uploads/img5.jpg");?>" alt="Image">
+              <!-- End Cover Image -->
+
+              <!-- Play Button -->
+              <a class="js-classes-toggle u-video-player__btn u-video-player__centered" href="javascript:;" data-target="#video" data-classes="u-video-player__played">
+                <span class="u-video-player__icon u-video-player__icon--lg text-primary">
+                  <span class="ti-control-play u-video-player__icon-inner"></span>
+                </span>
+              </a>
+              <!-- End Play Button -->
+
+              <!-- Video Iframe -->
+              <div class="embed-responsive embed-responsive-16by9">
+                <iframe id="vimeoVideo" class="embed-responsive-item" data-src="https://player.vimeo.com/video/97243285?autoplay=1&amp;title=0&amp;byline=0&amp;portrait=0">
+                </iframe>
+              </div>
+              <!-- End Video Iframe -->
+            </div>
+            <!-- End Video Block -->
+
+            <!-- SVG Background Shape -->
+            <figure class="w-100 u-content-centered z-index-minus-1">
+              <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1109.8 797.1" style="enable-background:new 0 0 1109.8 797.1;" xml:space="preserve">
+                <path class="u-fill-primary" opacity=".1" d="M105.1,267.1C35.5,331.5-3.5,423,0.3,517.7c5.8,145.3,110.7,314.2,588,273.1c753-64.7,481.3-358.3,440.4-398.3
+                  c-4-3.9-7.9-7.9-11.7-12L761.9,104.8C639.4-27.6,432.5-35.6,299.9,87L105.1,267.1z"></path>
+              </svg>
+            </figure>
+            <!-- End SVG Background Shape -->
+          </div>
+
+
+
+          <div class="col-lg-5 mb-9 mb-lg-0">
+            <!-- Title -->
+            <div class="pr-lg-4 mb-7">
+              <span class="u-label u-label--sm u-label--success mb-2">Outsource</span>
+              <h2 class="text-primary">Các ứng
+                <span class="font-weight-bold">dụng trên platform</span>
+              </h2>
+              <p>Các ứng dụng được phục vụ trên hệ thống roller platform</p>
+            </div>
+            <!-- End Title -->
+
+            <div class="row">
+              <div class="col-sm-6">
+                <!-- List -->
+                <ul class="list-unstyled mb-0">
+                  <li class="py-2">
+                    <div class="media">
+                      <div class="d-flex mr-3">
+                      <span class="u-icon u-icon-danger--air u-icon--sm rounded-circle">
+                        <span class="ti-plus u-icon__inner"></span>
+                      </span>
+                      </div>
+                      <div class="media-body">
+                        HTML 5 Design
+                      </div>
+                    </div>
+                  </li>
+                  <li class="py-2">
+                    <div class="media">
+                      <div class="d-flex mr-3">
+                      <span class="u-icon u-icon-primary--air u-icon--sm rounded-circle">
+                        <span class="ti-plus u-icon__inner"></span>
+                      </span>
+                      </div>
+                      <div class="media-body">
+                        Geth
+                      </div>
+                    </div>
+                  </li>
+                  <li class="py-2">
+                    <div class="media">
+                      <div class="d-flex mr-3">
+                      <span class="u-icon u-icon-success--air u-icon--sm rounded-circle">
+                        <span class="fab ti-plus u-icon__inner"></span>
+                      </span>
+                      </div>
+                      <div class="media-body">
+                        Smart Contract
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+                <!-- End List -->
+              </div>
+
+              <div class="col-sm-6">
+                <!-- List -->
+                <ul class="list-unstyled mb-0">
+                  <li class="py-2">
+                    <div class="media">
+                      <div class="d-flex mr-3">
+                      <span class="u-icon u-icon-danger--air u-icon--sm rounded-circle">
+                        <span class="fab ti-plus u-icon__inner"></span>
+                      </span>
+                      </div>
+                      <div class="media-body">
+                        IoT Service
+                      </div>
+                    </div>
+                  </li>
+                  <li class="py-2">
+                    <div class="media">
+                      <div class="d-flex mr-3">
+                      <span class="u-icon u-icon-primary--air u-icon--sm rounded-circle">
+                        <span class="ti-plus u-icon__inner"></span>
+                      </span>
+                      </div>
+                      <div class="media-body">
+                        Games
+                      </div>
+                    </div>
+                  </li>
+                  <li class="py-2">
+                    <div class="media">
+                      <div class="d-flex mr-3">
+                      <span class="u-icon u-icon-success--air u-icon--sm rounded-circle">
+                        <span class="fab ti-plus u-icon__inner"></span>
+                      </span>
+                      </div>
+                      <div class="media-body">
+                        Solidarity
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+                <!-- End List -->
+              </div>
+            </div>
+          </div>
+
+
+        </div>
+      </div>
+    </div>
+
+
+
+
+<hr>
+
+<div data-json="support">
+ <div class="container u-space-1">
+      
+      <div class="w-md-80 w-lg-50 text-center mx-auto mb-9">
+        <span class="u-label u-label--sm u-label--success mb-2">Support</span>
+        <h2 class="text-primary" data-title>Hỗ trợ
+          <span class="font-weight-bold">người dùng</span>
+        </h2>
+        <p data-description>Cho chúng tôi biết các vấn để của bạn đang gặp phải</p>
+      </div>
+      <br>
+      <div class="row">
+        <div class="col-sm-6 col-lg-4 mb-7">
+          <!-- Icon Blocks -->
+          <div class="media">
+            <div class="d-flex mr-3">
+            <span class="u-icon u-icon-primary--air u-icon--sm rounded-circle">
+              <span class="u-icon__inner font-weight-bold">01.</span>
+            </span>
+            </div>
+            <div class="media-body">
+              <h3 class="h6">Vận hành hệ thống (100%)</h3>
+              <p>Hệ thống đi vào vận hành từ ngày 12/07/2018.</p>
+            </div>
+          </div>
+          <!-- End Icon Blocks -->
+        </div>
+
+        <div class="col-sm-6 col-lg-4 mb-7">
+          <!-- Icon Blocks -->
+          <div class="media">
+            <div class="d-flex mr-3">
+            <span class="u-icon u-icon-primary--air u-icon--sm rounded-circle">
+              <span class="u-icon__inner font-weight-bold">02.</span>
+            </span>
+            </div>
+            <div class="media-body">
+              <h3 class="h6">Public Network (20%)</h3>
+              <p>Chúng tôi sẽ mở hệ thống khai thác ROL từ sau block 50.000.</p>
+            </div>
+          </div>
+          <!-- End Icon Blocks -->
+        </div>
+
+        <div class="col-sm-6 col-lg-4 mb-7">
+          <!-- Icon Blocks -->
+          <div class="media">
+            <div class="d-flex mr-3">
+            <span class="u-icon u-icon-primary--air u-icon--sm rounded-circle">
+              <span class="u-icon__inner font-weight-bold">03.</span>
+            </span>
+            </div>
+            <div class="media-body">
+              <h3 class="h6">Phát triển wallet (30%)</h3>
+              <p>Phát triển wallet trên window/ linux/ Macos / Androi/ IOS.</p>
+            </div>
+          </div>
+          <!-- End Icon Blocks -->
+        </div>
+
+        <div class="col-sm-6 col-lg-4 mb-7 mb-sm-0">
+          <!-- Icon Blocks -->
+          <div class="media">
+            <div class="d-flex mr-3">
+            <span class="u-icon u-icon-primary--air u-icon--sm rounded-circle">
+              <span class="u-icon__inner font-weight-bold">04.</span>
+            </span>
+            </div>
+            <div class="media-body">
+              <h3 class="h6">Ứng dụng Masternode (40%)</h3>
+              <p>Cho phép miner khai thác ROL qua Masternode.</p>
+            </div>
+          </div>
+          <!-- End Icon Blocks -->
+        </div>
+
+        <div class="col-sm-6 col-lg-4 mb-7 mb-sm-0">
+          <!-- Icon Blocks -->
+          <div class="media">
+            <div class="d-flex mr-3">
+            <span class="u-icon u-icon-primary--air u-icon--sm rounded-circle">
+              <span class="u-icon__inner font-weight-bold">05.</span>
+            </span>
+            </div>
+            <div class="media-body">
+              <h3 class="h6">List sàn giao dịch (0%)</h3>
+              <p>Chúng tôi sẽ tiến hành list lên sàn giao dịch đưa ROL vào thương mại.</p>
+            </div>
+          </div>
+          <!-- End Icon Blocks -->
+        </div>
+
+        <div class="col-sm-6 col-lg-4 mb-7 mb-sm-0">
+          <!-- Icon Blocks -->
+          <div class="media">
+            <div class="d-flex mr-3">
+            <span class="u-icon u-icon-primary--air u-icon--sm rounded-circle">
+              <span class="u-icon__inner font-weight-bold">06.</span>
+            </span>
+            </div>
+            <div class="media-body">
+              <h3 class="h6">Phát triển Smart Contract</h3>
+              <p>Phát triển các ứng dụng trên smart contract chỉ 1 click chuột.</p>
+            </div>
+          </div>
+          <!-- End Icon Blocks -->
+
+
+        </div>
+
+      </div>
+
+        
+    </div>
+
+</div>
+<!--// End support -->    
+
+<hr>
+
+
+
+
+
+
+
+<div data-json="developgroup">
+ <div class="container u-space-1">
+      
+      <div class="w-md-80 w-lg-50 text-center mx-auto mb-9">
+        <span class="u-label u-label--sm u-label--success mb-2">Develop Groups</span>
+        <h2 class="text-primary" data-title>Thành viên
+          <span class="font-weight-bold">phát triển ROL</span>
+        </h2>
+        <p data-description>Các thành viên tiêu biểu phát triển ROL</p>
+      </div>
+      <br>
+      <div class="row">
+        <div class="col-sm-6 col-lg-4 mb-7">
+          <!-- Icon Blocks -->
+          <div class="media">
+          </div>
+          <!-- End Icon Blocks -->
+        </div>
+
+        <div class="col-sm-6 col-lg-4 mb-7">
+          <!-- Icon Blocks -->
+          <div class="media">
+            
+              
+          </div>
+          <!-- End Icon Blocks -->
+        </div>
+
+        <div class="col-sm-6 col-lg-4 mb-7">
+          <!-- Icon Blocks -->
+          <div class="media">
+            <div class="d-flex mr-3">
+            <span class="u-icon u-icon-primary--air u-icon--sm rounded-circle">
+              <span class="u-icon__inner font-weight-bold">03.</span>
+            </span>
+            </div>
+            <div class="media-body">
+              <h3 class="h6">Phát triển wallet (30%)</h3>
+              <p>Phát triển wallet trên window/ linux/ Macos / Androi/ IOS.</p>
+            </div>
+          </div>
+          <!-- End Icon Blocks -->
+        </div>
+
+        <div class="col-sm-6 col-lg-4 mb-7 mb-sm-0">
+          <!-- Icon Blocks -->
+          <div class="media">
+            <div class="d-flex mr-3">
+            <span class="u-icon u-icon-primary--air u-icon--sm rounded-circle">
+              <span class="u-icon__inner font-weight-bold">04.</span>
+            </span>
+            </div>
+            <div class="media-body">
+              <h3 class="h6">Ứng dụng Masternode (40%)</h3>
+              <p>Cho phép miner khai thác ROL qua Masternode.</p>
+            </div>
+          </div>
+          <!-- End Icon Blocks -->
+        </div>
+
+        <div class="col-sm-6 col-lg-4 mb-7 mb-sm-0">
+          <!-- Icon Blocks -->
+          <div class="media">
+            <div class="d-flex mr-3">
+            <span class="u-icon u-icon-primary--air u-icon--sm rounded-circle">
+              <span class="u-icon__inner font-weight-bold">05.</span>
+            </span>
+            </div>
+            <div class="media-body">
+              <h3 class="h6">List sàn giao dịch (0%)</h3>
+              <p>Chúng tôi sẽ tiến hành list lên sàn giao dịch đưa ROL vào thương mại.</p>
+            </div>
+          </div>
+          <!-- End Icon Blocks -->
+        </div>
+
+        <div class="col-sm-6 col-lg-4 mb-7 mb-sm-0">
+          <!-- Icon Blocks -->
+          <div class="media">
+            <div class="d-flex mr-3">
+            <span class="u-icon u-icon-primary--air u-icon--sm rounded-circle">
+              <span class="u-icon__inner font-weight-bold">06.</span>
+            </span>
+            </div>
+            <div class="media-body">
+              <h3 class="h6">Phát triển Smart Contract</h3>
+              <p>Phát triển các ứng dụng trên smart contract chỉ 1 click chuột.</p>
+            </div>
+          </div>
+          <!-- End Icon Blocks -->
+
+
+        </div>
+
+      </div>
+
+        
+    </div>
+
+</div>
+<!--// End support -->    
 
 
 

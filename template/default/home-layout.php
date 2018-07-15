@@ -34,7 +34,7 @@
          
 
           <div class="collapse navbar-collapse  offcanvas-collapse py-0" id="navbarsExampleDefault">
-            <ul class="navbar-nav ml-lg-auto">
+            <ul class="navbar-nav">
               <li class="nav-item active">
                 <a class="nav-link" href="<?php echo store_url("");?>"><i class="ti-home"></i> <?php echo lang("home");?> <span class="sr-only">(current)</span></a>
               </li>
@@ -52,10 +52,13 @@
               <?php } ?>
               
 
+              
+              
+            </ul>
+            <ul class="navbar-nav ml-lg-auto">
               <li class="nav-item">
                 <a class="nav-link btn btn-outline-light btn-capsule px-3" href="<?php echo store_url("account");?>"><i class="ti-user"></i> <?php echo lang("account");?></a>
               </li>
-              
             </ul>
             
           </div>

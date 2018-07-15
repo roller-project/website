@@ -15,10 +15,10 @@ $options["whatisroller"] = [
 	"description"	=> "",
 	"pin"	=> "",
 	"item" => [
-		["title","backgroundurl"],
-		["title","backgroundurl"],
-		["title","backgroundurl"],
-		["title","backgroundurl"]
+		["title" => "","backgroundurl" => ""],
+		["title" => "","backgroundurl" => ""],
+		["title" => "","backgroundurl" => ""],
+		["title" => "","backgroundurl" => ""]
 	],
 ];
 
@@ -27,10 +27,10 @@ $options["timeline"] = [
 	"title" => "Name 1",
 	"description"	=> "",
 	"item" => [
-		["title","description"],
-		["title","description"],
-		["title","description"],
-		["title","description"]
+		["title" => "","description" => ""],
+		["title" => "","description" => ""],
+		["title" => "","description" => ""],
+		["title" => "","description" => ""]
 	],
 ];
 $options["joingroup"] = [

@@ -31,7 +31,7 @@ body {
   z-index: 99;
 }
 #header.fixed-theme a{
-  color: #333;
+  color: #333 !important;
 }
 #header.fixed-theme .btn-outline-light{
   border-color:red;
@@ -39,20 +39,20 @@ body {
 #header{
   position: fixed;
   top:0;
-  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+  /*box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);*/
   border-bottom: 0px solid #ddd;
   width: 100%;
   z-index: 99;
-  background-color:rgba(255,255,255,0.8);
+  
 }
 #header .btn-outline-light{
-  border-color:red;
+  border-color:#FFF;
   color: red;
 }
 header a, header a:hover{
-  color: #007bff;
+  color: #FFF !important;;
   font-size: 18px;
-  font-weight: bold;
+  
  
 }
 header a:hover{

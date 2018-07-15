@@ -35,7 +35,7 @@ $(document).ready(function(){
           var items = item.find("[data-"+kk+"]");
           var tag = items.prop('tagName');
           items.removeClass("lock");
-          
+          if(!vv) return;
           if(tag == "A"){
               var hf = items.attr("href");
               hf = hf.replace('{url}',vv);

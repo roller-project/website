@@ -66,10 +66,10 @@
 				<div class="form-group row">
 				    <label class="col-sm-2 col-form-label">Content URL</label>
 				    <div class="col-sm-8">
-				      <input type="text" class="form-control" name="json[<?php echo $key;?>][content];?>" value="<?php echo $value["content"];?>">
+				      <input type="text" class="form-control" name="json[<?php echo $key;?>][content]" value="<?php echo $value["content"];?>">
 				    </div>
 				    <div class="col-sm-2">
-				      <input type="text" class="form-control" name="json[<?php echo $key;?>][limit];?>" value="<?php echo $value["limit"];?>">
+				      <input type="text" class="form-control" name="json[<?php echo $key;?>][limit]" value="<?php echo $value["limit"];?>">
 				    </div>
 
 				</div>
@@ -78,7 +78,7 @@
 				<div class="form-group row">
 				    <label class="col-sm-2 col-form-label">Description</label>
 				    <div class="col-sm-10">
-				      <textarea type="text" class="form-control" rows="5" name="json[<?php echo $key;?>][description];?>"><?php echo $value["description"];?></textarea>
+				      <textarea type="text" class="form-control" rows="5" name="json[<?php echo $key;?>][description]"><?php echo $value["description"];?></textarea>
 				    </div>
 				</div>
 				<?php } ?>
@@ -98,7 +98,8 @@
 				</div>
 			</div>
 			<?php } ?>
-				<?php if(isset($value["item"]) && count($value["item"]) > 0) { ?>
+				<?php if(isset($value["item"]) && is_array($value["item"]) && count($value["item"]) > 0) { ?>
+
 					<div class="form-group row">
 					    <label class="col-sm-2 col-form-label">Item Set</label>
 					    <div class="col-sm-10">
