@@ -114,7 +114,7 @@
               <div class="col-12">
                  <p class="text-left">Các quá trình phát triển của chúng tôi còn phụ thuộc vào sự đóng góp chi phí và công nghệ của cộng đồng sử dụng. Các đóng góp vui lòng gởi về <a href="https://www.blockchain.com/btc/address/18UDydoLS6eckX2aspZLWUWngKkZahWPkK" target="_bank">18UDydoLS6eckX2aspZLWUWngKkZahWPkK</a></p>
                 <!--copyright-->
-                <p class="copyright">Language : English | Vietnam | China | Russia | Korea</p>
+                <p class="copyright">Language : <a href="?langauge=english">English</a> | <a href="?langauge=vietnam">Vietnam</a> | <a href="?langauge=china">China</a> | <a href="?langauge=russia">Russia</a> | <a href="?langauge=korea">Korea</a></p>
                 <!--/copyright-->
               </div>
 

@@ -73,7 +73,59 @@ background-color: #dc3545;
 border-color: #dc3545;
 }
 
-
+.groupsay .media{
+  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+  background-color: #FFF;
+  position: relative;
+  border-radius: 15px;
+  display: block;
+  margin-top: 50px;
+}
+.groupsay .avatar{
+  text-align: center;
+}
+.groupsay .avatar img{
+  width:65px;
+  height: 65px;
+  margin:auto;
+  border:1px solid #ddd; 
+  border-radius: 100px;
+  margin-bottom: -30px; 
+  background-color: #FFF;
+  z-index: 999;
+}
+.heightline{
+  padding-top: 00px;
+  padding-bottom: 50px;
+  border:0px solid #ddd;
+  margin-top: -20px !important;
+}
+.heightline .avatar{
+  padding-top: 130px;
+  -webkit-border-top-left-radius: 15px;
+-webkit-border-top-right-radius: 15px;
+-moz-border-radius-topleft: 15px;
+-moz-border-radius-topright: 15px;
+border-top-left-radius: 15px;
+border-top-right-radius: 15px;
+margin-top: -1px;
+margin-left:-1px;
+margin-right:-1px;
+position: relative;  
+}
+.heightline .avatar .text{
+  position: absolute;
+  top: 40px;
+  z-index: 9999;
+  width: 100%;
+  text-align: center;
+}
+.heightline .avatar .text img{
+  margin-bottom: 0;
+  border: 5px solid #FFF;
+  width: 85px;
+  height: 85px;
+}
 /*
 Background Eff
 */
