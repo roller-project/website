@@ -39,7 +39,7 @@
                 <a class="nav-link" href="<?php echo store_url("");?>"><i class="ti-home"></i> <?php echo lang("home");?> <span class="sr-only">(current)</span></a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="http://explorer.roller.today:3000/home" target="_blank"><i class="ti-exploder"></i> Exploder</a>
+                <a class="nav-link" href="http://explorer.roller.today:3000/home" target="_blank"><i class="ti-export"></i> Exploder</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="http://wallet.roller.today" target="_blank"><i class="ti-wallet"></i> Wallet</a>
@@ -47,7 +47,7 @@
 
               <?php foreach ($menu as $key => $value) { ?>
                 <li class="nav-item">
-                  <a class="nav-link" href="<?php echo store_url($key);?>" title="<?php echo $value;?>"><?php echo $value;?></a>
+                  <a class="nav-link" href="<?php echo store_url($value["link"]);?>" title="<?php echo $value["name"];?>"><i class="<?php echo $value["icons"];?>"></i> <?php echo $value["name"];?></a>
                 </li>
               <?php } ?>
               
@@ -56,6 +56,7 @@
               
             </ul>
             <ul class="navbar-nav ml-lg-auto">
+              
               <li class="nav-item">
                 <a class="nav-link btn btn-outline-light btn-capsule px-3" href="<?php echo store_url("account");?>"><i class="ti-user"></i> <?php echo lang("account");?></a>
               </li>
@@ -66,7 +67,7 @@
       </header>
     
 
-          <main id="content" role="main" role="main">
+          <main id="content" role="main">
                   <?php echo $flash;?>
                   <?php echo $content;?>
           </main>
@@ -75,46 +76,26 @@
           <div class="container">
             <div class="row wow fadeInUp">
               <div class="col-12">
-                <p class="social">
+                <div class="social">
                   <span data-i18n="footer.heading">Follow us</span>
-                  <a href="#" target="_blank">
-                    <img src="<?php echo template_url("image/tw.png");?>" width="30" height="30">
-                  </a>
-                  <a href="#" target="_blank">
-                    <img src="<?php echo template_url("image/me.png");?>" width="30" height="30">
-                  </a>
-                  <a class="wechat" target="_blank">
-                    <img src="<?php echo template_url("image/weixin.png");?>" width="30" height="30">
-                    
-                  </a>
-                  <a href="#" target="_blank">
-                    <img src="<?php echo template_url("image/te.png");?>" width="30" height="30">
-                  </a>
-                  <a href="#" target="_blank">
-                    <img src="<?php echo template_url("image/git.png");?>" width="30" height="30">
-                  </a>
-                  <a href="#" target="_blank">
-                    <img src="<?php echo template_url("image/weibo.png");?>" width="30" height="30">
-                  </a>
-                  <a href="#" target="_blank">
-                    <img src="<?php echo template_url("image/youtube.png");?>" width="30" height="30">
-                  </a>
-                  <a href="#" target="_blank">
-                    <img src="<?php echo template_url("image/link.png");?>" width="30" height="30">
-                  </a>
-                  <a href="#" target="_blank">
-                    <img src="<?php echo template_url("image/fb.png");?>" width="30" height="30">
-                  </a>
-                  <a href="#" target="_blank">
-                    <img src="<?php echo template_url("image/reddit.png");?>" width="30" height="30">
-                  </a>
-                </p>
+                  <ul>
+                  <?php $social_db = json_decode($this->config->item("social"));?>
+                  <?php foreach ($social_db as $keySdb => $valueSdb) { ?>
+                      <li class="btn-outline-primary">
+                        <a href="<?php echo $valueSdb;?>" target="_blank">
+                          <i class="ti-<?php echo $keySdb;?>"></i>
+                        </a>
+                      </li>
+                  <?php } ?>
+                  </ul>
+                 
+                </div>
               </div>
 
               <div class="col-12">
                  <p class="text-left">Các quá trình phát triển của chúng tôi còn phụ thuộc vào sự đóng góp chi phí và công nghệ của cộng đồng sử dụng. Các đóng góp vui lòng gởi về <a href="https://www.blockchain.com/btc/address/18UDydoLS6eckX2aspZLWUWngKkZahWPkK" target="_bank">18UDydoLS6eckX2aspZLWUWngKkZahWPkK</a></p>
                 <!--copyright-->
-                <p class="copyright">Language : <a href="?langauge=english">English</a> | <a href="?langauge=vietnam">Vietnam</a> | <a href="?langauge=china">China</a> | <a href="?langauge=russia">Russia</a> | <a href="?langauge=korea">Korea</a></p>
+                <p class="copyright">Language : <a href="?language=english">English</a> | <a href="?language=vietnam">Vietnam</a> | <a href="?language=china">China</a> | <a href="?language=russia">Russia</a> | <a href="?language=korea">Korea</a></p>
                 <!--/copyright-->
               </div>
 

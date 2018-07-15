@@ -1,12 +1,12 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Page extends Frontend {
+class Content extends Frontend {
 	public function index(){
 		exit('No Support');
 	}
 
-	public function content($url=""){
+	public function detail($url=""){
 		if(!$url)exit('No Support');
 		$data = $this->page_model->getContent($url);
 		$content = "";

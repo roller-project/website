@@ -71,18 +71,72 @@
 	<hr>
 	<?php
 		$social = [
-			"facebook"
+			"flickr",
+			"instagram",
+			"google",
+			"github",
+			"facebook",
+			"dropbox",
+			"dribbble",
+			"apple",
+			"android",
+			"yahoo",
+			"trello",
+			"stack-overflow",
+			"soundcloud",
+			"sharethis",
+			"reddit",
+			"microsoft",
+			"linux",
+			"jsfiddle",
+			"joomla",
+			"html5",
+			"css3",
+			"drupal",
+			"wordpress",
+			"tumblr",
+			"skype",
+			"youtube",
+			"vimeo",
+			"twitter",
+			"linkedin",
+			"pinterest",
+			
 		];
 	?>
-	<?php foreach ($social as $key => $value) { ?>
-		
+	
+	
+
 	<div class="form-group row">
-	    <label class="col-sm-2 col-form-label text-right"><?php echo ucfirst($value);?></label>
-	    <div class="col-sm-10">
-	      <input type="text" class="form-control" name="config[<?php echo $value;?>]" value="<?php echo $this->config->item($value);?>">
+	    <label class="col-sm-2 col-form-label text-right">Social</label>
+	    
+	    <div class="col-sm-3">
+	      	<select class="form-control selectsocial">
+				<?php foreach ($social as $key => $value) { ?>
+				<option><?php echo $value;?></option>
+				<?php } ?>
+			</select>
+	    </div>
+	    <div class="col-sm-7">
+	    	<button class="btn btn-outline-primary" type="button" onclick="addSocial();"><i class="ti-plus"></i> Add</button>
 	    </div>
 	</div>
-	<?php } ?>
+
+	<div class="social">
+		<?php $social_db = json_decode($this->config->item("social"));?>
+		<?php foreach ($social_db as $keySdb => $valueSdb) { ?>
+			<div class="form-group row <?php echo $keySdb;?>">
+			    <label class="col-sm-2 col-form-label text-right"><?php echo ucfirst($keySdb);?></label>
+			    
+			    <div class="col-sm-10">
+			      <input type="text" class="form-control" name="config[social][<?php echo $keySdb;?>]" value="<?php echo $valueSdb;?>">
+			    </div>
+			</div>
+		<?php } ?>
+	</div>
+
+
+	
 
 	<div class="form-group row">
 	    <label class="col-sm-2 col-form-label text-right">&nbsp;</label>
@@ -92,3 +146,24 @@
 	</div>
 
 </form>
+
+
+<script type="text/html" id="socialForm">
+	<div class="form-group row {name}">
+	    <label class="col-sm-2 col-form-label text-right">{name}</label>
+	    
+	    <div class="col-sm-10">
+	      <input type="text" class="form-control" name="config[social][{name}]" value="">
+	    </div>
+	</div>
+</script>
+<script type="text/javascript">
+	function addSocial(){
+		var html = $("#socialForm").html();
+		var name = $(".selectsocial").val();
+		if(!$(".social ."+name).html()){
+			html = html.replace(/{name}/g,name);
+			$(".social").append(html);
+		}
+	}
+</script>

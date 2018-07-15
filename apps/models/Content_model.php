@@ -16,7 +16,7 @@ class Content_model extends CI_Model{
 
 	public function listContent($type="blog", $limit=20, $start=0, $sort="DESC", $sortBy="id", $filter="", $filterBy=""){
 		$arv["language"] = config_item("language");
-		$arv["stores"] = (config_item("stores") ? config_item("stores") : "");
+		$this->db->where("language",config_item("language"));
 		$this->db->where("type",$type);
 		return $this->db->get("contents")->result();
 	}

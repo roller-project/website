@@ -45,9 +45,9 @@
                 <a class="nav-link" href="http://wallet.roller.today" target="_blank"><i class="ti-wallet"></i> Wallet</a>
               </li>
 
-              <?php foreach ($menu as $key => $value) { ?>
+               <?php foreach ($menu as $key => $value) { ?>
                 <li class="nav-item">
-                  <a class="nav-link" href="<?php echo store_url($key);?>" title="<?php echo $value;?>"><?php echo $value;?></a>
+                  <a class="nav-link" href="<?php echo store_url($value["link"]);?>" title="<?php echo $value["name"];?>"><i class="<?php echo $value["icons"];?>"></i> <?php echo $value["name"];?></a>
                 </li>
               <?php } ?>
               
@@ -63,64 +63,140 @@
       </header>
     
 
-          <main role="main">
-            <div style="background-color: red; height: 120px;"></div>
-                  <div class="container">
-                    <div class="row">
-                      <div class="col-lg-9">
-                          <?php echo $flash;?>
-                          <?php echo $content;?>
-                      </div>
-                      <div class="col-lg-3">
-                        <h4>Plugins Set</h4>
-                      </div>
+          <main id="content" role="main">
+
+
+
+            <div class="position-relative text-center u-space-3-top u-gradient-overlay-half-info-v1 u-bg-img-hero" style="background-image: url(../../assets/img/1920x800/img10.jpg);">
+                <div class="row justify-content-md-center">
+                  <div class="col-md-8 col-lg-7 col-xl-5">
+                    <!-- Info -->
+                    <div class="mb-4">
+                      <h1 class="display-4 text-white font-weight-normal mb-3"><?php echo $header["title"];?></h1>
+
+                      <ul class="list-inline">
+                        <li class="list-inline-item">
+                          <a class="u-text-light" href="#">
+                            <span class="fa fa-map-marker-alt"></span>
+                            California
+                          </a>
+                        </li>
+                        <li class="list-inline-item">
+                          <a class="u-text-light" href="#">
+                            <span class="fa fa-globe"></span>
+                            mooreismine.com
+                          </a>
+                        </li>
+                      </ul>
+
+                      <p class="text-white">I am an ambitious adventurer, but apart from that, pretty simple person.</p>
                     </div>
+                    <!-- End Info -->
+
+                    <!-- Followers -->
+                    
+                    <!-- End Followers -->
+
+                    <!-- Avatar -->
+                    <br><br><br>
+                    <!-- End Avatar -->
+                  </div>
+
+                  <!-- SVG Background -->
+                  <figure class="position-absolute-bottom-0 z-index-minus-1">
+                    <svg preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="200px" viewBox="20 -20 300 100" style="margin-bottom: -8px;" xml:space="preserve">
+                      <path class="u-fill-white" opacity="0.4" d="M30.913,43.944c0,0,42.911-34.464,87.51-14.191c77.31,35.14,113.304-1.952,146.638-4.729
+                        c48.654-4.056,69.94,16.218,69.94,16.218v54.396H30.913V43.944z"></path>
+                      <path class="u-fill-white" opacity="0.4" d="M-35.667,44.628c0,0,42.91-34.463,87.51-14.191c77.31,35.141,113.304-1.952,146.639-4.729
+                        c48.653-4.055,69.939,16.218,69.939,16.218v54.396H-35.667V44.628z"></path>
+                      <path class="u-fill-white" opacity="0" d="M43.415,98.342c0,0,48.283-68.927,109.133-68.927c65.886,0,97.983,67.914,97.983,67.914v3.716
+                        H42.401L43.415,98.342z"></path>
+                      <path class="u-fill-white" d="M-34.667,62.998c0,0,56-45.667,120.316-27.839C167.484,57.842,197,41.332,232.286,30.428
+                        c53.07-16.399,104.047,36.903,104.047,36.903l1.333,36.667l-372-2.954L-34.667,62.998z"></path>
+                    </svg>
+                  </figure>
+                  <!-- End SVG Background Section -->
+                </div>
+              </div>
+
+                  <div class="container">
+                    <?php echo $flash;?>
+                    <?php echo $content;?>
                   </div>
           </main>
+
+
+
+        <div class="position-relative" style="border-top:1px solid #ddd;">
+  <figure class="position-absolute-bottom-0">
+      <svg preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="140px" viewBox="20 -20 300 100">
+        <path class="u-fill-white" opacity="0.4" d="M30.913,43.944c0,0,42.911-34.464,87.51-14.191c77.31,35.14,113.304-1.952,146.638-4.729
+    c48.654-4.056,69.94,16.218,69.94,16.218v54.396H30.913V43.944z"></path>
+        <path class="u-fill-white" opacity="0.4" d="M-35.667,44.628c0,0,42.91-34.463,87.51-14.191c77.31,35.141,113.304-1.952,146.639-4.729
+    c48.653-4.055,69.939,16.218,69.939,16.218v54.396H-35.667V44.628z"></path>
+        <path class="u-fill-white" opacity="0" d="M43.415,98.342c0,0,48.283-68.927,109.133-68.927c65.886,0,97.983,67.914,97.983,67.914v3.716
+    H42.401L43.415,98.342z"></path>
+        <path class="u-fill-white" d="M-34.667,62.998c0,0,56-45.667,120.316-27.839C167.484,57.842,197,41.332,232.286,30.428
+    c53.07-16.399,104.047,36.903,104.047,36.903l1.333,36.667l-372-2.954L-34.667,62.998z"></path>
+      </svg>
+    </figure>
+
+<div class="u-gradient-half-primary-v3">
+      <div class="container u-space-1-top">
+        <div class="row align-items-start">
+          <div class="col-lg-5 mb-7 mb-lg-0">
+            <!-- Title -->
+            <div class="pr-md-4 mb-4">
+              <span class="u-label u-label--sm u-label--success mb-2">Support</span>
+              <h2 class="text-primary">Hỗ trợ <span class="font-weight-bold">người dùng</span></h2>
+              <p>Các kênh hổ trợ người sử dụng Roller Platform.</p>
+            </div>
+            <!-- End Title -->
+
+            <a class="btn btn-primary u-btn-primary u-btn-wide u-btn-pill transition-3d-hover mr-1 mb-2" href="#" target="_blank">Facebook</a>
+            <a class="btn u-btn-primary--air u-btn-wide u-btn-pill transition-3d-hover ml-1 mb-2" href="#">Support Online</a>
+
+
+           
+
+          </div>
+
+          <div class="col-lg-7 mt-auto">
+            <!-- SVG Icon -->
+            <img src="<?php echo store_url("uploads/illustration.svg");?>" alt="SVG Illustration">
+            <!-- End SVG Icon -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+</div>
+
 
         <footer class="bg-gray">
           <div class="container">
             <div class="row wow fadeInUp">
               <div class="col-12">
-                <p class="social">
+                <div class="social">
                   <span data-i18n="footer.heading">Follow us</span>
-                  <a href="#" target="_blank">
-                    <img src="<?php echo template_url("image/tw.png");?>" width="30" height="30">
-                  </a>
-                  <a href="#" target="_blank">
-                    <img src="<?php echo template_url("image/me.png");?>" width="30" height="30">
-                  </a>
-                  <a class="wechat" target="_blank">
-                    <img src="<?php echo template_url("image/weixin.png");?>" width="30" height="30">
-                    
-                  </a>
-                  <a href="#" target="_blank">
-                    <img src="<?php echo template_url("image/te.png");?>" width="30" height="30">
-                  </a>
-                  <a href="#" target="_blank">
-                    <img src="<?php echo template_url("image/git.png");?>" width="30" height="30">
-                  </a>
-                  <a href="#" target="_blank">
-                    <img src="<?php echo template_url("image/weibo.png");?>" width="30" height="30">
-                  </a>
-                  <a href="#" target="_blank">
-                    <img src="<?php echo template_url("image/youtube.png");?>" width="30" height="30">
-                  </a>
-                  <a href="#" target="_blank">
-                    <img src="<?php echo template_url("image/link.png");?>" width="30" height="30">
-                  </a>
-                  <a href="#" target="_blank">
-                    <img src="<?php echo template_url("image/fb.png");?>" width="30" height="30">
-                  </a>
-                  <a href="#" target="_blank">
-                    <img src="<?php echo template_url("image/reddit.png");?>" width="30" height="30">
-                  </a>
-                </p>
+                  <ul>
+                  <?php $social_db = json_decode($this->config->item("social"));?>
+                  <?php foreach ($social_db as $keySdb => $valueSdb) { ?>
+                      <li class="btn-outline-primary">
+                        <a href="<?php echo $valueSdb;?>" target="_blank">
+                          <i class="ti-<?php echo $keySdb;?>"></i>
+                        </a>
+                      </li>
+                  <?php } ?>
+                  </ul>
+                 
+                </div>
               </div>
 
               <div class="col-12">
+                 <p class="text-left">Các quá trình phát triển của chúng tôi còn phụ thuộc vào sự đóng góp chi phí và công nghệ của cộng đồng sử dụng. Các đóng góp vui lòng gởi về <a href="https://www.blockchain.com/btc/address/18UDydoLS6eckX2aspZLWUWngKkZahWPkK" target="_bank">18UDydoLS6eckX2aspZLWUWngKkZahWPkK</a></p>
                 <!--copyright-->
-                <p class="copyright">Language : English | Vietnam | China | Russia | Korea</p>
+                <p class="copyright">Language : <a href="?language=english">English</a> | <a href="?language=vietnam">Vietnam</a> | <a href="?language=china">China</a> | <a href="?language=russia">Russia</a> | <a href="?language=korea">Korea</a></p>
                 <!--/copyright-->
               </div>
 

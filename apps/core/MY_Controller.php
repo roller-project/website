@@ -14,9 +14,8 @@ class BaseController extends CI_Controller{
 		}
 
 		if($this->session->userdata("language")){
-			$this->config->item("language",$this->session->set_userdata("language"));
+			$this->config->set_item("language",$this->session->userdata("language"));
 		}
-
 		
 		$this->lang("globals");
 		
@@ -135,7 +134,12 @@ class BaseController extends CI_Controller{
 		$arv = [];
 		$data = $this->page_model->getPageMenu();
 		foreach ($data as $key => $value) {
-			$arv[$value->url_rewrite.$this->config->item("url_prefix")] = $value->title;
+			
+			$arv[] = [
+				"link" => $value->url_rewrite.$this->config->item("url_prefix"),
+				"name"	=> $value->title,
+				"icons" => $value->menu_icons
+			];
 		}
 		return $arv;
 	}
@@ -185,11 +189,15 @@ class BaseController extends CI_Controller{
 	*/
 
 	public function lang($name=""){
+		
 		$file = FCPATH . "language/".$this->config->item("language")."/{$name}_lang.php";
-
+		
 		if(file_exists($file)){
+
 			$this->lang->load($name,$this->config->item("language"),false, true, FCPATH);
+			return true;
 		}
+		return false;
 	}
 	public function platform(){
 		if ($this->agent->is_browser())
@@ -227,7 +235,7 @@ class Frontend extends BaseController
 	{
 		defined('BASEPATH') OR exit('No direct script access allowed');
 		parent::__construct();
-		$this->lang->load("globals",'vietnam',false, true, FCPATH);
+		//$this->lang->load("globals",'vietnam',false, true, FCPATH);
 		$this->setLayout("home-layout");
 	}
 }

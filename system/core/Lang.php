@@ -130,6 +130,7 @@ class CI_Lang {
 			$alt_path .= 'language/'.$idiom.'/'.$langfile;
 			if (file_exists($alt_path))
 			{
+				
 				include($alt_path);
 				$found = TRUE;
 			}
