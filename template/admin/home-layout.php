@@ -56,7 +56,7 @@
               
             </ul>
             <div class="form-inline my-2 my-lg-0">
-              Language : <a href="?language=english">English</a> | <a href="?language=vietnam">Vietnam</a> | <a href="?language=china">China</a> | <a href="?language=russia">Russia</a> | <a href="?language=korea">Korea</a>
+              Language : 
             </div>
           </div>
         </nav>
@@ -69,12 +69,18 @@
               <span class="badge badge-pill bg-light align-text-bottom">27</span>
             </a>
             <a class="nav-link" href="#">Explore</a>
-            <a class="nav-link" href="#">Suggestions</a>
+            <a class="nav-link" href="#">Language</a>
             <a class="nav-link" href="#">Link</a>
             <a class="nav-link" href="#">Link</a>
             <a class="nav-link" href="#">Link</a>
             <a class="nav-link" href="#">Link</a>
             <a class="nav-link" href="#">Link</a>
+            <a class="nav-link" href="?language=english">English</a>
+            <a class="nav-link" href="?language=vietnam">Vietnam</a>
+            <a class="nav-link" href="?language=china">China</a>
+            <a class="nav-link" href="?language=russia">Russia</a>
+            <a class="nav-link" href="?language=korea">Korea</a>
+
           </nav>
         </div>
 
