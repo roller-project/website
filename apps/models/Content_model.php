@@ -81,8 +81,8 @@ class Content_model extends CI_Model{
 	public function getType(){
 		$arv = ["blog" => "Blog's"];
 		$arvs = [];
-		if($this->config->item("post_type")){
-			$ex = explode('|', $this->config->item("post_type"));
+		if(config_item("post_type")){
+			$ex = explode('|', config_item("post_type"));
 			foreach ($ex as $key => $value) {
 				$exF = explode('=', $value);
 				$arvs[$exF[0]] = $exF[1];
