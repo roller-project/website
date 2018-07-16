@@ -12,7 +12,7 @@ class Content extends Admin {
 	public function manager($type="blog", $id=0){
 		$data = $this->content_model->listContent($type);
 		$listType = $this->content_model->getType();
-		print_r($listType);
+		
 		$this->view("content/manager",["type" => $type,"listtype" => ($listType ? $listType : []), "data" => $data, "pages" => ""]);
 	}
 

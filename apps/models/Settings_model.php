@@ -22,7 +22,7 @@ class Settings_model extends CI_Model{
 
 	private function checkExists($key, $language=""){
 		$this->db->where("key_config",$key);
-		$this->db->where("(language='".$language."' OR language IS NULL)");
+		$this->db->where("(language='".$language."' OR language = '')");
 		return $this->db->get("settings")->row();
 	}
 }

@@ -121,16 +121,21 @@ class Bootstrap{
 
 
 	public function editer($name=""){
-		$html = '<script src="'.resource_url("ckedit/ckeditor.js").'"></script>
+		$html = '<script src="'.resource_url("tinymce/tinymce.min.js").'"></script>
 		<script type="text/javascript">
-		    ClassicEditor
-		        .create( document.querySelector( "'.$name.'" ) )
-		        .then(function(){
-		        	$(".ck-editor__editable").css({"height" : $("'.$name.'").height()});
-		        })
-		        .catch( error => {
-		            console.error( error );
-		        } );
+		    tinymce.init({
+			  selector: "'.$name.'",
+			  height: $("'.$name.'").height(),
+			  menubar: false,
+			  theme: "modern",
+			  plugins: [
+			    "advlist autolink lists link image charmap print preview anchor textcolor",
+			    "searchreplace visualblocks code fullscreen",
+			    "insertdatetime media table contextmenu paste code help wordcount"
+			  ],
+			  toolbar: "formatselect | bold italic backcolor  | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | removeformat | image media | code",
+			  content_css: []
+			});
 		</script>
 		';
 		return $html;

@@ -88,7 +88,7 @@ class Content_model extends CI_Model{
 				$arvs[$exF[0]] = $exF[1];
 			}
 		}
-		$arv = array_merge($arvs,$arv);
+		$arv = array_merge($arv, $arvs);
 		return $arv;
 	}
 
