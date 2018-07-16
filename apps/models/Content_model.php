@@ -79,7 +79,7 @@ class Content_model extends CI_Model{
 	Render Type
 	*/
 	public function getType(){
-		$arv = ["blog" => "Blog's","service" => "Service"];
+		$arv = ["blog" => "Blog's"];
 		$arvs = [];
 		if($this->config->item("post_type")){
 			$ex = explode('|', $this->config->item("post_type"));
