@@ -56,11 +56,11 @@
               
             </ul>
             <ul class="navbar-nav form-inline my-2 my-lg-0">
-              <li><a class="nav-link" href="/?language=english">English</a></li>
-              <li><a class="nav-link" href="/?language=vietnam">Vietnam</a></li>
-              <li><a class="nav-link" href="/?language=china">China</a></li>
-              <li><a class="nav-link" href="/?language=russia">Russia</a></li>
-              <li><a class="nav-link" href="/?language=korea">Korea</a></li>
+              <li><a class="nav-link" href="<?php echo admin_url();?>?language=english">English</a></li>
+              <li><a class="nav-link" href="<?php echo admin_url();?>?language=vietnam">Vietnam</a></li>
+              <li><a class="nav-link" href="<?php echo admin_url();?>?language=china">China</a></li>
+              <li><a class="nav-link" href="<?php echo admin_url();?>?language=russia">Russia</a></li>
+              <li><a class="nav-link" href="<?php echo admin_url();?>?language=korea">Korea</a></li>
             </ul>
           </div>
         </nav>
