@@ -136,15 +136,16 @@ class BaseController extends CI_Controller{
 
 			$data2 = $this->load->view($layout, $data, true);
 			$menu = $this->makeMenu();
-			return $this->load->view($this->layout,["content" => $data2, "flash" => $this->get_flash(), "header" => $this->make_meta($data), "menu" => $menu, "is_login" => $this->isLogin()]);
+			$footer = $this->makeMenu("footer");
+			return $this->load->view($this->layout,["content" => $data2, "flash" => $this->get_flash(), "header" => $this->make_meta($data), "menu" => $menu,"footer" => $footer, "is_login" => $this->isLogin()]);
 		}else{
 			return $this->load->view($layout, $data);
 		}
 	}
 
-	public function makeMenu(){
+	public function makeMenu($type="header"){
 		$arv = [];
-		$data = $this->page_model->getPageMenu();
+		$data = $this->page_model->getPageMenu(0,$type);
 		foreach ($data as $key => $value) {
 			
 			$arv[] = [

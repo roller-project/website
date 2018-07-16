@@ -74,6 +74,14 @@
 
         <footer class="bg-gray">
           <div class="container">
+            <ul class="row menuFooter">
+              <?php foreach ($footer as $key => $value) { ?>
+                <li class="col-lg-3">
+                  <a  href="<?php echo store_url($value["link"]);?>" title="<?php echo $value["name"];?>"><i class="<?php echo $value["icons"];?>"></i> <?php echo $value["name"];?></a>
+                </li>
+              <?php } ?>
+             
+            </ul>
             <div class="row wow fadeInUp">
               <div class="col-12">
                 <div class="social">

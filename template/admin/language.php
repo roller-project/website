@@ -43,6 +43,11 @@
 							<?php echo $this->bootstrap->button("save","submit");?>
 						</div>
 					</h3>
+
+					<div class="form-group">
+					    <label for="exampleInputPassword1">Name</label>
+					    <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Name Folder">
+					  </div>
 				</form>
 			</div>
 		</div>
