@@ -10,7 +10,7 @@
 	<div class="col-lg-2">
 		<div class="input-group mb-3">
 		  <select type="text" class="form-control" onchange="window.location.href='<?php echo admin_url("content/manager/");?>' + this.value;">
-		  	<?php foreach ($listType as $key => $value) { ?>
+		  	<?php foreach ($listtype as $key => $value) { ?>
 		  		<option value="<?php echo $key;?>" <?php echo ($key == $type ? "selected" : "");?>><?php echo $value;?></option>
 		  	<?php } ?>
 		  	
