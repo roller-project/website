@@ -86,6 +86,8 @@
 					<option value="footer" <?php echo (@$data->in_menu == "footer" ? "selected" : "");?> >Footer</option>
 					
 				</select>
+				Menu Icoin Class
+				<input type="text" name="menu_icons" value="<?php echo @$data->menu_icons;?>">
 				Apps Design
 				<select class="form-control" name="apps_display">
 					<option value="">Content Default</option>
@@ -109,6 +111,12 @@
 							}
 						?>
 					</optgroup>
+				</select>
+
+				<select type="text" name="data_type" class="form-control">
+				  	<?php foreach ($listType as $key => $value) { ?>
+				  		<option value="<?php echo $key;?>" <?php echo ($key == @$data->data_type ? "selected" : "");?>><?php echo $value;?></option>
+				  	<?php } ?>
 				</select>
 			</div>
 		</div>

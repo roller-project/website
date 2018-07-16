@@ -24,7 +24,8 @@ class Page extends Admin {
 		$data = $this->page_model->getInfoContent($id);
 		$apps = $this->template_model->application();
 		$listParent = $this->page_model->getList();
-		$this->view("page/create",["id" => $id, "data" => $data, "apps" => $apps,"listParent" => $listParent]);
+		$listType = $this->content_model->getType();
+		$this->view("page/create",["id" => $id, "data" => $data, "listType" => $listType,"apps" => $apps,"listParent" => $listParent]);
 	}
 
 	public function validate_post($id=null){
