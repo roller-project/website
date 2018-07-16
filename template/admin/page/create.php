@@ -112,7 +112,7 @@
 						?>
 					</optgroup>
 				</select>
-				List Data Block
+				List Data
 				<select type="text" name="data_type" class="form-control">
 				  	<?php foreach ($listType as $key => $value) { ?>
 				  		<option value="<?php echo $key;?>" <?php echo ($key == @$data->data_type ? "selected" : "");?>><?php echo $value;?></option>

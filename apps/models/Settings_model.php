@@ -31,4 +31,8 @@ class Settings_model extends CI_Model{
 	public function getLanguage(){
 		return $this->db->get("language")->result();
 	}
+
+	public function createetLanguage($folder){
+		$this->db->insert("language",["folder" => $folder]);
+	}
 }
