@@ -81,10 +81,7 @@
             <a class="nav-link" href="#">Link</a>
             
             
-            <a class="nav-link" href="?language=vietnam">Vietnam</a>
-            <a class="nav-link" href="?language=china">China</a>
-            <a class="nav-link" href="?language=russia">Russia</a>
-            <a class="nav-link" href="?language=korea">Korea</a>
+           
            
 
           </nav>
