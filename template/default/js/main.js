@@ -37,7 +37,11 @@ $.fn.extend({
         }
 
         if(tag == "P" || tag == "DIV" || tag == "H1" || tag == "H2" || tag == "H3" || tag == "H4" || tag == "H5" || tag == "H6" || tag == "H7"){
-          items.html(data);
+          if(items.hasClass("progress-bar")){
+            items.attr("style","width:"+data);
+          }else{
+            items.html(data);
+          }
         }
         return;
   }
