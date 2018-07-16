@@ -54,11 +54,11 @@
               
             </ul>
             <ul class="navbar-nav form-inline my-2 my-lg-0">
-              <li><a class="nav-link" href="<?php echo admin_url();?>?language=english">English</a></li>
-              <li><a class="nav-link" href="<?php echo admin_url();?>?language=vietnam">Vietnam</a></li>
-              <li><a class="nav-link" href="<?php echo admin_url();?>?language=china">China</a></li>
-              <li><a class="nav-link" href="<?php echo admin_url();?>?language=russia">Russia</a></li>
-              <li><a class="nav-link" href="<?php echo admin_url();?>?language=korea">Korea</a></li>
+              <li><a class="nav-link <?php echo (config_item("language") == "english" ? "active" : "");?>" href="<?php echo admin_url();?>?language=english">English</a></li>
+              <li><a class="nav-link <?php echo (config_item("language") == "vietnam" ? "active" : "");?>" href="<?php echo admin_url();?>?language=vietnam">Vietnam</a></li>
+              <li><a class="nav-link <?php echo (config_item("language") == "china" ? "active" : "");?>" href="<?php echo admin_url();?>?language=china">China</a></li>
+              <li><a class="nav-link <?php echo (config_item("language") == "russia" ? "active" : "");?>" href="<?php echo admin_url();?>?language=russia">Russia</a></li>
+              <li><a class="nav-link <?php echo (config_item("language") == "korea" ? "active" : "");?>" href="<?php echo admin_url();?>?language=korea">Korea</a></li>
             </ul>
           </div>
         </nav>
