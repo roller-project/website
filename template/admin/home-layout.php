@@ -55,9 +55,13 @@
 
               
             </ul>
-            <div class="form-inline my-2 my-lg-0">
-              Language : 
-            </div>
+            <ul class="navbar-nav form-inline my-2 my-lg-0">
+              <li><a class="nav-link" href="?language=english">English</a></li>
+              <li><a class="nav-link" href="?language=vietnam">Vietnam</a></li>
+              <li><a class="nav-link" href="?language=china">China</a></li>
+              <li><a class="nav-link" href="?language=russia">Russia</a></li>
+              <li><a class="nav-link" href="?language=korea">Korea</a></li>
+            </ul>
           </div>
         </nav>
 
@@ -75,11 +79,13 @@
             <a class="nav-link" href="#">Link</a>
             <a class="nav-link" href="#">Link</a>
             <a class="nav-link" href="#">Link</a>
-            <a class="nav-link" href="?language=english">English</a>
+            
+            
             <a class="nav-link" href="?language=vietnam">Vietnam</a>
             <a class="nav-link" href="?language=china">China</a>
             <a class="nav-link" href="?language=russia">Russia</a>
             <a class="nav-link" href="?language=korea">Korea</a>
+           
 
           </nav>
         </div>
