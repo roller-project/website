@@ -30,6 +30,8 @@ $options["timeline"] = [
 		["title" => "","description" => "","progress" => ""],
 		["title" => "","description" => "","progress" => ""],
 		["title" => "","description" => "","progress" => ""],
+		["title" => "","description" => "","progress" => ""],
+		["title" => "","description" => "","progress" => ""],
 		["title" => "","description" => "","progress" => ""]
 	],
 ];
@@ -40,7 +42,6 @@ $options["supportgroup"] = [
 	"title" => "Support groups",
 	"description"	=> "",
 	"item" => [
-		["title" => "","description" => "","link" => ""],
 		["title" => "","description" => "","link" => ""],
 		["title" => "","description" => "","link" => ""],
 		["title" => "","description" => "","link" => ""]
