@@ -47,8 +47,9 @@ class Page extends Admin {
 
 			];
 			$this->page_model->CreateOrUpdate($arv, $id);
-			$this->setFlash(true);
+			
 		}
+		$this->setFlash(true);
 		redirect(admin_url("page/manager"));
 	}
 }
