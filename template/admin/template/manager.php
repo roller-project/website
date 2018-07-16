@@ -103,12 +103,16 @@
 					<div class="form-group row">
 					    <label class="col-sm-2 col-form-label">Item Set</label>
 					    <div class="col-sm-10">
-					    	<?php foreach ($value["item"] as $keyItem => $valueItem) { ?>
+					    	<?php 
+					    	$i = 0;
+					    	foreach ($value["item"] as $keyItem => $valueItem) { 
+					    		
+					    	?>
 					    		
 					      	<div class="row">
 					      		<div class="col">
-					      			Name
-					      			<input type="text" name="json[<?php echo $key;?>][item][title]" value="<?php echo @$value["item"]->title[$keyItem];?>" class="form-control">
+					      			Name <?php print_r (@$valueItem["title"]);?>
+					      			<input type="text" name="json[<?php echo $key;?>][item][<?php echo $keyItem;?>][title]" value="<?php echo @$valueItem["title"];?>" class="form-control">
 					      		</div>
 					      		<?php if(isset($valueItem["backgroundurl"])) { ?>
 					      		<div class="col">
@@ -116,7 +120,7 @@
 					      			
 					      			<div class="input-group input-group-sm mb-2">
 					        
-							        <input type="text" class="form-control form-control-sm" id="backgroundurl<?php echo $key;?><?php echo $keyItem;?>" name="json[<?php echo $key;?>][item][backgroundurl]" value="<?php echo @$value["item"]["backgroundurl"][$keyItem];?>">
+							        <input type="text" class="form-control form-control-sm" id="backgroundurl<?php echo $key;?><?php echo $keyItem;?>" name="json[<?php echo $key;?>][item][<?php echo $keyItem;?>][backgroundurl]" value="<?php echo @$valueItem["backgroundurl"];?>">
 							        <div class="input-group-prepend">
 							          <button type="button" class="btn btn-info" data-target-input="#backgroundurl<?php echo $key;?><?php echo $keyItem;?>" data-toggle="modal" data-target="#UploadIDModel">Select</button>
 							        </div>
@@ -126,11 +130,13 @@
 					      		<?php if(isset($valueItem["description"])) { ?>
 					      		<div class="col-lg-12">
 					      			Description
-					      			<textarea class="form-control"></textarea>
+					      			<textarea class="form-control" name="json[<?php echo $key;?>][item][<?php echo $keyItem;?>][description]"><?php echo @$valueItem["description"];?></textarea>
 					      		</div>
 					      		<?php } ?>
 					      	</div>
-					      <?php } ?>
+					      <?php 
+					      $i++;
+					  	} ?>
 					    </div>
 					</div>
 				<?php } ?>

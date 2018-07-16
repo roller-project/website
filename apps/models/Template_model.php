@@ -216,7 +216,7 @@ class Template_model extends CI_Model{
 		if(!$row) $row = new stdClass;
 		$row->json = [];
 		if($row && isset($row->options)){
-			$row->json = $this->toArray(json_decode($row->options));
+			$row->json = json_decode($row->options, true);
 		}
 		
 		return $row;
@@ -224,11 +224,16 @@ class Template_model extends CI_Model{
 
 
 	public function toArray($obj){
-		if(!is_object($obj)) return [];
+		if(!is_object($obj)) return $obj;
 		$arv = [];
 		foreach ($obj as $key => $value) {
 			foreach ($value as $keyS => $valueS) {
-				$arv[$key][$keyS] = $valueS;
+				if(is_object($valueS)){
+					$arv[$key][$keyS] = $this->toArray($valueS);
+				}else{
+					$arv[$key][$keyS] = $valueS;
+				}
+				
 			}
 			
 		}

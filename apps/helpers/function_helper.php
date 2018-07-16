@@ -24,21 +24,31 @@ function template_url($path=""){
 
 
 
-function MergeArrays($Arr1, $Arr2)
+function MergeArrays($arv1, $arv2)
 {
-  foreach($Arr2 as $key => $Value)
+
+
+  foreach($arv2 as $key => $Value)
   {
-    if(array_key_exists($key, $Arr1) && is_array($Value)){
-      $Arr1[$key] = MergeArrays($Arr1[$key], $Arr2[$key]);
+  	
+    if(is_array($Value)){
+      $arv1[$key] = array_merge($arv1[$key], $arv2[$key]);
     }else{
-      if(isset($Arr1[$key])){
-	      $Arr1[$key] = $Value;
-	  }
+      $arv1[$key] = $Value;
     }
 
   }
 
-  return $Arr1;
+  
+  return $arv1;
 
 }
 
+
+function objectToArray($obj){
+	$arv = [];
+	foreach ($obj as $key => $value) {
+		$arv[$key] = $value;
+	}
+	return $arv;
+}

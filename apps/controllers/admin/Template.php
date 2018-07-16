@@ -26,9 +26,11 @@ class Template extends Admin {
 				include_once $pathOptions;
 			}
 			$info = $this->template_model->getApplicationInfo($id);
+			//print_r($info->json); exit();
 			$options = MergeArrays($options,$info->json);
 		}
 		
+		//print_r($options);exit();
 		
 
 		$this->view("template/manager",["page" => $page, "options" => $options,"id" => $id]);
@@ -193,6 +195,7 @@ class Template extends Admin {
 
 	public function validate_application($id=""){
 		$data = $this->input->post("json");
+		//print_r($data); exit();
 		$this->template_model->CreateOrUpdateApplication($id,$data);
 		redirect(admin_url("template/manager/{$id}"));
 	}

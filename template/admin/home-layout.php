@@ -27,7 +27,7 @@
           <div class="navbar-collapse offcanvas-collapse" id="navbarsExampleDefault">
             <ul class="navbar-nav mr-auto">
               <li class="nav-item active">
-                <a class="nav-link" href="#">Dashboard <span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="<?php echo admin_url();?>"><?php echo lang("home");?> <span class="sr-only">(current)</span></a>
               </li>
 
               <li class="nav-item">
@@ -37,15 +37,13 @@
               <li class="nav-item">
                 <a class="nav-link" href="<?php echo admin_url("content/manager");?>">Contents</a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Profile</a>
-              </li>
+              
               <li class="nav-item">
                 <a class="nav-link" href="<?php echo admin_url("template/manager");?>">Templates</a>
               </li>
 
               <li class="nav-item">
-                <a class="nav-link" href="#">Application</a>
+                <a class="nav-link" href="<?php echo admin_url("settings/language");?>">Language</a>
               </li>
 
 
