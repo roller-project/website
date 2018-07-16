@@ -2,7 +2,7 @@
 $options = [];
 $options["slider"] = [
 	"name"	=> "Slider",
-	"title" => "Name 1",
+	"title" => "Slider Top",
 	"description"	=> "",
 	"backgroundurl" => "",
 	"author" => "CEO / VÕ VĂN KHOA",
@@ -27,12 +27,52 @@ $options["timeline"] = [
 	"title" => "Name 1",
 	"description"	=> "",
 	"item" => [
-		["title" => "","description" => ""],
-		["title" => "","description" => ""],
-		["title" => "","description" => ""],
-		["title" => "","description" => ""]
+		["title" => "","description" => "","progress" => ""],
+		["title" => "","description" => "","progress" => ""],
+		["title" => "","description" => "","progress" => ""],
+		["title" => "","description" => "","progress" => ""]
 	],
 ];
+
+
+$options["supportgroup"] = [
+	"name"	=> "Support Tabs",
+	"title" => "Support groups",
+	"description"	=> "",
+	"item" => [
+		["title" => "","description" => "","link" => ""],
+		["title" => "","description" => "","link" => ""],
+		["title" => "","description" => "","link" => ""],
+		["title" => "","description" => "","link" => ""]
+	],
+];
+
+$options["downloadwallet"] = [
+	"name"	=> "Download Wallet",
+	"title" => "Wallet Programs",
+	"description"	=> "",
+	"item" => [
+		["title" => "","link" => ""],
+		["title" => "","link" => ""],
+		["title" => "","link" => ""],
+		["title" => "","link" => ""]
+	],
+];
+
+$options["exchange"] = [
+	"name"	=> "Exchange Avalible",
+	"title" => "Exchange",
+	"pin"	=>	"Exchange",
+	"description"	=> "",
+	"item" => [
+		["title" => "","link" => ""],
+		["title" => "","link" => ""],
+		["title" => "","link" => ""],
+		["title" => "","link" => ""]
+	],
+];
+
+
 
 
 $options["developgroup"] = [
@@ -47,13 +87,15 @@ $options["developgroup"] = [
 	],
 ];
 
-$options["joingroup"] = [
-	"name"	=> "Join Group",
+$options["groupsay"] = [
+	"name"	=> "Group Say",
 	"title" => "Name 1",
 	"description"	=> "",
-	"limit"	=>	4,
-	"content"	=> "",
-	"item" => [],
+	"item" => [
+		["title" => "","description" => "","backgroundurl" => ""],
+		["title" => "","description" => "","backgroundurl" => ""],
+		["title" => "","description" => "","backgroundurl" => ""]
+	],
 ];
 
 ?>

@@ -32,7 +32,7 @@ function MergeArrays($arv1, $arv2)
   {
   	
     if(is_array($Value)){
-      $arv1[$key] = array_merge($arv1[$key], $arv2[$key]);
+      $arv1[$key] = @array_merge($arv1[$key], $arv2[$key]);
     }else{
       $arv1[$key] = $Value;
     }

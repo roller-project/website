@@ -20,7 +20,28 @@ $(function () {
 });
 
 
+$.fn.extend({
+  jsonToHTML: function(data) {
 
+      if(!data) return;
+       var tag = this.prop('tagName');
+       var items = this;
+        if(tag == "A"){
+           
+            items.attr("href",data);
+        }
+
+        if(tag == "IMG"){
+            
+            items.attr("src",data);
+        }
+
+        if(tag == "P" || tag == "DIV" || tag == "H1" || tag == "H2" || tag == "H3" || tag == "H4" || tag == "H5" || tag == "H6" || tag == "H7"){
+          items.html(data);
+        }
+        return;
+  }
+});
 
 $(document).ready(function(){
   var jsonContents = $("#jsonContent2").html();
@@ -33,32 +54,25 @@ $(document).ready(function(){
         var item = $('[data-json="'+k+'"]');
         $.each(v, function(kk, vv){
           var items = item.find("[data-"+kk+"]");
-          var tag = items.prop('tagName');
-          items.removeClass("lock");
-          if(!vv) return;
-          if(tag == "A"){
-              var hf = items.attr("href");
-              hf = hf.replace('{url}',vv);
-              items.attr("href",hf);
-          }
-          if(tag == "IMG"){
-              var hf = items.attr("src");
-              hf = hf.replace('{url}',vv);
-              items.attr("src",hf);
-          }
-
-          if(tag == "DIV" && kk == "backgroundurl"){
-            var hf = items.css("background-image");
-            //alert(hf);
-            //hf = hf.replace('{url}',vv);
-            items.css("background-image","url('"+vv+"')");
-          }else if(tag == "P" || tag == "DIV" || tag == "H1" || tag == "H2" || tag == "H3" || tag == "H4" || tag == "H5" || tag == "H6" || tag == "H7"){
-            items.html(vv);
-          }
+         
+          items.jsonToHTML(vv);
+          
           if(kk == "item"){
-            $.each(vv.item, function(kItem, vItem){
-              alert(vItem);
+            var itemFetch = $('[data-json="'+k+'"] [json-item]');
+            
+            if(itemFetch.length == 0) return;
+
+            $.each(vv, function(kItem, vItem){
+               
+                var pateItem =itemFetch.find('[json-item-data]:eq('+kItem+')');
+                if(pateItem.length == 0) return;
+                $.each(vItem, function(rItem, rvItem){
+                    if(!rvItem) return;
+                    var rS = pateItem.find('[item-'+rItem+']');
+                    rS.jsonToHTML(rvItem);
+                });
             });
+            
           }
           /*
           $.each(vv, function(kkk, vvv){

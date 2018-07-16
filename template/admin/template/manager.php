@@ -111,9 +111,31 @@
 					    		
 					      	<div class="row">
 					      		<div class="col">
-					      			Name <?php print_r (@$valueItem["title"]);?>
+					      			Name 
 					      			<input type="text" name="json[<?php echo $key;?>][item][<?php echo $keyItem;?>][title]" value="<?php echo @$valueItem["title"];?>" class="form-control">
 					      		</div>
+					      		<?php if(isset($valueItem["link"])) { ?>
+					      		<div class="col">
+					      			Link 
+					      			<input type="text" name="json[<?php echo $key;?>][item][<?php echo $keyItem;?>][link]" value="<?php echo @$valueItem["link"];?>" class="form-control">
+					      		</div>
+					      		<?php } ?>
+
+					      		<?php if(isset($valueItem["progress"])) { ?>
+					      		<div class="col">
+					      			Progress 
+					      			<input type="text" name="json[<?php echo $key;?>][item][<?php echo $keyItem;?>][progress]" value="<?php echo @$valueItem["progress"];?>" class="form-control">
+					      		</div>
+					      		<?php } ?>
+
+					      		
+					      		<?php if(isset($valueItem["icons"])) { ?>
+					      		<div class="col">
+					      			Icons Class 
+					      			<input type="text" name="json[<?php echo $key;?>][item][<?php echo $keyItem;?>][icons]" value="<?php echo @$valueItem["icons"];?>" class="form-control">
+					      		</div>
+					      		<?php } ?>
+
 					      		<?php if(isset($valueItem["backgroundurl"])) { ?>
 					      		<div class="col">
 					      			Image

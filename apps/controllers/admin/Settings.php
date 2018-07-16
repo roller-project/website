@@ -18,6 +18,11 @@ class Settings extends Admin {
 		$this->view("config");
 	}
 
+	public function language(){
+		$data = $this->settings_model->getLanguage();
+		$this->view("language",["data" => $data]);
+	}
+
 
 	public function validate_update(){
 		$config = $this->input->post("config");

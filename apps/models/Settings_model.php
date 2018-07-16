@@ -25,4 +25,10 @@ class Settings_model extends CI_Model{
 		$this->db->where("(language='".$language."' OR language = '')");
 		return $this->db->get("settings")->row();
 	}
+
+
+
+	public function getLanguage(){
+		return $this->db->get("language")->result();
+	}
 }

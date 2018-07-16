@@ -7,11 +7,11 @@
 
         <div class="col-lg-6 position-relative">
           <!-- Image Gallery -->
-          <div class="row mx-gutters-2">
-            <div class="col-5 align-self-end px-2 mb-3">
+          <div class="row mx-gutters-2" json-item>
+            <div class="col-5 align-self-end px-2 mb-3" json-item-data>
               <!-- Fancybox -->
               <a class="js-fancybox u-media-viewer" href="javascript:;">
-                <img class="img-fluid rounded" src="<?php echo store_url("uploads/img1.jpg");?>" alt="Image Description">
+                <img class="img-fluid rounded" item-backgroundurl src="<?php echo store_url("uploads/img1.jpg");?>" alt="Image Description">
 
                 <span class="u-media-viewer__container">
                   <span class="u-media-viewer__icon">
@@ -22,10 +22,10 @@
               <!-- End Fancybox -->
             </div>
 
-            <div class="col-7 px-2 mb-3">
+            <div class="col-7 px-2 mb-3" json-item-data>
               <!-- Fancybox -->
               <a class="js-fancybox u-media-viewer" href="javascript:;">
-                <img class="img-fluid rounded" src="<?php echo store_url("uploads/img3.jpg");?>" alt="Image Description">
+                <img class="img-fluid rounded" item-backgroundurl src="<?php echo store_url("uploads/img3.jpg");?>" alt="Image Description">
 
                 <span class="u-media-viewer__container">
                   <span class="u-media-viewer__icon">
@@ -36,10 +36,10 @@
               <!-- End Fancybox -->
             </div>
 
-            <div class="col-5 offset-1 px-2 mb-3">
+            <div class="col-5 offset-1 px-2 mb-3" json-item-data>
               <!-- Fancybox -->
               <a class="js-fancybox u-media-viewer" href="javascript:;">
-                <img class="img-fluid rounded" src="<?php echo store_url("uploads/img2.jpg");?>" alt="Image Description">
+                <img class="img-fluid rounded" item-backgroundurl src="<?php echo store_url("uploads/img2.jpg");?>" alt="Image Description">
 
                 <span class="u-media-viewer__container">
                   <span class="u-media-viewer__icon">
@@ -50,10 +50,10 @@
               <!-- End Fancybox -->
             </div>
 
-            <div class="col-5 px-2 mb-3">
+            <div class="col-5 px-2 mb-3" json-item-data>
               <!-- Fancybox -->
               <a class="js-fancybox u-media-viewer" href="javascript:;">
-                <img class="img-fluid rounded" src="<?php echo store_url("uploads/img4.jpg");?>" alt="Image Description">
+                <img class="img-fluid rounded" item-backgrounurl src="<?php echo store_url("uploads/img4.jpg");?>" alt="Image Description">
 
                 <span class="u-media-viewer__container">
                   <span class="u-media-viewer__icon">
@@ -111,7 +111,7 @@
 
 
 
-<div class="u-gradient-half-primary-v1">
+<div data-json="downloadwallet" class="u-gradient-half-primary-v1">
       <div class="container u-space-3">
         <div class="row">
           <div class="col-lg-5">
@@ -120,8 +120,8 @@
               <span class="u-icon u-icon-white u-icon--lg text-primary rounded-circle mb-4">
                 <span class="ti-mobile u-icon__inner"></span>
               </span>
-              <h2 class="text-white font-weight-bold">Wallet <span class="text-warning">roller platform</span></h2>
-              <p class="u-text-light">Phần mềm quản lý ROL và Smart Contract trên các hệ điều hành</p>
+              <h2 class="text-white font-weight-bold" data-title>Wallet <span class="text-warning">roller platform</span></h2>
+              <p class="u-text-light" data-description>Phần mềm quản lý ROL và Smart Contract trên các hệ điều hành</p>
             </div>
             <!-- End Title -->
 
@@ -304,7 +304,7 @@
         <p data-description>The passion and commitment to that mission lives through everything we do.</p>
       </div>
       <br>
-      <div class="row">
+      <div class="row timelineStyle" json-item>
         <div class="col-sm-6 col-lg-4 mb-7">
           <!-- Icon Blocks -->
           <div class="media">
@@ -313,9 +313,13 @@
               <span class="u-icon__inner font-weight-bold">01.</span>
             </span>
             </div>
-            <div class="media-body">
-              <h3 class="h6">Vận hành hệ thống (100%)</h3>
-              <p>Hệ thống đi vào vận hành từ ngày 12/07/2018.</p>
+            <div class="media-body" json-item-data>
+              <h3 class="h6" item-title>Vận hành hệ thống (100%)</h3>
+              <div class="progress" style="height: 2px;">
+                <div class="progress-bar" item-progress role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+              <p item-description>Hệ thống đi vào vận hành từ ngày 12/07/2018.</p>
+
             </div>
           </div>
           <!-- End Icon Blocks -->
@@ -329,9 +333,13 @@
               <span class="u-icon__inner font-weight-bold">02.</span>
             </span>
             </div>
-            <div class="media-body">
-              <h3 class="h6">Public Network (20%)</h3>
-              <p>Chúng tôi sẽ mở hệ thống khai thác ROL từ sau block 50.000.</p>
+            <div class="media-body" json-item-data>
+              <h3 class="h6" item-title>Public Network (20%)</h3>
+              <div class="progress" style="height: 2px;">
+                <div class="progress-bar" item-progress role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+
+              <p item-description>Chúng tôi sẽ mở hệ thống khai thác ROL từ sau block 50.000.</p>
             </div>
           </div>
           <!-- End Icon Blocks -->
@@ -345,9 +353,12 @@
               <span class="u-icon__inner font-weight-bold">03.</span>
             </span>
             </div>
-            <div class="media-body">
-              <h3 class="h6">Phát triển wallet (30%)</h3>
-              <p>Phát triển wallet trên window/ linux/ Macos / Androi/ IOS.</p>
+            <div class="media-body" json-item-data>
+              <h3 class="h6" item-title>Phát triển wallet (30%)</h3>
+              <div class="progress" style="height: 2px;">
+                <div class="progress-bar" item-progress role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+              <p item-description>Phát triển wallet trên window/ linux/ Macos / Androi/ IOS.</p>
             </div>
           </div>
           <!-- End Icon Blocks -->
@@ -361,9 +372,12 @@
               <span class="u-icon__inner font-weight-bold">04.</span>
             </span>
             </div>
-            <div class="media-body">
-              <h3 class="h6">Ứng dụng Masternode (40%)</h3>
-              <p>Cho phép miner khai thác ROL qua Masternode.</p>
+            <div class="media-body" json-item-data>
+              <h3 class="h6" item-title>Ứng dụng Masternode (40%)</h3>
+              <div class="progress" style="height: 2px;">
+                <div class="progress-bar" item-progress role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+              <p item-description>Cho phép miner khai thác ROL qua Masternode.</p>
             </div>
           </div>
           <!-- End Icon Blocks -->
@@ -377,9 +391,12 @@
               <span class="u-icon__inner font-weight-bold">05.</span>
             </span>
             </div>
-            <div class="media-body">
-              <h3 class="h6">List sàn giao dịch (0%)</h3>
-              <p>Chúng tôi sẽ tiến hành list lên sàn giao dịch đưa ROL vào thương mại.</p>
+            <div class="media-body" json-item-data>
+              <h3 class="h6" item-title>List sàn giao dịch (0%)</h3>
+              <div class="progress" style="height: 2px;">
+                <div class="progress-bar" item-progress role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+              <p item-description>Chúng tôi sẽ tiến hành list lên sàn giao dịch đưa ROL vào thương mại.</p>
             </div>
           </div>
           <!-- End Icon Blocks -->
@@ -393,9 +410,12 @@
               <span class="u-icon__inner font-weight-bold">06.</span>
             </span>
             </div>
-            <div class="media-body">
-              <h3 class="h6">Phát triển Smart Contract</h3>
-              <p>Phát triển các ứng dụng trên smart contract chỉ 1 click chuột.</p>
+            <div class="media-body" json-item-data>
+              <h3 class="h6" item-title>Phát triển Smart Contract</h3>
+              <div class="progress" style="height: 2px;">
+                <div class="progress-bar" item-progress role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+              <p item-description>Phát triển các ứng dụng trên smart contract chỉ 1 click chuột.</p>
             </div>
           </div>
           <!-- End Icon Blocks -->
@@ -572,7 +592,7 @@
 
 
 
-<div class="position-relative">
+<div data-json="exchange" class="position-relative">
   <figure class="position-absolute-bottom-0">
       <svg preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="140px" viewBox="20 -20 300 100">
         <path class="u-fill-white" opacity="0.4" d="M30.913,43.944c0,0,42.911-34.464,87.51-14.191c77.31,35.14,113.304-1.952,146.638-4.729
@@ -592,9 +612,9 @@
           <div class="col-lg-5 mb-7 mb-lg-0">
             <!-- Title -->
             <div class="pr-md-4 mb-4">
-              <span class="u-label u-label--sm u-label--success mb-2">Exchange</span>
-              <h2 class="text-primary">Tính thanh <span class="font-weight-bold">khoản</span></h2>
-              <p>Danh sách sàn giao dịch chấp nhận giao dịch ROL đang vận hành trên thị trường.</p>
+              <span class="u-label u-label--sm u-label--success mb-2" data-pin>Exchange</span>
+              <h2 class="text-primary" data-title>Tính thanh <span class="font-weight-bold">khoản</span></h2>
+              <p data-description>Danh sách sàn giao dịch chấp nhận giao dịch ROL đang vận hành trên thị trường.</p>
             </div>
             <!-- End Title -->
 
@@ -621,17 +641,17 @@
 
 
 
-<div id="featuresSection" class="container text-center u-space-1">
+<div data-json="supportgroup" id="featuresSection" class="container text-center u-space-1">
       <!-- Title -->
       <div class="w-md-80 w-lg-50 mx-auto mb-9">
         <span class="u-label u-label--sm u-label--success mb-2">Support</span>
-        <h2 class="text-primary">Hỗ trợ <span class="font-weight-bold">người dùng</span></h2>
-        <p>Hãy cho chúng tôi biết vấn đề bạn đang gặp phải.</p>
+        <h2 class="text-primary" data-title>Hỗ trợ <span class="font-weight-bold">người dùng</span></h2>
+        <p data-description>Hãy cho chúng tôi biết vấn đề bạn đang gặp phải.</p>
       </div>
       <!-- End Title -->
 
-      <div class="row">
-        <div class="col-md-4 mb-7 mb-md-0">
+      <div class="row" json-item>
+        <div class="col-md-4 mb-7 mb-md-0" json-item-data>
           <!-- Process -->
           <div class="position-relative">
             <div class="u-indicator-dots min-height-155 mb-2">
@@ -659,13 +679,13 @@
             </div>
           </div>
 
-          <h3 class="h5">Khai thác ROL</h3>
-          <p class="mb-md-0">Các hướng dẫn sử dụng khai thác ROL hiệu quả nhất cho người dùng.</p><br>
-          <a href="#" class="btn btn-outline-info btn-capsule px-4">Xem thêm</a>
+          <h3 class="h5" item-title>Khai thác ROL</h3>
+          <p class="mb-md-0" item-description>Các hướng dẫn sử dụng khai thác ROL hiệu quả nhất cho người dùng.</p><br>
+          <a href="#" item-link class="btn btn-outline-info btn-capsule px-4">Xem thêm</a>
           <!-- End Process -->
         </div>
 
-        <div class="col-md-4 mb-7 mb-md-0">
+        <div class="col-md-4 mb-7 mb-md-0" json-item-data>
           <!-- Process -->
           <div class="position-relative">
             <div class="u-indicator-dots min-height-155 mb-2">
@@ -693,13 +713,13 @@
             </div>
           </div>
 
-          <h3 class="h5">Cài đặt Masternode</h3>
-          <p class="mb-md-0">Hướng dẫn cài đặt và vận hành masternode trên Roller Platform.</p><br>
-          <a href="#" class="btn btn-outline-primary btn-capsule px-4">Xem thêm</a>
+          <h3 class="h5" item-title>Cài đặt Masternode</h3>
+          <p class="mb-md-0" item-description>Hướng dẫn cài đặt và vận hành masternode trên Roller Platform.</p><br>
+          <a href="#"  item-link class="btn btn-outline-primary btn-capsule px-4">Xem thêm</a>
           <!-- End Process -->
         </div>
 
-        <div class="col-md-4 mb-7 mb-md-0">
+        <div class="col-md-4 mb-7 mb-md-0" json-item-data>
           <!-- Process -->
           <div class="min-height-155 mb-2">
             <!-- Icon -->
@@ -725,9 +745,9 @@
             <!-- End SVG Shape -->
           </div>
 
-          <h3 class="h5">Xây dựng ICO</h3>
-          <p class="mb-md-0">Hướng dẫn xây dựng, định hướng, phát triển ICO, Token, Game trên smart contract.</p><br>
-          <a href="#" class="btn btn-outline-danger btn-capsule px-4">Xem thêm</a>
+          <h3 class="h5" item-title>Xây dựng ICO</h3>
+          <p class="mb-md-0" item-description>Hướng dẫn xây dựng, định hướng, phát triển ICO, Token, Game trên smart contract.</p><br>
+          <a href="#" item-link class="btn btn-outline-danger btn-capsule px-4">Xem thêm</a>
           <!-- End Process -->
         </div>
       </div>
@@ -748,17 +768,19 @@
         <p data-description>Các thành viên tiêu biểu phát triển ROL</p>
       </div>
       <br>
-      <div class="row">
+      <div class="row" json-item>
          <?php for ($i=1; $i <= 4; $i++) { ?>
           <div class="col-sm-6 col-lg-3 mb-7">
             <!-- Icon Blocks -->
-            <div class="shadown-sm">
-                <img src="<?php echo store_url("uploads/ceo.jpg");?>" class="img-fluid w-100 rounded">
+            <div class="shadown-sm" json-item-data>
+                <img item-backgroundurl src="<?php echo store_url("uploads/ceo.jpg");?>" class="img-fluid w-100 rounded">
                 <div class="position-relative bg-white text-center rounded shadow-sm z-index-2 mt-offset-6 p-4 mx-3">
-                  <h3 class="h6 mb-1">Vo Van Khoa</h3>
+                  <h3 item-title class="h6 mb-1">Vo Van Khoa</h3>
+                  <div item-description>
                   <p class="font-size-14 mb-0">CEO</p>
                   <a class="btn btn-outline-primary btn-sm"><i class="ti-facebook"></i></a>
                   <a class="btn btn-outline-primary btn-sm"><i class="ti-plus"></i></a>
+                  </div>
                 </div>
                
             </div>
@@ -789,19 +811,21 @@
         <p data-description>Góp ý từ cồng đồng về Roller Platform</p>
       </div>
       <br>
-      <div class="row">
+      <div class="row" json-item>
         
          
         <div class="col-sm-6 col-lg-4 mb-7">
           <!-- Icon Blocks -->
-          <div class="media" style="min-height: 120px;">
+          <div class="media" style="min-height: 120px;" json-item-data>
               <div class="content card-body">
-                <b>VO VAN KHOA</b><br>
-                The template is really nice and offers quite a large set of options. It's beautiful and the coding is done quickly and seamlessly. Thank you!<br>
-                The template is really nice and offers quite a large set of options. It's beautiful and the coding is done quickly and seamlessly. Thank you!<br>
+                <b item-title>VO VAN KHOA</b><br>
+                <p item-description>
+                  The template is really nice and offers quite a large set of options. It's beautiful and the coding is done quickly and seamlessly. Thank you!<br>
+                  The template is really nice and offers quite a large set of options. It's beautiful and the coding is done quickly and seamlessly. Thank you!<br>
+                </p>
               </div>
               <div class="avatar">
-               <img src="<?php echo store_url("uploads/avatar.jpg");?>" width="100%;">
+               <img item-backgroundurl src="<?php echo store_url("uploads/avatar.jpg");?>" width="100%;">
              </div>
           </div>
           
@@ -813,7 +837,7 @@
 
         <div class="col-sm-6 col-lg-4 mb-7">
           <!-- Icon Blocks -->
-          <div class="media heightline" style="min-height: 120px;">
+          <div class="media heightline" style="min-height: 120px;" json-item-data>
               <div class="avatar u-gradient-half-primary-v1">
                   <figure class="position-absolute-bottom-0 z-index-2">
                       <svg preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="140px" viewBox="20 -20 300 100" style="margin-bottom: -8px;" xml:space="preserve">
@@ -829,13 +853,13 @@
                     </figure>
                   <div class="text">
                     
-                    <img src="<?php echo store_url("uploads/avatar.jpg");?>" width="100%; z-index:9999;"><br>
-                    <b>VO VAN KHOA</b>
+                    <img item-backgroundurl src="<?php echo store_url("uploads/avatar.jpg");?>" width="100%; z-index:9999;"><br>
+                    <b item-title>VO VAN KHOA</b>
                   </div>
                    
 
               </div>
-              <div class="content card-body">
+              <div class="content card-body" item-description>
                 
                 
                 The template is really nice and offers quite a large set of options. It's beautiful and the coding is done quickly and seamlessly. Thank you!<br>
@@ -850,14 +874,15 @@
 
         <div class="col-sm-6 col-lg-4 mb-7">
           <!-- Icon Blocks -->
-          <div class="media" style="min-height: 120px;">
+          <div class="media" style="min-height: 120px;" json-item-data>
               <div class="content card-body">
-                <b>VO VAN KHOA</b><br>
+                <b item-title>VO VAN KHOA</b><br>
+                 <p item-description>The template is really nice and offers quite a large set of options. It's beautiful and the coding is done quickly and seamlessly. Thank you!<br>
                 The template is really nice and offers quite a large set of options. It's beautiful and the coding is done quickly and seamlessly. Thank you!<br>
-                The template is really nice and offers quite a large set of options. It's beautiful and the coding is done quickly and seamlessly. Thank you!<br>
+              </p>
               </div>
               <div class="avatar">
-               <img src="<?php echo store_url("uploads/avatar.jpg");?>" width="100%;">
+               <img item-backgroundurl src="<?php echo store_url("uploads/avatar.jpg");?>" width="100%;">
              </div>
           </div>
           

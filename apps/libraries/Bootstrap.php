@@ -40,6 +40,12 @@ class Bootstrap{
 			$l = "<i class=\"ti-back\"></i> Back";
 		}
 
+		if($key == "copy"){
+			$c = "btn-primary";
+			$l = "<i class=\"ti-copy\"></i> Copy";
+		}
+
+
 		$ht = ($lang ? $l : $c);
 		if((strpos($size,"outline") || $size == "outline") && !$lang) {
 			$ht = str_replace('btn-', 'btn-outline-', $ht);
