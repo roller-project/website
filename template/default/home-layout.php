@@ -94,7 +94,7 @@
                 <button type="button" class="btn btn-xs btn-primary u-btn-primary u-btn-wide u-btn-pill text-left mb-2 mb-sm-0 mr-1">
                   <span class="media align-items-center">
                     <span class="d-flex mr-3">
-                      <span class="fab fa-apple font-size-26"></span>
+                      <span class="fab ti-apple font-size-26"></span>
                     </span>
                     <span class="media-body">
                       <span class="d-block">Download on the</span>
@@ -106,7 +106,7 @@
                 <button type="button" class="btn btn-xs btn-primary u-btn-primary u-btn-wide u-btn-pill text-left mb-2 mb-sm-0 ml-1">
                   <span class="media align-items-center">
                     <span class="d-flex mr-3">
-                      <span class="fab fa-google-play font-size-26"></span>
+                      <span class="fab ti-google font-size-26"></span>
                     </span>
                     <span class="media-body">
                       <span class="d-block">Get it on</span>
