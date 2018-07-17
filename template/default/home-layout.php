@@ -77,10 +77,10 @@
             
 
             <div class="row">
-              <div class="col-lg-7 mr-auto">
+              <div class="col-lg-7 col-md-12 md-auto">
                 <ul class="menuFooter">
                   <?php foreach ($footer as $key => $value) { ?>
-                    <li class="col-lg-3">
+                    <li class="col-lg-4">
                       <a  href="<?php echo store_url($value["link"]);?>" title="<?php echo $value["name"];?>"><i class="<?php echo ($value["icons"] ? $value["icons"] : "ti-plus");?>"></i> <?php echo $value["name"];?></a>
                     </li>
                   <?php } ?>
@@ -90,7 +90,7 @@
                 
                 
               </div>
-              <div class="col-lg-5 mr-auto text-right">
+              <div class="col-lg-5 col-md-12 md-auto text-right">
                 <button type="button" class="btn btn-xs btn-primary u-btn-primary u-btn-wide u-btn-pill text-left mb-2 mb-sm-0 mr-1">
                   <span class="media align-items-center">
                     <span class="d-flex mr-3">
