@@ -80,7 +80,7 @@
               <div class="col-lg-7 col-md-12 md-auto">
                 <ul class="menuFooter">
                   <?php foreach ($footer as $key => $value) { ?>
-                    <li class="col-lg-4">
+                    <li class="col-lg-6">
                       <a  href="<?php echo store_url($value["link"]);?>" title="<?php echo $value["name"];?>"><i class="<?php echo ($value["icons"] ? $value["icons"] : "ti-plus");?>"></i> <?php echo $value["name"];?></a>
                     </li>
                   <?php } ?>
