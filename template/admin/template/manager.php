@@ -101,30 +101,32 @@
 				<?php if(isset($value["item"]) && is_array($value["item"]) && count($value["item"]) > 0) { ?>
 
 					<div class="form-group row">
-					    <label class="col-sm-2 col-form-label">Item Set</label>
+					    <label class="col-sm-2 col-form-label">Item Set </label>
 					    <div class="col-sm-10">
+					    	<div style="overflow: hidden; height: 30px;">
+					    		<div onClick="$(this).parent().css({'height': 'auto'});$(this).remove();">Item Options [Click Show Options +]</div>
 					    	<?php 
 					    	$i = 0;
 					    	foreach ($value["item"] as $keyItem => $valueItem) { 
 					    		
 					    	?>
 					    		
-					      	<div class="row">
+					      	<div class="row" style="margin-bottom:15px;">
 					      		<div class="col">
 					      			Name ( <?php echo ($keyItem + 1);?> )
-					      			<input type="text" name="json[<?php echo $key;?>][item][<?php echo $keyItem;?>][title]" value="<?php echo @$valueItem["title"];?>" class="form-control">
+					      			<input type="text" name="json[<?php echo $key;?>][item][<?php echo $keyItem;?>][title]" value="<?php echo @$valueItem["title"];?>" class="form-control form-control-sm">
 					      		</div>
 					      		<?php if(isset($valueItem["link"])) { ?>
 					      		<div class="col">
 					      			Link 
-					      			<input type="text" name="json[<?php echo $key;?>][item][<?php echo $keyItem;?>][link]" value="<?php echo @$valueItem["link"];?>" class="form-control">
+					      			<input type="text" name="json[<?php echo $key;?>][item][<?php echo $keyItem;?>][link]" value="<?php echo @$valueItem["link"];?>" class="form-control form-control-sm">
 					      		</div>
 					      		<?php } ?>
 
 					      		<?php if(isset($valueItem["progress"])) { ?>
 					      		<div class="col">
 					      			Progress 
-					      			<input type="text" name="json[<?php echo $key;?>][item][<?php echo $keyItem;?>][progress]" value="<?php echo @$valueItem["progress"];?>" class="form-control">
+					      			<input type="text" name="json[<?php echo $key;?>][item][<?php echo $keyItem;?>][progress]" value="<?php echo @$valueItem["progress"];?>" class="form-control form-control-sm">
 					      		</div>
 					      		<?php } ?>
 
@@ -132,7 +134,7 @@
 					      		<?php if(isset($valueItem["icons"])) { ?>
 					      		<div class="col">
 					      			Icons Class 
-					      			<input type="text" name="json[<?php echo $key;?>][item][<?php echo $keyItem;?>][icons]" value="<?php echo @$valueItem["icons"];?>" class="form-control">
+					      			<input type="text" name="json[<?php echo $key;?>][item][<?php echo $keyItem;?>][icons]" value="<?php echo @$valueItem["icons"];?>" class="form-control form-control-sm">
 					      		</div>
 					      		<?php } ?>
 
@@ -152,13 +154,14 @@
 					      		<?php if(isset($valueItem["description"])) { ?>
 					      		<div class="col-lg-12">
 					      			Description
-					      			<textarea class="form-control" name="json[<?php echo $key;?>][item][<?php echo $keyItem;?>][description]"><?php echo @$valueItem["description"];?></textarea>
+					      			<textarea class="form-control  form-control-sm" name="json[<?php echo $key;?>][item][<?php echo $keyItem;?>][description]"><?php echo @$valueItem["description"];?></textarea>
 					      		</div>
 					      		<?php } ?>
 					      	</div>
 					      <?php 
 					      $i++;
 					  	} ?>
+					    </div>
 					    </div>
 					</div>
 				<?php } ?>

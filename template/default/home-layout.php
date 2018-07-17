@@ -74,19 +74,49 @@
 
         <footer class="bg-gray">
           <div class="container">
-            <ul class="row menuFooter">
-              <?php foreach ($footer as $key => $value) { ?>
-                <li class="col-lg-3">
-                  <a  href="<?php echo store_url($value["link"]);?>" title="<?php echo $value["name"];?>"><i class="<?php echo $value["icons"];?>"></i> <?php echo $value["name"];?></a>
-                </li>
-              <?php } ?>
-             
-            </ul>
-            <div class="row wow fadeInUp">
-              <div class="col-12">
+            
+
+            <div class="row">
+              <div class="col-lg-7 mr-auto">
+                <ul class="menuFooter">
+                  <?php foreach ($footer as $key => $value) { ?>
+                    <li class="col-lg-3">
+                      <a  href="<?php echo store_url($value["link"]);?>" title="<?php echo $value["name"];?>"><i class="<?php echo ($value["icons"] ? $value["icons"] : "ti-plus");?>"></i> <?php echo $value["name"];?></a>
+                    </li>
+                  <?php } ?>
+                 
+                </ul>
+                
+                
+                
+              </div>
+              <div class="col-lg-5 mr-auto text-right">
+                <button type="button" class="btn btn-xs btn-primary u-btn-primary u-btn-wide u-btn-pill text-left mb-2 mb-sm-0 mr-1">
+                  <span class="media align-items-center">
+                    <span class="d-flex mr-3">
+                      <span class="fab fa-apple font-size-26"></span>
+                    </span>
+                    <span class="media-body">
+                      <span class="d-block">Download on the</span>
+                      <strong class="font-size-14">App Store</strong>
+                    </span>
+                  </span>
+                </button>
+
+                <button type="button" class="btn btn-xs btn-primary u-btn-primary u-btn-wide u-btn-pill text-left mb-2 mb-sm-0 ml-1">
+                  <span class="media align-items-center">
+                    <span class="d-flex mr-3">
+                      <span class="fab fa-google-play font-size-26"></span>
+                    </span>
+                    <span class="media-body">
+                      <span class="d-block">Get it on</span>
+                      <strong class="font-size-14">Google Play</strong>
+                    </span>
+                  </span>
+                </button>
+                <br><br>
                 <div class="social">
-                  <span data-i18n="footer.heading">Follow us</span>
-                  <ul>
+                <ul>
                   <?php $social_db = json_decode($this->config->item("social"));?>
                   <?php foreach ($social_db as $keySdb => $valueSdb) { ?>
                       <li class="btn-outline-primary">
@@ -96,11 +126,10 @@
                       </li>
                   <?php } ?>
                   </ul>
-                 
-                </div>
+                  </div>
               </div>
-
-              <div class="col-12">
+              <div class="col-lg-12">
+                <br>
                  <p class="text-left">Các quá trình phát triển của chúng tôi còn phụ thuộc vào sự đóng góp chi phí và công nghệ của cộng đồng sử dụng. Các đóng góp vui lòng gởi về <a href="https://www.blockchain.com/btc/address/18UDydoLS6eckX2aspZLWUWngKkZahWPkK" target="_bank">18UDydoLS6eckX2aspZLWUWngKkZahWPkK</a></p>
                 <!--copyright-->
                 <p class="copyright">Language : <a href="?language=english">English</a> | <a href="?language=vietnam">Vietnam</a> | <a href="?language=china">China</a> | <a href="?language=russia">Russia</a> | <a href="?language=korea">Korea</a></p>
