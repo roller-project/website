@@ -36,9 +36,11 @@ $.fn.extend({
             items.attr("src",data);
         }
 
-        if(tag == "P" || tag == "DIV" || tag == "H1" || tag == "H2" || tag == "H3" || tag == "H4" || tag == "H5" || tag == "H6" || tag == "H7"){
+        if(tag == "P" || tag == "B" || tag == "STRONG" || tag == "I" || tag == "EM" || tag == "DIV" || tag == "H1" || tag == "H2" || tag == "H3" || tag == "H4" || tag == "H5" || tag == "H6" || tag == "H7"){
           if(items.hasClass("progress-bar")){
             items.attr("style","width:"+data);
+          }else if(items.hasClass("background")){
+             items.css("background-image","url("+data+");");
           }else{
             items.html(data);
           }

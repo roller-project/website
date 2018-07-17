@@ -111,7 +111,7 @@
 					    		
 					      	<div class="row">
 					      		<div class="col">
-					      			Name 
+					      			Name ( <?php echo ($keyItem + 1);?> )
 					      			<input type="text" name="json[<?php echo $key;?>][item][<?php echo $keyItem;?>][title]" value="<?php echo @$valueItem["title"];?>" class="form-control">
 					      		</div>
 					      		<?php if(isset($valueItem["link"])) { ?>
