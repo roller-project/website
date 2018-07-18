@@ -238,3 +238,18 @@ footer{
 .timelineStyle .col-sm-6{
   margin-bottom: 30px;
 }
+
+
+
+.limit-line-6{
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 6;
+  -webkit-box-orient: vertical;
+}
+.limit-line-7{
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 7;
+  -webkit-box-orient: vertical;
+}

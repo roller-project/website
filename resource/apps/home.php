@@ -819,7 +819,7 @@
           <div class="media" style="min-height: 120px;" json-item-data>
               <div class="content card-body">
                 <b item-title>VO VAN KHOA</b><br>
-                <p item-description>
+                <p item-description class="limit-line-7">
                   The template is really nice and offers quite a large set of options. It's beautiful and the coding is done quickly and seamlessly. Thank you!<br>
                   The template is really nice and offers quite a large set of options. It's beautiful and the coding is done quickly and seamlessly. Thank you!<br>
                 </p>
@@ -877,7 +877,7 @@
           <div class="media" style="min-height: 120px;" json-item-data>
               <div class="content card-body">
                 <b item-title>VO VAN KHOA</b><br>
-                 <p item-description>The template is really nice and offers quite a large set of options. It's beautiful and the coding is done quickly and seamlessly. Thank you!<br>
+                 <p item-description class="limit-line-7">The template is really nice and offers quite a large set of options. It's beautiful and the coding is done quickly and seamlessly. Thank you!<br>
                 The template is really nice and offers quite a large set of options. It's beautiful and the coding is done quickly and seamlessly. Thank you!<br>
               </p>
               </div>
