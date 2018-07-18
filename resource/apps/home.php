@@ -4,7 +4,9 @@
 <div class="container u-space-3" data-json="whatisroller">
       <div class="row justify-content-between align-items-center">
         
+        <?php if(config_item("nextfork")){ ?>
 
+        <?php } ?>
         <div class="col-lg-6 position-relative append-img" data-backgroundurl>
           <!-- Image Gallery -->
           <div class="row mx-gutters-2" json-item>
