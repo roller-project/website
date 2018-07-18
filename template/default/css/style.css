@@ -204,6 +204,12 @@ footer{
   margin:0; 
 }
 
+.menuFooter li {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
 .MobiOpen{
   margin-left: -320px;
   transition: margin-left .5s;
