@@ -241,6 +241,12 @@ footer{
 
 
 
+.limit-text-150 {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
 .limit-line-6{
   overflow: hidden;
   display: -webkit-box;

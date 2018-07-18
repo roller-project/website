@@ -14,7 +14,7 @@ class Page_model extends CI_Model{
 
 
 	public function getList($parentID="0", $only_parent=false, $sname=""){
-		$this->db->where("language = '' OR language ='".$this->config->item("language")."'");
+		$this->db->where("language ='".$this->config->item("language")."'");
 		$this->db->where("parent_id", $parentID);
 		$data =  $this->db->get("pages")->result();
 
@@ -50,13 +50,31 @@ class Page_model extends CI_Model{
 	}
 
 	public function getPageMenu($parentID="0", $target="header", $only_parent=false){
-		$this->db->where("language = '' OR language ='".$this->config->item("language")."'");
+		$this->db->where("language ='".$this->config->item("language")."'");
 		$this->db->where("parent_id", $parentID);
-		$this->db->where("in_menu ", $target);
+		if(is_array($target)){
+			foreach ($target as $key => $value) {
+				$this->db->where("in_menu ", $value);
+			}
+		}else{
+			$this->db->where("in_menu ", $target);
+		}
+		
 		$data =  $this->db->get("pages")->result();
 		return $data;
 	}
 
+
+	public function getPageWithApss($parentID=0){
+		$this->db->where("language ='".$this->config->item("language")."'");
+		$this->db->where("parent_id", $parentID);
+		$this->db->where("apps_display != ''");
+		$data =  $this->db->get("pages")->result();
+
+		
+
+		return $data;
+	}
 
 	public function getContent($url){
 		$this->db->where("url_rewrite",$url);

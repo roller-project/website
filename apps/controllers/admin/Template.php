@@ -15,7 +15,8 @@ class Template extends Admin {
 	}
 
 	public function manager($id=""){
-		$page = $this->page_model->getList();
+		$page = $this->page_model->getPageWithApss();
+
 		$pageInfo = $this->page_model->getInfoContent($id);
 
 		$options = [];
