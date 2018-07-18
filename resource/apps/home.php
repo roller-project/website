@@ -2,11 +2,12 @@
 <?php include __DIR__."/slider/slider3.php"; ?>
 
 <div class="container u-space-3" data-json="whatisroller">
+      <?php if(config_item("nextfork")){ ?>
+            <div class="notesfork text-center"><button class="u-gradient-half-primary-v5"><?php echo config_item("nextfork");?></button></div>
+        <?php } ?>
       <div class="row justify-content-between align-items-center">
         
-        <?php if(config_item("nextfork")){ ?>
-            <div class="notesfork"><?php echo config_item("nextfork");?></div>
-        <?php } ?>
+
         <div class="col-lg-6 position-relative append-img" data-backgroundurl>
           <!-- Image Gallery -->
           <div class="row mx-gutters-2" json-item>
