@@ -320,7 +320,9 @@ class Html2text
         $text = trim(stripslashes($this->html));
 
         // Run our defined search-and-replace
-        $text = preg_replace_callback($this->search, $this->replace, $text);
+        $text = preg_replace_callback($this->search, function($this->replace){
+            return $this->replace;
+        }, $text);
 
         // Strip any other HTML tags
         $text = strip_tags($text, $this->allowed_tags);
