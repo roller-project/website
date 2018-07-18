@@ -819,10 +819,12 @@
           <div class="media" style="min-height: 120px;" json-item-data>
               <div class="content card-body">
                 <b item-title>VO VAN KHOA</b><br>
-                <p item-description class="limit-line-7">
+                <div class="limit-line-7">
+                <p item-description>
                   The template is really nice and offers quite a large set of options. It's beautiful and the coding is done quickly and seamlessly. Thank you!<br>
                   The template is really nice and offers quite a large set of options. It's beautiful and the coding is done quickly and seamlessly. Thank you!<br>
                 </p>
+                </div>
               </div>
               <div class="avatar">
                <img item-backgroundurl src="<?php echo store_url("uploads/avatar.jpg");?>" width="100%;">
