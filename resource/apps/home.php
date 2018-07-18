@@ -3,7 +3,7 @@
 
 <div class="container u-space-3" data-json="whatisroller">
       <?php if(config_item("nextfork")){ ?>
-            <div class="notesfork"><button class="u-gradient-half-info-v5 btn btn-lg btn-outline-info btn-capsule px-4 btn-lg" style="color: #FFF;"><?php echo config_item("nextfork");?></button></div>
+            <div class="notesfork"><button class="u-gradient-half-info-v5 btn btn-lg  btn-capsule px-4 btn-lg" style="color: #FFF;"><?php echo config_item("nextfork");?></button></div>
         <?php } ?>
       <div class="row justify-content-between align-items-center">
         
