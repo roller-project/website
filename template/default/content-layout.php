@@ -25,7 +25,7 @@
     <body>
       
       <header  id="header">
-        <nav class="navbar navbar-expand-md navbar-none bg-none container">
+        <nav class="navbar navbar-expand-md navbar-light bg-none container">
           <a class="navbar-brand" href="<?php echo store_url("");?>"><img src="<?php echo template_url("image/logo.png");?>" style="height: 50px;"></a>
           <button class="navbar-toggler p-0 border-0" type="button" data-toggle="offcanvas">
             <span class="navbar-toggler-icon"></span>
@@ -33,29 +33,33 @@
 
          
 
-          <div class="navbar-collapse offcanvas-collapse py-0" id="navbarsExampleDefault">
-            <ul class="navbar-nav ml-lg-auto">
+          <div class="collapse navbar-collapse  offcanvas-collapse py-0" id="navbarsExampleDefault">
+            <ul class="navbar-nav">
               <li class="nav-item active">
                 <a class="nav-link" href="<?php echo store_url("");?>"><i class="ti-home"></i> <?php echo lang("home");?> <span class="sr-only">(current)</span></a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="http://explorer.roller.today:3000/home" target="_blank"><i class="ti-exploder"></i> Exploder</a>
+                <a class="nav-link" href="http://explorer.roller.today:3000/home" target="_blank"><i class="ti-export"></i> Explorer</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="http://wallet.roller.today" target="_blank"><i class="ti-wallet"></i> Wallet</a>
               </li>
 
-               <?php foreach ($menu as $key => $value) { ?>
+              <?php foreach ($menu as $key => $value) { ?>
                 <li class="nav-item">
                   <a class="nav-link" href="<?php echo store_url($value["link"]);?>" title="<?php echo $value["name"];?>"><i class="<?php echo $value["icons"];?>"></i> <?php echo $value["name"];?></a>
                 </li>
               <?php } ?>
               
 
+              
+              
+            </ul>
+            <ul class="navbar-nav ml-lg-auto">
+              
               <li class="nav-item">
                 <a class="nav-link btn btn-outline-light btn-capsule px-3" href="<?php echo store_url("account");?>"><i class="ti-user"></i> <?php echo lang("account");?></a>
               </li>
-              
             </ul>
             
           </div>
@@ -179,11 +183,49 @@
 
         <footer class="bg-gray">
           <div class="container">
-            <div class="row wow fadeInUp">
-              <div class="col-12">
+            
+
+            <div class="row">
+              <div class="col-lg-7 col-md-12 md-auto">
+                <ul class="row menuFooter">
+                  <?php foreach ($footer as $key => $value) { ?>
+                    <li class="col-lg-6">
+                      <a  href="<?php echo store_url($value["link"]);?>" title="<?php echo $value["name"];?>"><i class="<?php echo ($value["icons"] ? $value["icons"] : "ti-plus");?>"></i> <?php echo $value["name"];?></a>
+                    </li>
+                  <?php } ?>
+                 
+                </ul>
+                
+                
+                
+              </div>
+              <div class="col-lg-5 col-md-12 md-auto text-right">
+                <button type="button" class="btn btn-xs btn-primary u-btn-primary u-btn-wide u-btn-pill text-left mb-2 mb-sm-0 mr-1">
+                  <span class="media align-items-center">
+                    <span class="d-flex mr-3">
+                      <span class="fab ti-apple font-size-26"></span>
+                    </span>
+                    <span class="media-body">
+                      <span class="d-block">Download on the</span>
+                      <strong class="font-size-14">App Store</strong>
+                    </span>
+                  </span>
+                </button>
+
+                <button type="button" class="btn btn-xs btn-primary u-btn-primary u-btn-wide u-btn-pill text-left mb-2 mb-sm-0 ml-1">
+                  <span class="media align-items-center">
+                    <span class="d-flex mr-3">
+                      <span class="fab ti-google font-size-26"></span>
+                    </span>
+                    <span class="media-body">
+                      <span class="d-block">Get it on</span>
+                      <strong class="font-size-14">Google Play</strong>
+                    </span>
+                  </span>
+                </button>
+                <br><br>
                 <div class="social">
-                  <span data-i18n="footer.heading">Follow us</span>
-                  <ul>
+                <ul>
                   <?php $social_db = json_decode($this->config->item("social"));?>
                   <?php foreach ($social_db as $keySdb => $valueSdb) { ?>
                       <li class="btn-outline-primary">
@@ -193,11 +235,10 @@
                       </li>
                   <?php } ?>
                   </ul>
-                 
-                </div>
+                  </div>
               </div>
-
-              <div class="col-12">
+              <div class="col-lg-12">
+                <br>
                  <p class="text-left">Các quá trình phát triển của chúng tôi còn phụ thuộc vào sự đóng góp chi phí và công nghệ của cộng đồng sử dụng. Các đóng góp vui lòng gởi về <a href="https://www.blockchain.com/btc/address/18UDydoLS6eckX2aspZLWUWngKkZahWPkK" target="_bank">18UDydoLS6eckX2aspZLWUWngKkZahWPkK</a></p>
                 <!--copyright-->
                 <p class="copyright">Language : <a href="?language=english">English</a> | <a href="?language=vietnam">Vietnam</a> | <a href="?language=china">China</a> | <a href="?language=russia">Russia</a> | <a href="?language=korea">Korea</a></p>
