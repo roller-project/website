@@ -256,7 +256,7 @@ class BaseController extends CI_Controller{
 		}
 		
 
-		if(!$this->session->userdata("language")){
+		if(!$this->session->userdata("language") && is_dir(FCPATH . "language/".$language)){
 			$this->config->set_item("language", $lang);
 		}
 	}
