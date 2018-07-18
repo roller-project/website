@@ -28,8 +28,12 @@ class BaseController extends CI_Controller{
 	/*
 	Create Settings
 	*/
-	public function config($languge="",  $plugins=""){
-		$this->db->where("language",$languge);
+	public function config($plugins=""){
+		$language = "english";
+		if($this->session->userdata("language")){
+			$language = $this->session->userdata("language");
+		}
+		$this->db->where("language='".$language."' OR globals = 'yes'");
 		
 		$this->db->where("plugins",$plugins);
 		$data = $this->db->get("settings")->result();
