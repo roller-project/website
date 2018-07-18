@@ -192,6 +192,7 @@ class Html2text
      *  @access public
      *  @return void
      */
+    /*
     function html2text( $source = '', $from_file = false )
     {
         if ( !empty($source) ) {
@@ -199,6 +200,7 @@ class Html2text
         }
         $this->set_base_url();
     }
+    */
 
     /**
      *  Loads source HTML into memory, either from $source string or a file.
