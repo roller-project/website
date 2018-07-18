@@ -115,6 +115,7 @@
 			"twitter",
 			"linkedin",
 			"pinterest",
+			"discord",
 			
 		];
 	?>
@@ -142,8 +143,11 @@
 			<div class="form-group row <?php echo $keySdb;?>">
 			    <label class="col-sm-2 col-form-label text-right"><?php echo ucfirst($keySdb);?></label>
 			    
-			    <div class="col-sm-10">
+			    <div class="col-sm-9">
 			      <input type="text" class="form-control" name="config[social][<?php echo $keySdb;?>]" value="<?php echo $valueSdb;?>">
+			    </div>
+			    <div class="col-sm-1">
+			    	<button class="btn btn-sm btn-info" onclick="$(this).parent().parent().remove();">-</button>
 			    </div>
 			</div>
 		<?php } ?>
