@@ -5,7 +5,7 @@
       <div class="row justify-content-between align-items-center">
         
         <?php if(config_item("nextfork")){ ?>
-
+            <div class="notesfork"><?php echo config_item("nextfork");?></div>
         <?php } ?>
         <div class="col-lg-6 position-relative append-img" data-backgroundurl>
           <!-- Image Gallery -->

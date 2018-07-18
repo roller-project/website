@@ -62,6 +62,13 @@
 
 
 	<div class="form-group row">
+	    <label class="col-sm-2 col-form-label text-right">Next Fork</label>
+	    <div class="col-sm-10">
+	      <input type="text" class="form-control" name="config[nextfork]" value="<?php echo $this->config->item("nextfork");?>">
+	    </div>
+	</div>
+
+	<div class="form-group row">
 	    <label class="col-sm-2 col-form-label text-right">Site Language</label>
 	    <div class="col-sm-10">
 	      <input type="text" class="form-control" name="config[language]" value="<?php echo $this->config->item("language");?>">
