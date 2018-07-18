@@ -242,6 +242,7 @@ class BaseController extends CI_Controller{
 	
 
 	public function ipToLang(){
+		if(defined("ADMIN")) return;
 		$ip = $this->input->ip_address();;
 		$details = json_decode(file_get_contents("http://ipinfo.io/{$ip}/json"));
 		//echo $details->city; // -> "Mountain View"
