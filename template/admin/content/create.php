@@ -24,6 +24,11 @@
 				    
 				</div>
 
+				<div class="form-group">
+				    <label for="exampleInputDescription">Description</label>
+				    <textarea class="form-control form-control-sm" rows="2" name="description" ><?php echo @$getInfo->description;?></textarea>
+				    
+				  </div>
 				  
 				  <div class="form-group">
 				    <label for="exampleInputDescription">Contents</label>

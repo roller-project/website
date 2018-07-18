@@ -27,6 +27,7 @@ class Content extends Admin {
 			"title" => $this->input->post("title"),
 			"url_rewrite" => $this->input->post("url_rewrite"),
 			"content" => $this->input->post("content"),
+			"description" => $this->input->post("description"),
 			"thumbnail" => $this->input->post("thumbnail"),
 			"type"	=> $type,
 		];
