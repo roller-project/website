@@ -22,6 +22,9 @@ function template_url($path=""){
 
 }
 
+function preg_replace($search, $replace, $text){
+	
+}
 
 
 function MergeArrays($arv1, $arv2)
