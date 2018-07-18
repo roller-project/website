@@ -17,6 +17,10 @@ class BaseController extends CI_Controller{
 			$this->config->set_item("language",$this->session->userdata("language"));
 		}
 		
+		if($this->config->item("autolanguage") == "yes"){
+			$this->ipToLang();
+		}
+
 		$this->lang("globals");
 		
 	}
@@ -236,6 +240,26 @@ class BaseController extends CI_Controller{
 	}
 
 	
+
+	public function ipToLang(){
+		$ip = $this->input->ip_address();;
+		$details = json_decode(file_get_contents("http://ipinfo.io/{$ip}/json"));
+		//echo $details->city; // -> "Mountain View"
+		$country = strtolower($details->country);
+		$language = "english";
+		if($country == "vn"){
+			$language = "vn";
+		}
+
+		if($country == "cn"){
+			$language = "china";
+		}
+		
+
+		if(!$this->session->userdata("language")){
+			$this->config->set_item("language", $lang);
+		}
+	}
 }
 
 /**

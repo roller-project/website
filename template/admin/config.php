@@ -68,6 +68,13 @@
 	    </div>
 	</div>
 
+	<div class="form-group row">
+	    <label class="col-sm-2 col-form-label text-right">Detech Language IP</label>
+	    <div class="col-sm-10">
+	      <input type="text" class="form-control" name="config[autolanguage]" value="<?php echo $this->config->item("autolanguage");?>">
+	    </div>
+	</div>
+
 	<hr>
 	<?php
 		$social = [
