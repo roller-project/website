@@ -43,7 +43,9 @@ class Page extends Admin {
 				"apps_display"	=> @$arvs["apps_display"],
 				"in_menu"	=> @$arvs["in_menu"],
 				"status"	=> @$arvs["status"],
-				"parent_id"	=> @$arvs["parent_id"]
+				"parent_id"	=> @$arvs["parent_id"],
+				"medium_url"	=> @$arvs["medium_url"],
+				"website_service"	=> @$arvs["website_service"]
 
 			];
 			$this->page_model->CreateOrUpdate($arv, $id);

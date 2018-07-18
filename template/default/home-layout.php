@@ -39,7 +39,7 @@
                 <a class="nav-link" href="<?php echo store_url("");?>"><i class="ti-home"></i> <?php echo lang("home");?> <span class="sr-only">(current)</span></a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="http://explorer.roller.today:3000/home" target="_blank"><i class="ti-export"></i> Exploder</a>
+                <a class="nav-link" href="http://explorer.roller.today:3000/home" target="_blank"><i class="ti-export"></i> Explorer</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="http://wallet.roller.today" target="_blank"><i class="ti-wallet"></i> Wallet</a>

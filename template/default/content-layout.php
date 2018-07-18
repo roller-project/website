@@ -75,21 +75,25 @@
                       <h1 class="display-4 text-white font-weight-normal mb-3"><?php echo $header["title"];?></h1>
 
                       <ul class="list-inline">
+                        <?php if(@$header["medium_url"]){ ?>
                         <li class="list-inline-item">
-                          <a class="u-text-light" href="#">
-                            <span class="fa fa-map-marker-alt"></span>
-                            California
+                          <a class="u-text-light" href="<?php echo @$header["medium_url"];?>">
+                            <span class="ti-medium"></span>
+                            Medium
                           </a>
                         </li>
+                      <?php }
+                      if(@$header["website_service"]){ ?>
                         <li class="list-inline-item">
-                          <a class="u-text-light" href="#">
-                            <span class="fa fa-globe"></span>
-                            mooreismine.com
+                          <a class="u-text-light" href="<?php echo @$header["website_service"];?>">
+                            <span class="ti-wordpress"></span>
+                            Blog's Service
                           </a>
                         </li>
+                      <?php } ?>
                       </ul>
 
-                      <p class="text-white">I am an ambitious adventurer, but apart from that, pretty simple person.</p>
+                      <p class="text-white"><?php echo $header["site_description"];?></p>
                     </div>
                     <!-- End Info -->
 
@@ -148,8 +152,8 @@
             <!-- Title -->
             <div class="pr-md-4 mb-4">
               <span class="u-label u-label--sm u-label--success mb-2">Support</span>
-              <h2 class="text-primary">Hỗ trợ <span class="font-weight-bold">người dùng</span></h2>
-              <p>Các kênh hổ trợ người sử dụng Roller Platform.</p>
+              <h2 class="text-primary"><?php echo lang("support_customer");?></h2>
+              <p><?php echo lang("chanel_customer");?></p>
             </div>
             <!-- End Title -->
 

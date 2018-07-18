@@ -86,8 +86,15 @@
 					<option value="footer" <?php echo (@$data->in_menu == "footer" ? "selected" : "");?> >Footer</option>
 					
 				</select>
+
 				Menu Icoin Class
-				<input type="text" name="menu_icons" value="<?php echo @$data->menu_icons;?>">
+				<input type="text" class="form-control" name="menu_icons" value="<?php echo @$data->menu_icons;?>">
+
+				Medium Blog
+				<input type="text" class="form-control" name="medium_url" value="<?php echo @$data->medium_url;?>">
+
+				Web Services
+				<input type="text" class="form-control" name="website_service" value="<?php echo @$data->website_service;?>">
 				Apps Design
 				<select class="form-control" name="apps_display">
 					<option value="">Content Default</option>
