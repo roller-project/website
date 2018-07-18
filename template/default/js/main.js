@@ -41,6 +41,8 @@ $.fn.extend({
             items.attr("style","width:"+data);
           }else if(items.hasClass("background")){
              items.css("background-image","url("+data+");");
+          }else if(items.hasClass("append-img")){
+            items.html('<img src="'+data+'" class="'.items.attr("[append-class]").'">');
           }else{
             items.html(data);
           }
