@@ -15,3 +15,4 @@ $lang["success_insert"]		=	"Dữ liệu được thêm thành công";
 $lang["error_insert"]		=	"Lỗi khi thêm dữ liệu";
 $lang["support_customer"] = 	"Hỗ trợ người dùng";
 $lang["chanel_customer"]	=	"Các kênh hỗ trợ";
+$lang["roadmap"]			=	"Kế hoạch phát triển";

@@ -93,7 +93,7 @@
                       <?php } ?>
                       </ul>
 
-                      <p class="text-white"><?php echo $header["site_description"];?></p>
+                      <p class="text-white"><?php echo @$header["site_description"];?></p>
                     </div>
                     <!-- End Info -->
 
