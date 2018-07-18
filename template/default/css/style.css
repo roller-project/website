@@ -265,3 +265,7 @@ footer{
   -webkit-line-clamp: 7;
   -webkit-box-orient: vertical;
 }
+.notesfork{
+  padding-left: 20%;
+  margin-top: -50px;
+}
