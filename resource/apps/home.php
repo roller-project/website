@@ -5,7 +5,7 @@
       <div class="row justify-content-between align-items-center">
         
 
-        <div class="col-lg-6 position-relative append-img" data-backgroundurl append-class="w-100">
+        <div class="col-lg-6 position-relative append-img" data-backgroundurl>
           <!-- Image Gallery -->
           <div class="row mx-gutters-2" json-item>
             <div class="col-5 align-self-end px-2 mb-3" json-item-data>
