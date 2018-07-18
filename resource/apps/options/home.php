@@ -14,6 +14,7 @@ $options["whatisroller"] = [
 	"title" => "Name 1",
 	"description"	=> "",
 	"pin"	=> "",
+	"backgroundurl" => "",
 	"item" => [
 		["title" => "","backgroundurl" => ""],
 		["title" => "","backgroundurl" => ""],
