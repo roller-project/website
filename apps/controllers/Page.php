@@ -18,6 +18,7 @@ class Page extends Frontend {
 			$infoApp = $this->template_model->getApplicationInfo($data->id);
 			$content .= '<script type="application/json" id="jsonContent2">'.json_encode($infoApp->json).'</script>';
 		}else{
+			
 			$content = $this->content_model->listContent($data->data_type);
 			$this->setLayout("content-layout");
 		}

@@ -17,7 +17,10 @@ if($content){
 			  <div class="card-body">
 			  	<h5 style="overflow: hidden;"><a href="<?php echo store_url("post-".$value->url_rewrite).config_item("url_prefix");?>"><?php echo $value->title;?></a></h5>
 		    	
-			    <p class="card-text"><?php echo word_limiter($value->content,10);?>.</p>
+			    <p class="card-text"><?php 
+			    $this->html2text->set_html($value->content);
+			    echo word_limiter($this->html2text->get_text(),10);
+			    ?>.</p>
 			  </div>
 			</div>
 		  </li>

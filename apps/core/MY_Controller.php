@@ -4,7 +4,7 @@ class BaseController extends CI_Controller{
 	function __construct()
 	{
 		parent::__construct();
-		$this->load->library(['session','email','user_agent','bootstrap']);
+		$this->load->library(['session','email','user_agent','bootstrap','html2text']);
 		$this->load->helper(['url','function','form','language','string','text']);
 		$this->config();
 		$this->load->model(["account_model","template_model","content_model","page_model","settings_model"]);
