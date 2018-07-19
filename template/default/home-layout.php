@@ -130,7 +130,7 @@
               </div>
               <div class="col-lg-12">
                 <br>
-                 <p class="text-left">Các quá trình phát triển của chúng tôi còn phụ thuộc vào sự đóng góp chi phí và công nghệ của cộng đồng sử dụng. Các đóng góp vui lòng gởi về <a href="https://www.blockchain.com/btc/address/18UDydoLS6eckX2aspZLWUWngKkZahWPkK" target="_bank">18UDydoLS6eckX2aspZLWUWngKkZahWPkK</a></p>
+                 <p class="text-left"><?php echo lang("help_list_exchange");?></p>
                 <!--copyright-->
                 <p class="copyright">Language : <a href="?language=english">English</a> | <a href="?language=vietnam">Vietnam</a> | <a href="?language=china">China</a> | <a href="?language=russia">Russia</a> | <a href="?language=korea">Korea</a></p>
                 <!--/copyright-->

@@ -29,3 +29,4 @@ $lang["partners"] = "Đối tác phát triển ứng dụng";
 $lang["partners_description"] = "Chúng tôi luôn hoan nghênh mọi đóng góp và phát triển dự án để đạt mục tiêu là một dự án của cộng đồng.";
 $lang["joingroup_title"] = "Cách đơn giản";
 $lang["joingroup_description"] = "Nhập email để trở thành cộng đồng của chúng tôi. Các thông tin mới nhất từ chúng tôi sẽ chuyển đến bạn ngay lập tức.";
+$lang["help_list_exchange"] = 'Các quá trình phát triển của chúng tôi còn phụ thuộc vào sự đóng góp chi phí và công nghệ của cộng đồng sử dụng. Các đóng góp vui lòng gởi về <a href="https://www.blockchain.com/btc/address/18UDydoLS6eckX2aspZLWUWngKkZahWPkK" target="_bank">18UDydoLS6eckX2aspZLWUWngKkZahWPkK</a>';

@@ -31,3 +31,4 @@ $lang["partners"] = "Application development partners";
 $lang["partners_description"] = "We are pleasure with all contributions and development projects to be completed to reach the goal that is a community project.";
 $lang["joingroup_title"] = "Easy with Roller Member";
 $lang["joingroup_description"] = "Enter you email";
+$lang["help_list_exchange"] = "";
