@@ -1,10 +1,10 @@
 <?php
-$lang["home"]	= "Home";
+$lang["home"]	= "Home page";
 $lang["account"]	=	"Account";
-$lang["error"] = "Error";
-$lang["success"]	= "Success";
-$lang["warning"]	=	"Warning";
-$lang["account_ready"]	=	"Email not exists";
+$lang["error"] = "Lỗi";
+$lang["success"]	= "Hoàn thành";
+$lang["warning"]	=	"Cảnh bảo";
+$lang["account_ready"]	=	"Email đăng ký đã tồn tại";
 $lang["success_register"]	= "Tài khoản được tạo. Bạn có thể đăng nhập";
 $lang["success_login"]		=	"Đăng nhập thành công";
 
@@ -13,3 +13,7 @@ $lang["error_update"]		=	"Lỗi cập nhập vui lòng kiểm tra lại";
 
 $lang["success_insert"]		=	"Dữ liệu được thêm thành công";
 $lang["error_insert"]		=	"Lỗi khi thêm dữ liệu";
+$lang["support_customer"] = 	"Hỗ trợ người dùng";
+$lang["chanel_customer"]	=	"Các kênh hỗ trợ";
+$lang["roadmap"]			=	"Kế hoạch phát triển";
+$lang["more"]				=	"More."

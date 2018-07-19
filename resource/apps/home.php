@@ -684,7 +684,7 @@
 
           <h3 class="h5" item-title>Khai thác ROL</h3>
           <p class="mb-md-0" item-description>Các hướng dẫn sử dụng khai thác ROL hiệu quả nhất cho người dùng.</p><br>
-          <a href="#" item-link class="btn btn-outline-info btn-capsule px-4">Xem thêm</a>
+          <a href="#" item-link class="btn btn-outline-info btn-capsule px-4"><?php echo lang("more");?></a>
           <!-- End Process -->
         </div>
 
