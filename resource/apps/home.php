@@ -489,10 +489,8 @@
             <!-- Title -->
             <div class="pr-lg-4 mb-7">
               <span class="u-label u-label--sm u-label--success mb-2">Outsource</span>
-              <h2 class="text-primary">Đối tác
-                <span class="font-weight-bold">phát triển ứng dụng</span>
-              </h2>
-              <p>Chúng tôi luôn hoan nghênh mọi đóng góp và phát triển dự án để đạt mục tiêu là một dự án của cộng đồng.</p>
+              <h2 class="text-primary"><?php echo lang("partners");?></h2>
+              <p><?php echo lang("partners_description");?></p>
             </div>
             <!-- End Title -->
 
@@ -1298,17 +1296,17 @@
             <!-- Title -->
             <div class="text-center mb-4">
               <span class="u-label u-label--sm u-label--white mb-2">Subscribe</span>
-              <h2 class="h1 text-white"><span class="font-weight-bold">Cách </span> đơn giản</h2>
-              <p class="lead u-text-light">Nhập email để trở thành cộng đồng của chúng tôi. Các thông tin mới nhất từ chúng tôi sẽ chuyển đến bạn ngay lập tức.</p>
+              <h2 class="h1 text-white"><?php echo lang("joingroup_title");?></h2>
+              <p class="lead u-text-light"><?php echo lang("joingroup_description");?></p>
             </div>
             <!-- End Title -->
 
             <!-- Form -->
             <form class="js-validate js-form-message mb-2" novalidate="novalidate">
               <div class="js-focus-state input-group input-group-lg u-form u-form--lg u-form--white-brd">
-                <input class="form-control u-form__input" name="email" required="" placeholder="Nhập email của bạn" aria-label="Nhập email của bạn" data-msg="Please enter a valid email address." data-error-class="u-has-error" data-success-class="u-has-success" type="email">
+                <input class="form-control u-form__input" name="email" required="" placeholder="<?php echo lang("enter_email");?>" aria-label="Nhập email của bạn" data-msg="Please enter a valid email address." data-error-class="u-has-error" data-success-class="u-has-success" type="email">
                 <div class="input-group-append u-form__append">
-                  <button type="submit" class="btn btn-warning u-btn-wide">Gia nhập</button>
+                  <button type="submit" class="btn btn-warning u-btn-wide"><?php echo lang("btn_join");?></button>
                 </div>
               </div>
             </form>

@@ -17,3 +17,15 @@ $lang["support_customer"] = 	"Hỗ trợ người dùng";
 $lang["chanel_customer"]	=	"Các kênh hỗ trợ";
 $lang["roadmap"]			=	"Kế hoạch phát triển";
 $lang["more"]				=	"Xem thêm.";
+$lang["enter_email"]		=	"Nhập email của bạn";
+$lang["btn_join"]			=	"Gia nhập";
+
+/*
+Language Text page
+*/
+
+
+$lang["partners"] = "Đối tác phát triển ứng dụng";
+$lang["partners_description"] = "Chúng tôi luôn hoan nghênh mọi đóng góp và phát triển dự án để đạt mục tiêu là một dự án của cộng đồng.";
+$lang["joingroup_title"] = "Cách đơn giản";
+$lang["joingroup_description"] = "Nhập email để trở thành cộng đồng của chúng tôi. Các thông tin mới nhất từ chúng tôi sẽ chuyển đến bạn ngay lập tức.";
