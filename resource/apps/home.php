@@ -718,7 +718,7 @@
 
           <h3 class="h5" item-title>Cài đặt Masternode</h3>
           <p class="mb-md-0" item-description>Hướng dẫn cài đặt và vận hành masternode trên Roller Platform.</p><br>
-          <a href="#"  item-link class="btn btn-outline-primary btn-capsule px-4">Xem thêm</a>
+          <a href="#"  item-link class="btn btn-outline-primary btn-capsule px-4"><?php echo lang("more");?></a>
           <!-- End Process -->
         </div>
 
@@ -750,7 +750,7 @@
 
           <h3 class="h5" item-title>Xây dựng ICO</h3>
           <p class="mb-md-0" item-description>Hướng dẫn xây dựng, định hướng, phát triển ICO, Token, Game trên smart contract.</p><br>
-          <a href="#" item-link class="btn btn-outline-danger btn-capsule px-4">Xem thêm</a>
+          <a href="#" item-link class="btn btn-outline-danger btn-capsule px-4"><?php echo lang("more");?></a>
           <!-- End Process -->
         </div>
       </div>
