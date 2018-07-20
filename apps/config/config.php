@@ -23,7 +23,16 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | a PHP script and you can easily do that on your own.
 |
 */
-$config['base_url'] = '';
+
+$server=$_SERVER["SERVER_NAME"];
+$uri=$_SERVER["REQUEST_URI"];
+if ($_SERVER['HTTPS'] == 'off') {
+    $url = "https://{$server}{$uri}";
+}else{
+	$url = "http://{$server}{$uri}";
+}
+
+$config['base_url'] = $url;
 
 /*
 |--------------------------------------------------------------------------
@@ -100,7 +109,13 @@ $config['charset'] = 'UTF-8';
 | setting this variable to TRUE (boolean).  See the user guide for details.
 |
 */
-$config['enable_hooks'] = FALSE;
+$config['enable_hooks'] = TRUE;
+
+$hook['post_controller_constructor'][] = array(
+    'function' => 'redirect_ssl',
+    'filename' => 'ssl.php',
+    'filepath' => 'hooks'
+);
 
 /*
 |--------------------------------------------------------------------------
