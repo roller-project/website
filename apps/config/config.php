@@ -26,7 +26,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 $server=$_SERVER["SERVER_NAME"];
 $uri=$_SERVER["REQUEST_URI"];
-$url = "http://{$server}{$uri}";
+$url = "http://{$server}/";
 
 if(isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] != 'off'){
         $url = substr($url, 0, 4) . 's' . substr($url, 4);
