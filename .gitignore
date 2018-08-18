@@ -30,3 +30,6 @@ user_guide_src/cilexer/pycilexer.egg-info/*
 *.sublime-project
 /tests/tests/
 /tests/results/
+macos.tar.gz
+roller-darwin-10.6-amd64.zip
+macos.zip
