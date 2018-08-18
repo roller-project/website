@@ -6,7 +6,7 @@ class Dashboard extends Frontend {
 	
 	public function index()
 	{
-		if(!$this->config->item("maintenance") == "on"){
+		if($this->config->item("maintenance") == "on"){
 			$this->maintenance();
 		}else{
 			$this->home();
