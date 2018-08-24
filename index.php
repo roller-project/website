@@ -131,7 +131,7 @@ switch (ENVIRONMENT)
 	define('APPPATH', $application_folder.DIRECTORY_SEPARATOR);
 
 	
-	define('VIEWPATH', FCPATH."template/default".DIRECTORY_SEPARATOR);
+	define('VIEWPATH', FCPATH."template/smart".DIRECTORY_SEPARATOR);
 
 /*
  * --------------------------------------------------------------------

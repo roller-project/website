@@ -1,0 +1,39 @@
+header{
+	background: #fff;
+padding: 0.5em 1em;
+
+width: 100%;
+-webkit-box-sizing: border-box;
+-moz-box-sizing: border-box;
+box-sizing: border-box;
+z-index: 2;
+-webkit-box-shadow: 0 0 14px 0 rgba(198,202,206,0.3);
+box-shadow: 0 0 14px 0 rgba(198,202,206,0.3);
+}
+.slider{
+	margin-left: -15px;
+	margin-right: -15px;
+	
+}
+.navbar-nav .nav-item.active a.nav-link{
+	color: green;
+}
+
+.carousel-text-left{
+	position: absolute;
+	text-align: right;
+	width: 40%;
+	top: 120px;
+}
+.carousel-text h3{
+	font-size: 48px;
+	text-transform: uppercase;
+}
+
+#mining, #exchange{
+	background: #f3f3f3;
+	padding-top:50px;
+	padding-bottom: 50px; 
+	margin-left: -15px;
+	margin-right: -15px;
+}
