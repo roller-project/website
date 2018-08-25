@@ -50,7 +50,7 @@
 <header id="header">
 	<div class="container">
 	<nav class="navbar navbar-expand-lg navbar-light">
-	  <a class="navbar-brand" href="<?php echo store_url();?>"><img src="<?php echo template_url("image/logo.png");?>" style="height:50px;"></a>
+	  <a class="navbar-brand" href="<?php echo store_url();?>"><img class="logo2" src="<?php echo template_url("image/logo2.png");?>" style="height:50px;"><img class="logo" src="<?php echo template_url("image/logo.png");?>" style="height:50px;"></a>
 	  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 	    <span class="navbar-toggler-icon"></span>
 	  </button>
@@ -197,13 +197,13 @@
                */
               function offSetManager(){
 
-                  var yOffset = $(window).height();
+                  var yOffset = 100;
                   var currYOffSet = window.pageYOffset;
                   if($(window).width() > 780){
                     if(yOffset < currYOffSet) {
                         myNavBar.add();
                     }
-                    else if(currYOffSet < 10){
+                    else if(currYOffSet < 50){
                         myNavBar.remove();
                     }
                   }
