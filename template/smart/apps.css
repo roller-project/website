@@ -264,16 +264,17 @@ footer .infolink a{
 	margin-right:-15px; 
 	color: #FFF;
 	text-transform: uppercase;
-  background: url(image/banner.jpg) #1e2641 no-repeat;
+  background: url(image/banner.jpg) #1e2641 no-repeat center center;
   position: relative;
 }
 .headerTitle:before{
   position: absolute;
   width: 100%;
-  border-bottom: 1px dotted #ddd;
+  border-top: 0px dotted #ddd;
   content: "";
-  height: 100px;
-  top : 0;
+  height: 50%;
+  bottom : 0;
+  background-color: #219abd;
 }
 .icoin{
   padding: 10px;
