@@ -267,7 +267,7 @@ footer .infolink a{
   position: relative;
   z-index: 9;
 }
-.headerTitle:before{
+.headerTitle:after{
   position: absolute;
   width: 100%;
   border-top: 0px dotted #ddd;
