@@ -13,13 +13,13 @@
     <meta name="twitter:url" content="<?php echo store_url();?>">
     <meta name="twitter:title" content="Blockchain Assets Trading Platform">
     <meta name="twitter:description" content="The first 300K registered members will be free of trading fees in the first year. With each member invited, you will receive an additional one month free trading fee.">
-    <meta name="twitter:image" content="http://coverlayout.com/facebook/covers/cute-puppy-dog/cute-puppy-dog_tn.jpg">
+    <meta name="twitter:image" content="<?php echo template_url("image/banner.jpg");?>">
     <meta name="twitter:creator" content="aiodex">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="@smartexchange">
 
     <meta property="og:title" content="Blockchain Assets Trading Platform">
-    <meta property="og:image" content="http://coverlayout.com/facebook/covers/cute-puppy-dog/cute-puppy-dog_tn.jpg">
+    <meta property="og:image" content="<?php echo template_url("image/banner.jpg");?>">
     <meta property="og:description" content="The first 300K registered members will be free of trading fees in the first year. With each member invited, you will receive an additional one month free trading fee.">
     <meta property="article:author" content="smartexchange">
     <meta property="og:url" content="<?php echo store_url();?>">
