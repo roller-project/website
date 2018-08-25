@@ -18,7 +18,9 @@
                   }
                   ?>
 		</h6>
-		<?php echo $data->content;?>
+		<div style="text-align: justify-all;">
+			<?php echo $data->content;?>
+		</div>
 	</div>
 
 	<div class="col-lg-2">
