@@ -217,7 +217,7 @@
        
       <div class="col-lg-4 col-sm-6" style="margin-bottom: 15px;">
         <div class="box d-flex">
-            <div class="left w-25"><img src="<?php echo $value["image"];?>" class="w-100"></div>
+            <div class="left w-25"><img src="<?php echo $value["image"];?>" class="w-100 border" style="padding:3px;"></div>
             <div class="description w-75">
               <h6><?php echo $value["name"];?></h6>
               <strong><?php echo $value["type"];?></strong><br>
@@ -225,11 +225,23 @@
             </div>
            
         </div>
+
         <div style="margin-top:15px;">
-          <a class="btn btn-sm btn-outline-success"><i class="fa fa-facebook"></i> FB</a>
-          <a class="btn btn-sm btn-outline-success">Discord</a>
-          <a class="btn btn-sm btn-outline-success"><i class="fa fa-telegram"></i></a>
+          <?php
+            $sol = explode(';', $value["social"]);
+            foreach ($sol as $keySol => $valueSol) {
+              if(trim($valueSol)){
+              @list($sClass, $sUrl) = explode('|', $valueSol);
+            ?>
+             <a class="icoin border" href="<?php echo $sUrl;?>" target="_bank"><i class="<?php echo $sClass;?>"></i></a>
+            <?php
+              }
+            }
+            ?>
+          
+         
         </div>
+         <br>
       </div>
     <?php } ?>
     </div>

@@ -99,21 +99,24 @@ class Dashboard extends Frontend {
 			"name"  => "Võ Văn Khoa",
 			"type"	=> "CEO",
 			"description" => $langdev[0],
-			"image"	=>	"https://pbs.twimg.com/profile_images/1681658825/avatar.png"
+			"image"	=>	"https://pbs.twimg.com/profile_images/1681658825/avatar.png",
+			"social" => "fab fa-facebook|https://www.facebook.com/bitcoindplust"
 		];
 
 		$development[] = [
 			"name"  => "Leszek Mitraszewski",
 			"type"	=> "Manager",
 			"description" => $langdev[1],
-			"image"	=>	"https://www.w3schools.com/w3images/avatar2.png"
+			"image"	=>	template_url("image/develop/lee.png"),
+			"social" => ""
 		];
 
 		$development[] = [
 			"name"  => "Giảng Ngọc Trung",
 			"type"	=> "Manager",
 			"description" => $langdev[2],
-			"image"	=>	"https://www.w3schools.com/w3images/avatar3.png"
+			"image"	=>	template_url("image/develop/gianngoctrung.png"),
+			"social" => ""
 		];
 
 
@@ -121,21 +124,24 @@ class Dashboard extends Frontend {
 			"name"  => "Đỗ Nguyện",
 			"type"	=> "Manager",
 			"description" => $langdev[3],
-			"image"	=>	"https://www.w3schools.com/w3images/avatar4.png"
+			"image"	=>	template_url("image/develop/dauhu.png"),
+			"social" => "fab fa-facebook|https://www.facebook.com/bitcoindplust"
 		];
 
 		$development[] = [
 			"name"  => "Nguyễn Nguyên",
 			"type"	=> "Manager",
 			"description" => $langdev[4],
-			"image"	=>	"https://www.w3schools.com/w3images/avatar5.png"
+			"image"	=>	"https://www.w3schools.com/w3images/avatar5.png",
+			"social" => ""
 		];
 
 		$development[] = [
 			"name"  => "Lê Phú",
 			"type"	=> "Manager",
 			"description" => $langdev[5],
-			"image"	=>	"https://www.w3schools.com/w3images/avatar1.png"
+			"image"	=>	"https://www.w3schools.com/w3images/avatar1.png",
+			"social" => ""
 		];
 		/*
 		Read Develop Admin Contents
@@ -146,7 +152,8 @@ class Dashboard extends Frontend {
 				"name"  => $value->title,
 				"type"	=> "Manager",
 				"description" => $value->description,
-				"image"	=>	($value->thumbnail ? $value->thumbnail : "https://www.w3schools.com/w3images/avatar1.png")
+				"image"	=>	($value->thumbnail ? $value->thumbnail : "https://www.w3schools.com/w3images/avatar1.png"),
+				"social" => ""
 			];
 		}
 
@@ -154,29 +161,29 @@ class Dashboard extends Frontend {
 
 		$social = [];
 		$social[] = [
-			"icons" => "fa fa-facebook",
+			"icons" => "fab fa-facebook",
 			"url" => "https://www.facebook.com/groups/1071050689694143/"
 		];
 		$social[] = [
-			"icons" => "fa fa-github",
+			"icons" => "fab fa-github",
 			"url"	=> "https://github.com/roller-project"
 		];
 		$social[] = [
-			"icons" => "fa fa-medium",
+			"icons" => "fab fa-medium",
 			"url" => "#"
 		];
 		$social[] = [
-			"icons" => "fa fa-google-plus",
-			"url"	=>	"#",
+			"icons" => "fab fa-discord",
+			"url"	=>	"https://discord.gg/Y928qyU",
 		];
 		$social[] = [
-			"icons" => "fa fa-twitter",
-			"url"	=>	"#",
+			"icons" => "fab fa-twitter",
+			"url"	=>	"https://twitter.com/RollerPlatform",
 		];
 
 		$social[] = [
-			"icons" => "fa fa-telegram",
-			"url"	=>	"#",
+			"icons" => "fab fa-telegram",
+			"url"	=>	"https://t.me/vnminer",
 		];
 
 		$data = $this->page_model->getContent("home");
