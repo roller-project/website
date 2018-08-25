@@ -72,7 +72,7 @@
   </div>
 </section>
 
-<section id="exchange bg-white">
+<section id="exchange">
   <h2 class="text-center text-green title"><?php echo lang("exchange");?></h2>
   <div class="container">
     <div class="row">
