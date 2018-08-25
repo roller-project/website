@@ -73,7 +73,7 @@ $lang["mining_text_1"] = 'Để khai thác Roller bạn cần một wallet cho b
 $lang["mining_text_2"] = 'Ngoài ra bạn có thể khai thác và sở hữu ROL thông qua Masternode, Airdrop và các chương trình ứng dụng khai thác ROL bạn có thể tham khảo thêm quy trình ứng dụng của ROL <a href="/blogs.html">tại đây.</a>';
 
 $lang["team"] = "Nhóm phát triển";
-$lang["team_title"] = "Cộng đồng phát triển Roller";
+$lang["team_title"] = "Đồng phát triển Roller";
 $lang["report"] = "Báo cáo";
 $lang["blogs"] = "Blogs";
 $lang["blogs_title"] = "Tin tức & Hoạt động Roller";
