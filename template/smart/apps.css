@@ -277,6 +277,8 @@ footer .infolink a{
  
   background: url(image/banner.jpg) #1e2641 no-repeat center top;
   z-index: 1;
+  -webkit-box-shadow: 0 0 14px 0 rgba(198,202,206,0.3);
+box-shadow: 0 0 14px 0 rgba(198,202,206,0.3);
 }
 .icoin{
   padding: 10px;
