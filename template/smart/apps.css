@@ -260,6 +260,7 @@ footer .infolink a{
 	margin-right:-15px; 
 	color: #FFF;
 	text-transform: uppercase;
+  background-image: url(image/banner.jpg);
 }
 .icoin{
   padding: 10px;
