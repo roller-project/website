@@ -25,34 +25,34 @@ class Dashboard extends Frontend {
 	{
 		$exchange = [];
 		$exchange[] = [
-			"image" => "https://i.imgur.com/jETv0Y1.png",
+			"image" => template_url("image/exchange/s1.png"),
 			"name"	=>	"Aiodex",
 			"url"	=>	"https://aiodex.com/vote/coin/5b6458f3a315090673cbb57f#"
 		];
 
 		$exchange[] = [
-			"image" => "https://s3.amazonaws.com/main-newsbtc-images/2017/09/15130433/cobinhood1.png",
+			"image" => template_url("image/exchange/cobinhood1.png"),
 			"name"	=>	"Cobinhood",
 			"url"	=>	"https://aiodex.com/vote/coin/5b6458f3a315090673cbb57f#"
 		];
 		$exchange[] = [
-			"image" => "http://cdn.techpp.com/wp-content/uploads/2018/02/Koinex.jpeg",
+			"image" => template_url("image/exchange/Koinex.jpeg"),
 			"name"	=>	"Koinex",
 			"url"	=>	"https://aiodex.com/vote/coin/5b6458f3a315090673cbb57f#"
 		];
 		$exchange[] = [
-			"image" => "https://bitcoinradionetwork.io/wp-content/uploads/2018/04/In-South-Korea-Trading-Opens-On-Crypto-Exchange-Giant-Huobi.png",
+			"image" => template_url("image/exchange/In-South-Korea-Trading-Opens-On-Crypto-Exchange-Giant-Huobi.png"),
 			"name"	=>	"Huobi",
 			"url"	=>	"https://aiodex.com/vote/coin/5b6458f3a315090673cbb57f#"
 		];
 		$exchange[] = [
-			"image" => "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRT77lmUGOGUuuzTec1VTRlPhwPwSRxFLBks8mzG1I4THlk3hsu",
+			"image" => template_url("image/exchange/images.png"),
 			"name"	=>	"Karaken",
 			"url"	=>	"https://aiodex.com/vote/coin/5b6458f3a315090673cbb57f#"
 		];
 
 		$exchange[] = [
-			"image" => "https://4.bp.blogspot.com/-aN02e_lmdGY/WLh7U5VTV2I/AAAAAAAADl8/_OUsjv6Vk5E4G7LqRgXo2j7-92gAFbASgCLcB/s1600/Poloniex-logo.png",
+			"image" => template_url("image/exchange/Poloniex-logo.png"),
 			"name"	=>	"Poloniex",
 			"url"	=>	"https://aiodex.com/vote/coin/5b6458f3a315090673cbb57f#"
 		];
@@ -99,7 +99,7 @@ class Dashboard extends Frontend {
 			"name"  => "Võ Văn Khoa",
 			"type"	=> "CEO",
 			"description" => $langdev[0],
-			"image"	=>	"https://pbs.twimg.com/profile_images/1681658825/avatar.png",
+			"image"	=>	template_url("image/develop/avatar.png"),
 			"social" => "fab fa-facebook|https://www.facebook.com/bitcoindplust"
 		];
 
@@ -132,7 +132,7 @@ class Dashboard extends Frontend {
 			"name"  => "Nguyễn Nguyên",
 			"type"	=> "Manager",
 			"description" => $langdev[4],
-			"image"	=>	"https://www.w3schools.com/w3images/avatar5.png",
+			"image"	=>	template_url("image/develop/avatar5.png"),
 			"social" => ""
 		];
 
@@ -140,7 +140,7 @@ class Dashboard extends Frontend {
 			"name"  => "Lê Phú",
 			"type"	=> "Manager",
 			"description" => $langdev[5],
-			"image"	=>	"https://www.w3schools.com/w3images/avatar1.png",
+			"image"	=>	template_url("image/develop/avatar1.png"),
 			"social" => ""
 		];
 		/*
@@ -152,7 +152,7 @@ class Dashboard extends Frontend {
 				"name"  => $value->title,
 				"type"	=> "Manager",
 				"description" => $value->description,
-				"image"	=>	($value->thumbnail ? $value->thumbnail : "https://www.w3schools.com/w3images/avatar1.png"),
+				"image"	=>	($value->thumbnail ? $value->thumbnail : template_url("image/develop/avatar1.png")),
 				"social" => ""
 			];
 		}
