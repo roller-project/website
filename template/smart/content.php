@@ -18,7 +18,7 @@
                   }
                   ?>
 		</h6>
-		<div style="text-align: justify;">
+		<div class="text-content">
 			<?php echo $data->content;?>
 		</div>
 	</div>

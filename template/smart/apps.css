@@ -48,7 +48,14 @@ h1, h2, h3, h4, h5, h6{
 .navbar-nav .nav-item a.nav-link{
 	font-weight: bold;
 }
-
+ul{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.text-content{
+  text-align: justify-all;
+}
 .carousel-text-left{
 	position: absolute;
 	text-align: center;
