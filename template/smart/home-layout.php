@@ -197,13 +197,13 @@
                */
               function offSetManager(){
 
-                  var yOffset = 0;
+                  var yOffset = $(window).height();
                   var currYOffSet = window.pageYOffset;
                   if($(window).width() > 780){
                     if(yOffset < currYOffSet) {
                         myNavBar.add();
                     }
-                    else if(currYOffSet == yOffset){
+                    else if(currYOffSet < 10){
                         myNavBar.remove();
                     }
                   }
