@@ -48,9 +48,7 @@ h1, h2, h3, h4, h5, h6{
 .navbar-nav .nav-item a.nav-link{
 	font-weight: bold;
 }
-.carousel-text{
-  color: #1e4c39;
-}
+
 .carousel-text-left{
 	position: absolute;
 	text-align: center;
