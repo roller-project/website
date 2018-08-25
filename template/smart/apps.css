@@ -13,15 +13,14 @@ width: 100%;
 -webkit-box-sizing: border-box;
 -moz-box-sizing: border-box;
 box-sizing: border-box;
-z-index: 2;
-
+z-index: 9999;
 }
 a{
 	color: #f7a35c;
 }
 header.fixed-theme{
 	
-	z-index: 9999;
+	
   -webkit-box-shadow: 0 0 14px 0 rgba(198,202,206,0.3);
 box-shadow: 0 0 14px 0 rgba(198,202,206,0.3);
 background: #fff;
@@ -266,6 +265,7 @@ footer .infolink a{
 	text-transform: uppercase;
   background: url(image/banner.jpg) #1e2641 no-repeat center center;
   position: relative;
+  z-index: 9;
 }
 .headerTitle:before{
   position: absolute;
@@ -274,7 +274,8 @@ footer .infolink a{
   content: "";
   height: 50%;
   bottom : 0;
-  background-color: #219abd;
+  background-color: #f3f3f3;
+  z-index: 1;
 }
 .icoin{
   padding: 10px;
