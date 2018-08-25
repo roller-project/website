@@ -70,6 +70,11 @@ ul{
   padding: 0;
   margin: 0;
 }
+
+.navbar {
+    position: relative;
+    padding: .5rem 0rem;
+}
 .text-content{
   text-align: justify-all;
 }
