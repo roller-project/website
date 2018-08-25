@@ -8,14 +8,14 @@
     </ol>
     <div class="carousel-inner">
       <div class="carousel-item active">
-        <img class="d-block w-100" src="http://cssslider.com/sliders/demo-10/data1/images/3.jpg" alt="First slide">
+        <img class="d-block w-100" src="<?php echo template_url("image/banner.jpg");?>" alt="First slide">
         <div class="carousel-caption d-none d-md-block carousel-text carousel-text-left">
           <h3>Roller Platform</h3>
           <p>Roller Platform là một hệ sinh thái tiền mã hóa mã nguồn mở phi tập trung, dựa trên nền tảng của Ethereum với ký hiệu của riêng là "ROL". <br><br>Mục tiêu chính của Roller là nghiên cứu, phát triển một cơ chế tự duy trì, tự quản lí, tự tài trợ hệ sinh thái blockchain và môi trường phát triển ứng dụng của blockchain. </p>
         </div>
       </div>
       <div class="carousel-item">
-        <img class="d-block w-100" src="http://cssslider.com/sliders/demo-10/data1/images/2.jpg" alt="Second slide">
+        <img class="d-block w-100" src="<?php echo template_url("image/banner.jpg");?>" alt="Second slide">
         <div class="container">
           <div class="carousel-caption d-none d-md-block carousel-text carousel-text-left">
             <h3>Ứng dụng</h3>
@@ -24,7 +24,7 @@
         </div>
       </div>
       <div class="carousel-item">
-        <img class="d-block w-100" src="http://cssslider.com/sliders/demo-10/data1/images/1.jpg" alt="Third slide">
+        <img class="d-block w-100" src="<?php echo template_url("image/banner.jpg");?>" alt="Third slide">
         <div class="carousel-caption d-none d-md-block carousel-text carousel-text-left">
           <h3>Development</h3>
           <p>Roller Platform được phát triển bởi các lập trình viên Việt Nam. Với các hệ thống liền mạch như Exchange, CMS, Masternode, etc....<br><br>
