@@ -39,7 +39,7 @@ h1, h2, h3, h4, h5, h6{
 	
 }
 .slider .carousel-inner{
-	max-height: 300px;
+	/*max-height: 500px;*/
   
 }
 .navbar-nav .nav-item.active a.nav-link{
@@ -62,7 +62,7 @@ ul{
 	width: 60%;
 	
 	margin: auto;
-	top:50px;
+	top:35%;
 }
 .carousel-text h3{
 	font-size: 48px;

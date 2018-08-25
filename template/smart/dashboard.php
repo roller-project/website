@@ -7,31 +7,16 @@
       <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
     </ol>
     <div class="carousel-inner">
-      <div class="carousel-item active">
-        <img class="d-block w-100" src="<?php echo template_url("image/banner.jpg");?>" alt="First slide">
+      <?php foreach (lang("slider") as $key => $value) { ?>
+       
+      <div class="carousel-item <?php echo ($key == 0 ? "active" : "");?>">
+        <img class="d-block w-100" src="<?php echo $value["image"];?>" alt="First slide">
         <div class="carousel-caption d-none d-md-block carousel-text carousel-text-left">
-          <h3>Roller Platform</h3>
-          <p>Roller Platform là một hệ sinh thái tiền mã hóa mã nguồn mở phi tập trung, dựa trên nền tảng của Ethereum với ký hiệu của riêng là "ROL". <br><br>Mục tiêu chính của Roller là nghiên cứu, phát triển một cơ chế tự duy trì, tự quản lí, tự tài trợ hệ sinh thái blockchain và môi trường phát triển ứng dụng của blockchain. </p>
+          <?php echo $value["caption"];?>
         </div>
       </div>
-      <div class="carousel-item">
-        <img class="d-block w-100" src="<?php echo template_url("image/banner.jpg");?>" alt="Second slide">
-        <div class="container">
-          <div class="carousel-caption d-none d-md-block carousel-text carousel-text-left">
-            <h3>Ứng dụng</h3>
-            <p>Với các ứng dụng thiết thực từ Smart Contracts như. Tech Document, Share Contracts, ANN, Miner Controller, Security Web 4.0, IoT Services ... Roller sẽ mang đến cho người dùng cuối tiếp cận ứng dụng công nghệ trong thời kỳ công nghiệp 4.0</p>
-          </div>
-        </div>
-      </div>
-      <div class="carousel-item">
-        <img class="d-block w-100" src="<?php echo template_url("image/banner.jpg");?>" alt="Third slide">
-        <div class="carousel-caption d-none d-md-block carousel-text carousel-text-left">
-          <h3>Development</h3>
-          <p>Roller Platform được phát triển bởi các lập trình viên Việt Nam. Với các hệ thống liền mạch như Exchange, CMS, Masternode, etc....<br><br>
-            Với hệ thống CMS có nhiều Services được cung cấp miễn phí cho người dùng trên các ứng dụng của Roller. Chúng mang đến một cách nhìn tổng quan và thiết thực cuộc sống
-          </p>
-        </div>
-      </div>
+    <?php } ?>
+      
     </div>
     <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
