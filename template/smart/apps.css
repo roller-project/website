@@ -173,8 +173,13 @@ footer{
 	min-height: 100px;
 	background-color: #1e2641;
 	color: #FFF;
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
 
+footer .infolink a{
+  display: block;
+}
 #roadmap{
 	color: #606060;
 }
@@ -187,6 +192,14 @@ footer{
 	padding: 15px;
 	color: #FFF;
 	border-radius: 100px;
+  position: relative;
+}
+#roadmap h4:before{
+  width: 85px;
+  height: 85px;
+  border: 1px solid #ddd;
+  position: absolute;
+  z-index: 99;
 }
 #roadmap p{
 	margin-left: 15px; 

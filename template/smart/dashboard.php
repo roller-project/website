@@ -45,64 +45,35 @@
 </div>
 
 <section id="roadmap">
-  <h2 class="text-center text-green title">Road Map</h2>
+  <h2 class="text-center text-green title"><?php echo lang("roadmap_title");?></h2>
   <div class="container">
       <div class="row">
-          <div class="col-sm-6 border-right border-bottom alt d-flex success">
+          <?php 
+          foreach ($roadmap as $key => $value) { 
+            if($key%2 == 0){
+            ?>
+            <div class="col-sm-6 <?php echo ($key + 2 < count($roadmap) ? "border-bottom" : "");?> <?php echo ($key%2 == 0 ? "border-right alt" : "");?> <?php echo @$value["class"];?> d-flex" style="padding-top: 15px;">
             
-            <p>
-              <b>Khởi chạy hệ thống</b><br>
-              Tiến hành khởi chạy hệ thống Blockchain. Xây dựng các hệ thống phân tích dữ liệu liên quan. Vận hành máy trạm ( Maternode )
-            </p>
-            <h4>Q4<br>2018</h4>
+            <p><?php echo $value["description"];?></p>
+            <h4><?php echo $value["timeline"];?></h4>
           </div>
-          <div class="col-sm-6 border-bottom d-flex">
-            <h4>Q1 2019</h4>
-            <p>
-              <b>Đưa các ứng dụng vào Blockchain</b><br>
-              Đưa các ứng dụng vào sử dụng trong hệ thống roller. Làm nền tảng cho hệ thống vận hành dựa trên CMS
-            </p>
-          </div>
-
-          <div class="col-sm-6 border-right border-bottom d-flex alt" style="padding-top: 15px;">
+        <?php }else{ ?> 
+            <div class="col-sm-6 <?php echo ($key + 2 < count($roadmap) ? "border-bottom" : "");?> <?php echo ($key%2 == 0 ? "border-right alt" : "");?> d-flex" style="padding-top: 15px;">
+            <h4><?php echo $value["timeline"];?></h4>
+            <p><?php echo $value["description"];?></p>
             
-            <p>
-              <b>List Exchange</b><br>
-              Phát triển marketing và thiết lập các giao dịch thanh khoản cho ROL. Đồng thời Hệ thống Hold sẽ được vận hành
-            </p>
-            <h4>Q2 2019</h4>
           </div>
-          <div class="col-sm-6 border-bottom d-flex" style="padding-top: 15px;">
-            <h4>Q3 2019</h4>
-            <p>
-              <b>Phát triển hệ sinh thái</b><br>
-              Giai đoạn tập trung phát triển các ứng dụng trên nền tãng blockchain dể thu hút đầu tư vào Roller Platform
-            </p>
-          </div>
-
-
-          <div class="col-sm-6 border-right d-flex alt" style="padding-top: 15px;">
-            
-            <p>
-              <b>Phát triển Smart Contracts</b><br>
-              Giai đoạn phát triển các ứng dụng của contract nhằm mang lại cho người dùng các tính năng ứng dụng riêng của blockchain
-            </p>
-            <h4>Q4 2019</h4>
-          </div>
-          <div class="col-sm-6 d-flex" style="padding-top: 15px;">
-            <h4>Q1 2020</h4>
-            <p>
-              <b>Phát triển dịch vụ kết nối</b><br>
-              Giai đoạn kết nối các dịch vụ công nghệ bên phát triển thứ 3. Như tự động hóa, Security, IoT ...
-            </p>
-          </div>
+        <?php } ?>
+          <?php } ?>
+          
+          
 
       </div>
   </div>
 </section>
 
 <section id="exchange bg-white">
-  <h2 class="text-center text-green title">Exchange</h2>
+  <h2 class="text-center text-green title"><?php echo lang("exchange");?></h2>
   <div class="container">
     <div class="row">
       <?php
@@ -120,35 +91,35 @@
 
 <div class="sign-wrap">
     <svg class="start-block" width="100%" height="160" viewBox="0 0 100 102" preserveAspectRatio="none">
-      <path d="M0 100 L10 10 L100 100 Z"></path>
+      <path d="M0 100 L0 10 L100 100 Z"></path>
     </svg>
 </div>
 <section id="mining">
   <div class="container">
-  <h2 class="text-right text-green title">Chi tiết kỹ thuật</h2>
+  <h2 class="text-right text-green title"><?php echo lang("mining_title");?></h2>
   <br><br>
   <div class="row">
     <div class="col-lg-7">
-      <h5>Roller Infomation</h5>
+      <h4><?php echo lang("roller_infomation");?></h4>
       <div class="row">
         <div class="col">
-          Name  : Roller Network<br>
-          Symbol : ROL<br>
-          Type : Proof-of-Work<br>
-          Algorithm : Dagger Hashimoto<br>
+          <?php echo lang("info_name");?>  : Roller Network<br>
+          <?php echo lang("info_symbol");?> : ROL<br>
+          <?php echo lang("info_type");?> : Proof-of-Work<br>
+          <?php echo lang("info_algorithm");?> : Dagger Hashimoto<br>
         </div>
         <div class="col">
-          Target : 15 sec<br>
-          Rewand : 9 ROL<br>
-          Total : 100.000.000 ROL<br>
-          No ICO - No Premice
+          <?php echo lang("info_target");?> : 15 sec<br>
+          <?php echo lang("info_rewand");?> : 9 ROL<br>
+          <?php echo lang("info_total");?> : 100.000.000 ROL<br>
+          <?php echo lang("info_ico");?> - <?php echo lang("info_premice");?>
         </div>
       </div>
       
       
     </div>
     <div class="col-lg-5">
-      <h5>Time Fork</h5>
+      <h4><?php echo lang("timefork");?></h4>
     300.000 Masternode<br>
     1.200.000 Smart Contract<br>
     2.100.000 Ecosystem<br>
@@ -157,21 +128,24 @@
     </div>
   </div>
   <br>
-  Để khai thác Roller bạn cần một wallet cho bạn. Bạn có thể đăng ký miễn phí một wallet online và sử dụng nó tại <a href="http://cms.roller.today" target="_bank">https://cms.roller.today</a><br>
-  Sau đó sử dụng các phần mềm khai thác ethereum thông thường như claymore ... để kết nối đến pool đào. Bạn có thể tham khảo qua các pool đào hỗ trợ roller bên dưới 
+  <?php echo lang("mining_text_1");?>
   <br><br>
   <div class="row">
     <?php foreach ($pool as $key => $value) { ?>
      
-    <div class="col-2">
-      <a href="" class="btn btn-outline-success btn-radius btn-block"><?php echo $value["name"];?></a>
+    <div class="col-lg-2 col-sm-12" style="margin-bottom: 15px;">
+      <a href="<?php echo $value["url"];?>" target="_bank" class="btn btn-outline-success btn-radius btn-block"><?php echo $value["name"];?></a>
     </div>
   <?php } ?>
   </div>
 </div>
+<br>
+<div class="container">
+<code><?php echo $lang["mining_text_2"];?></code>
+</div>
 <br><br>
   <div class="container">
-    <h2 class="text-left text-green title">Wallet Application</h2>
+    <h2 class="text-left text-green title"><?php echo lang("wallet_application");?></h2>
     <div class="row">
       <div class="col-lg-3 col-sm-6" style="margin-bottom: 15px;">
         <div class="card card-body">
@@ -216,6 +190,9 @@
         </div>
       </div>
 
+      
+
+
     </div>
     <br>
     <p class="text-center">Node : https://node.roller.today - Chain ID : 29021982</p>
@@ -224,6 +201,8 @@
       <a class="btn btn-lg btn-outline-primary btn-radius" href="#"><i class="fa fa-android"></i> Androi</a>
       <a class="btn btn-lg btn-outline-primary btn-radius"  href="#"><i class="fa fa-apple"></i> Apple Store</a>
     </div>
+
+
   </div>
 
 </section>
@@ -231,7 +210,7 @@
 <section id="team" class="border-bottom">
   
   <div class="container">
-    <h2 class="text-center text-green title"><i class="fa fa-book"></i> Nhóm phát triển</h2>
+    <h2 class="text-center text-green title"><i class="fa fa-book"></i> <?php echo lang("team_title");?></h2>
     <div class="row">
       <?php
       foreach ($development as $key => $value) { ?>
@@ -255,11 +234,12 @@
     <?php } ?>
     </div>
     <br>
-    <p><b>Và một số cộng tác đồng phát triển hệ thống blockchain</b></p>
+    <p class="text-center"><b><?php echo lang("developteam_more");?></b></p>
   </div>
 </section>
+<?php if(is_array($blogs) && $blogs) { ?>
 <section id="blog">
-  <h2 class="text-center text-green title">Tin tức & Hoạt động Roller</h2>
+  <h2 class="text-center text-green title"><?php echo lang("blogs_title");?></h2>
   <div class="container">
     <div class="row">
       <?php foreach ($blogs as $key => $value) { ?>
@@ -289,7 +269,7 @@
               <h3><?php echo $value->title;?></h3>
               <h2 style="height: 30px;"><?php echo ($value->short_description ? $value->short_description : " ");?></h2>
               <p class="summary" style="height: 100px;"><?php echo $value->description;?></p>
-              <a href="/post-<?php echo $value->url_rewrite;?>.html">Xem thêm..</a>
+              <a href="/post-<?php echo $value->url_rewrite;?>.html"><?php echo lang("more");?></a>
             </div>
           </div>
       </div>
@@ -304,20 +284,21 @@
     </div>
   </div>
 </section>
-
+<?php } ?>
 <div class="sign-wrap">
     <svg class="start-block" width="100%" height="160" viewBox="0 0 100 102" preserveAspectRatio="none">
-      <path d="M0 100 L30 10 L100 100 Z"></path>
+      <path d="M0 100 L100 10 L100 100 Z"></path>
     </svg>
 </div>
+
 <section id="socical">
   <div class="container">
-    <h2 class="text-right text-green title">Liên hệ với Roller Platform</h2>
+    <h2 class="text-left text-green title"><?php echo lang("platformcontact");?></h2>
     <br><br>
     <div class="row">
     <?php foreach ($social as $key => $value) { ?>
       <div class="col-lg-2 col-sm-3 text-center">
-        <div class="icon"><a href=""><span class="fa-4x <?php echo $value["icons"];?>"></span></a></div>
+        <div class="icon"><a href="<?php echo $value["url"];?>" target="_bank"><span class="fa-4x <?php echo $value["icons"];?>"></span></a></div>
       </div>
     <?php }?>
     </div>

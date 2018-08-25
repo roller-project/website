@@ -17,6 +17,10 @@ class Dashboard extends Frontend {
 		$this->setLayout(false)->view('maintenance',["content" => ""]);
 	}
 
+	public function setlanguage($language){
+		$this->session->set_userdata("language",$language);
+		redirect(store_url());
+	}
 	public function home()
 	{
 		$exchange = [];
@@ -56,59 +60,59 @@ class Dashboard extends Frontend {
 		$pool = [];
 		$pool[] = [
 			"name" => "Offical Pool",
-			"url"	=>	""
+			"url"	=>	"http://pool.roller.today/"
 		];
 
 		$pool[] = [
-			"name" => "Offical Pool",
-			"url"	=>	""
-		];
-
-
-		$pool[] = [
-			"name" => "Offical Pool",
-			"url"	=>	""
+			"name" => "Cryptopools",
+			"url"	=>	"https://roller.cryptopools.info/"
 		];
 
 
 		$pool[] = [
-			"name" => "Offical Pool",
-			"url"	=>	""
+			"name" => "Comining.io",
+			"url"	=>	"https://comining.io/"
+		];
+
+
+		$pool[] = [
+			"name" => "Minerpool.cf",
+			"url"	=>	"http://rol.minerpool.cf/"
 		];
 
 
 		$pool[] = [
 			"name" => "Offical Pool",
-			"url"	=>	""
+			"url"	=>	"http://pool.roller.today/"
 		];
 
 		$pool[] = [
 			"name" => "Offical Pool",
-			"url"	=>	""
+			"url"	=>	"http://pool.roller.today/"
 		];
 
 
 
-
+		$langdev = lang("developteam");
 		$development = [];
 		$development[] = [
 			"name"  => "Võ Văn Khoa",
 			"type"	=> "CEO",
-			"description" => "Điều hành phát triển toàn cục hệ thống Roller",
+			"description" => $langdev[0],
 			"image"	=>	"https://pbs.twimg.com/profile_images/1681658825/avatar.png"
 		];
 
 		$development[] = [
 			"name"  => "Leszek Mitraszewski",
 			"type"	=> "Manager",
-			"description" => "Tư vấn phát triển vận hành hệ thống Blockchain",
+			"description" => $langdev[1],
 			"image"	=>	"https://www.w3schools.com/w3images/avatar2.png"
 		];
 
 		$development[] = [
 			"name"  => "Giảng Ngọc Trung",
 			"type"	=> "Manager",
-			"description" => "Điều hành phát triển Exchange Roller",
+			"description" => $langdev[2],
 			"image"	=>	"https://www.w3schools.com/w3images/avatar3.png"
 		];
 
@@ -116,21 +120,21 @@ class Dashboard extends Frontend {
 		$development[] = [
 			"name"  => "Đỗ Nguyện",
 			"type"	=> "Manager",
-			"description" => "Điều hành phát triển Masternode",
+			"description" => $langdev[3],
 			"image"	=>	"https://www.w3schools.com/w3images/avatar4.png"
 		];
 
 		$development[] = [
 			"name"  => "Nguyễn Nguyên",
 			"type"	=> "Manager",
-			"description" => "Phát triển Smart Contracts",
+			"description" => $langdev[4],
 			"image"	=>	"https://www.w3schools.com/w3images/avatar5.png"
 		];
 
 		$development[] = [
 			"name"  => "Lê Phú",
 			"type"	=> "Manager",
-			"description" => "Điều hành phát triển Application",
+			"description" => $langdev[5],
 			"image"	=>	"https://www.w3schools.com/w3images/avatar1.png"
 		];
 		/*
@@ -150,28 +154,34 @@ class Dashboard extends Frontend {
 
 		$social = [];
 		$social[] = [
-			"icons" => "fa fa-facebook"
+			"icons" => "fa fa-facebook",
+			"url" => "https://www.facebook.com/groups/1071050689694143/"
 		];
 		$social[] = [
-			"icons" => "fa fa-github"
+			"icons" => "fa fa-github",
+			"url"	=> "https://github.com/roller-project"
 		];
 		$social[] = [
-			"icons" => "fa fa-medium"
+			"icons" => "fa fa-medium",
+			"url" => "#"
 		];
 		$social[] = [
-			"icons" => "fa fa-google-plus"
+			"icons" => "fa fa-google-plus",
+			"url"	=>	"#",
 		];
 		$social[] = [
-			"icons" => "fa fa-twitter"
+			"icons" => "fa fa-twitter",
+			"url"	=>	"#",
 		];
 
 		$social[] = [
-			"icons" => "fa fa-telegram"
+			"icons" => "fa fa-telegram",
+			"url"	=>	"#",
 		];
 
 		$data = $this->page_model->getContent("home");
 		$content = "";
-
+		/*
 		if(isset($data->apps_display) && $data->apps_display != "" && file_exists(FCPATH.$data->apps_display)){
 			ob_start();
 			include_once FCPATH.$data->apps_display;
@@ -181,8 +191,44 @@ class Dashboard extends Frontend {
 		}else{
 			$this->setLayout("content-layout");
 		}
+		*/
 
 		$blogs = $this->content_model->getContent("type=blog&limit=3");
-		$this->view('dashboard',["content" => $content, "data" => $data,"exchange" => $exchange, "pool" => $pool, "development" => $development, "social" => $social, "blogs" => $blogs]);
+
+		$roadmap_timeline = lang("roadmap_timeline");
+		$roadmap = [];
+		$roadmap[] = [
+			"timeline" => "Q4 2018",
+			"class" => "success",
+			"description" => $roadmap_timeline[0]
+		];
+
+		$roadmap[] = [
+			"timeline" => "Q1 2019",
+			"class" => "text-warning",
+			"description" => $roadmap_timeline[1]
+		];
+
+		$roadmap[] = [
+			"timeline" => "Q2 2019",
+			"description" => $roadmap_timeline[2]
+		];
+
+		$roadmap[] = [
+			"timeline" => "Q3 2019",
+			"description" => $roadmap_timeline[3]
+		];
+
+		$roadmap[] = [
+			"timeline" => "Q4 2019",
+			"description" => $roadmap_timeline[4]
+		];
+
+		$roadmap[] = [
+			"timeline" => "Q1 2020",
+			"description" => $roadmap_timeline[5]
+		];
+
+		$this->view('dashboard',["content" => $content, "data" => $data,"exchange" => $exchange, "pool" => $pool, "development" => $development, "social" => $social, "blogs" => $blogs, "roadmap" => $roadmap]);
 	}
 }

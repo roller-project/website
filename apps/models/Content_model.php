@@ -38,8 +38,8 @@ class Content_model extends CI_Model{
 		$sortBy = (@$query["sortBy"] ? $query["sortBy"] : "id");
 		$filter = (@$query["filter"] ? $query["filter"] : "");
 		$filterBy = (@$query["filterBy"] ? $query["filterBy"] : "title");
-
-		return $this->listContent($type, config_item("language"), $limit, $start, $sort, $sortBy, $filter, $filterBy);
+		$language = (@$query["language"] ? $query["language"] : config_item("language"));
+		return $this->listContent($type, $language, $limit, $start, $sort, $sortBy, $filter, $filterBy);
 	}
 
 	private function convertUrlQuery($query) {

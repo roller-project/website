@@ -41,7 +41,8 @@
 <meta name="google-site-verification" content="M329jGz1izszNrlin_lnP_ssu8VrX0rRvwve1L8sVhk" />
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/v4-shims.css">
-<link rel="alternate" href="<?php echo store_url("vi");?>" hreflang="vi" />
+<link rel="alternate" href="<?php echo store_url("vietnam.lang");?>" hreflang="vi" />
+<link rel="alternate" href="<?php echo store_url("english.lang");?>" hreflang="english" />
 
 </head>
 <body>
@@ -56,12 +57,10 @@
 
 	  <div class="collapse navbar-collapse w-100" id="navbarSupportedContent">
 	    <ul class="navbar-nav ml-auto">
-	      <li class="nav-item active">
-	        <a class="nav-link" href="<?php echo store_url("");?>">Home <span class="sr-only">(current)</span></a>
-	      </li>
+	     
 	      
 	      <li class="nav-item">
-	        <a class="nav-link" href="<?php echo store_url("#roadmap");?>">Roadmap</a>
+	        <a class="nav-link" href="<?php echo store_url("#roadmap");?>"><?php echo lang("roadmap");?></a>
 	      </li>
 
 	      <li class="nav-item">
@@ -69,38 +68,38 @@
 	      </li>
 
 	      <li class="nav-item">
-	        <a class="nav-link" href="<?php echo store_url("#exchange");?>">Exchanges</a>
+	        <a class="nav-link" href="<?php echo store_url("#exchange");?>"><?php echo lang("exchange");?></a>
 	      </li>
 
 	      <li class="nav-item">
-	        <a class="nav-link" href="https://cms.roller.today" target="_bank">Wallets</a>
+	        <a class="nav-link" href="https://cms.roller.today" target="_bank"><?php echo lang("wallet");?></a>
 	      </li>
 
 	      <li class="nav-item">
-	        <a class="nav-link" href="<?php echo store_url("#mining");?>">Mining</a>
+	        <a class="nav-link" href="<?php echo store_url("#mining");?>"><?php echo lang("mining");?></a>
 	      </li>
 
 	      <li class="nav-item">
-	        <a class="nav-link" href="<?php echo store_url("#team");?>">Team</a>
+	        <a class="nav-link" href="<?php echo store_url("#team");?>"><?php echo lang("team");?></a>
 	      </li>
 
 	      <li class="nav-item">
-	        <a class="nav-link" href="<?php echo store_url("report-project.html");?>">Report Project</a>
+	        <a class="nav-link" href="<?php echo store_url("report-project.html");?>"><?php echo lang("report");?></a>
 	      </li>
 
 	      <li class="nav-item">
-	        <a class="nav-link" href="<?php echo store_url("blogs.html");?>">Blog</a>
+	        <a class="nav-link" href="<?php echo store_url("blogs.html");?>"><?php echo lang("blogs");?></a>
 	      </li>
 
 
 
 	      <li class="nav-item dropdown">
-	        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-	          Language
+	        <a class="nav-link btn btn-outline-primary btn-sm dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+	          <?php echo ucfirst(config_item("language"));?>
 	        </a>
 	        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-	          <a class="dropdown-item" href="<?php echo store_url("vote");?>">Vietnam</a>
-	          <a class="dropdown-item" href="<?php echo store_url("coinbase");?>">English</a>
+	          <a class="dropdown-item" href="<?php echo store_url("vietnam.lang");?>">Vietnam</a>
+	          <a class="dropdown-item" href="<?php echo store_url("english.lang");?>">English</a>
 	          
 	        </div>
 	      </li>
@@ -118,7 +117,31 @@
 		<?php print_r($content);?>
 	</main>
 	<footer>
-		<div class="container-fluid"></div>
+		<div class="container">
+      <div class="row infolink">
+          <div class="col-lg-4 col-sm-12">
+            <h4><?php echo lang("about_community");?></h4>
+            <a href="/about.html"><?php echo lang("aboutus");?></a>
+            <a href="#team"><?php echo lang("team_title");?></a>
+            <a href="/report-project.html"><?php echo lang("report_project");?></a>
+            <a href="#"><?php echo lang("development_plan");?></a>
+          </div>
+          <div class="col-lg-4 col-sm-12">
+            <h4><?php echo lang("ecosystem");?></h4>
+            <a href="#wallet"><?php echo lang("wallet");?></a>
+            <a href="#"><?php echo lang("explorer");?></a>
+            <a href="https://cms.roller.today">Roller CMS</a>
+            <a href="#"><?php echo lang("application");?></a>
+          </div>
+          <div class="col-lg-4 col-sm-12">
+            <h4><?php echo lang("help_customer");?></h4>
+            <a href="/blogs.html"><?php echo lang("help");?></a>
+            <a href="#"><?php echo lang("faq");?></a>
+            <a href="#social">Social</a>
+            <a href="#contact"><?php echo lang("contacts");?></a>
+          </div>
+      </div>  
+    </div>
 	</footer>
 
 
