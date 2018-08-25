@@ -1,4 +1,4 @@
-<div class="headerTitle"><div class="container"><h2><?php echo $data->title;?></h2></div></div>
+<div class="headerTitle"><div class="container"><h2><i class="fa fa-link"></i>  <?php echo $data->title;?></h2></div></div>
 <div class="container">
 <br>
 <div class="row">

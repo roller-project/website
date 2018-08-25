@@ -4,7 +4,7 @@ if($content){
 	if(is_array($content)){
 		?>
 
-		<div class="headerTitle"><div class="container"><h2><?php echo $data->title;?></h2></div></div>
+		<div class="headerTitle"><div class="container"><h2><i class="fa fa-link"></i>  <?php echo $data->title;?></h2></div></div>
 		<div class="container">
 		<p><?php echo $data->content;?></p>
 		
@@ -55,7 +55,7 @@ if($content){
 }else{
 	?>
 	
-	<div class="headerTitle"><div class="container"><h2><?php echo $data->title;?></h2></div></div>
+	<div class="headerTitle"><div class="container"><h2><i class="fa fa-link"></i> <?php echo $data->title;?></h2></div></div>
 	<div class="container">
 	<p><?php echo $data->content;?></p>
 	</div>
