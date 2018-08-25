@@ -10,7 +10,7 @@ class Content extends Frontend {
 		if(!$url)exit('No Support');
 		$url =  urldecode($url);
 		$data = $this->content_model->getInfoContentURL($url);
-		$content = $this->content_model->listContent($data->type,config_item("language"), 6,0,"DESC","created_at");
+		$content = $this->content_model->listContent($data->type,config_item("language"), 3,0,"DESC","updated_at");
 		//$this->setLayout("content-layout");
 		
 		$this->view("content",["data" => $data, "content" => $content]);
