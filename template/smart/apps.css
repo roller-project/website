@@ -255,12 +255,20 @@ footer .infolink a{
 .headerTitle{
 	padding-top: 130px;
 	padding-bottom: 30px;
-	background-color:#1e2641;
 	margin-left:-15px;
 	margin-right:-15px; 
 	color: #FFF;
 	text-transform: uppercase;
-  background-image: url(image/banner.jpg);
+  background: url(image/banner.jpg) #1e2641 no-repeat;
+  position: relative;
+}
+.headerTitle:before{
+  position: absolute;
+  width: 100%;
+  border-bottom: 1px dotted #ddd;
+  content: "";
+  height: 100px;
+  top : 0;
 }
 .icoin{
   padding: 10px;
