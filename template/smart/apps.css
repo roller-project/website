@@ -40,12 +40,16 @@ h1, h2, h3, h4, h5, h6{
 }
 .slider .carousel-inner{
 	max-height: 300px;
+  
 }
 .navbar-nav .nav-item.active a.nav-link{
 	color: #90ed7d;
 }
 .navbar-nav .nav-item a.nav-link{
 	font-weight: bold;
+}
+.carousel-text{
+  color: #1e4c39;
 }
 .carousel-text-left{
 	position: absolute;
@@ -229,7 +233,7 @@ footer .infolink a{
 .headerTitle{
 	padding-top: 30px;
 	padding-bottom: 30px;
-	background-color:#90ed7d;
+	background-color:#1e2641;
 	margin-left:-15px;
 	margin-right:-15px; 
 	color: #FFF;
