@@ -60,7 +60,7 @@
 			<td><?php echo $value->id;?></td>
 			<td><?php echo $value->title;?></td>
 			<td><?php echo $value->created_at;?></td>
-			<td><?php echo $value->display_form;?></td>
+			<td><?php echo $value->updated_at;?></td>
 			<td><?php echo $value->views;?></td>
 			<td class="text-right">
 				<?php echo $this->bootstrap->link("edit",admin_url("content/create/{$type}/".$value->id),"btn-sm outline");?>

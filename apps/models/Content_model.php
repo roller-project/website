@@ -6,17 +6,19 @@ class Content_model extends CI_Model{
 		$row = $this->getInfoContent($id);
 		$arv["url_rewrite"] = $this->renderURL($arv, @$row->id);
 		if($row){
+			$arv["updated_at"] = date("Y-m-d h:i:s");
 			$this->db->update("contents",$arv,["id" => $id]);
 		}else{
 			$arv["language"] = config_item("language");
-			$arv["stores"] = (config_item("stores") ? config_item("stores") : "");
 			$this->db->insert("contents", $arv);
 		}
 	}
 
-	public function listContent($type="blog", $limit=20, $start=0, $sort="DESC", $sortBy="id", $filter="", $filterBy=""){
+	public function listContent($type="blog", $language=false, $limit=20, $start=0, $sort="DESC", $sortBy="id", $filter="", $filterBy=""){
 		$arv["language"] = config_item("language");
-		$this->db->where("language",config_item("language"));
+		if($language != "all"){
+			$this->db->where("language",config_item("language"));
+		}
 		$this->db->where("type",$type);
 		$this->db->limit($limit, $start);
 		
@@ -37,7 +39,7 @@ class Content_model extends CI_Model{
 		$filter = (@$query["filter"] ? $query["filter"] : "");
 		$filterBy = (@$query["filterBy"] ? $query["filterBy"] : "title");
 
-		return $this->listContent($type, $limit, $start, $sort, $sortBy, $filter, $filterBy);
+		return $this->listContent($type, config_item("language"), $limit, $start, $sort, $sortBy, $filter, $filterBy);
 	}
 
 	private function convertUrlQuery($query) {
@@ -79,7 +81,7 @@ class Content_model extends CI_Model{
 	Render Type
 	*/
 	public function getType(){
-		$arv = ["blog" => "Blog's"];
+		$arv = ["blog" => "Blog's", "team" => "Development", "pool" => "Pool", "exchange" => "Exchange"];
 		$arvs = [];
 		if(config_item("post_type")){
 			$ex = explode('|', config_item("post_type"));

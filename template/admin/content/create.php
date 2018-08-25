@@ -25,10 +25,16 @@
 				</div>
 
 				<div class="form-group">
+				    <label for="exampleInputDescription">Short Description</label>
+				    <textarea class="form-control form-control-sm" rows="2" name="short_description" ><?php echo @$getInfo->short_description;?></textarea>
+				    
+				</div>
+
+				<div class="form-group">
 				    <label for="exampleInputDescription">Description</label>
 				    <textarea class="form-control form-control-sm" rows="2" name="description" ><?php echo @$getInfo->description;?></textarea>
 				    
-				  </div>
+				</div>
 				  
 				  <div class="form-group">
 				    <label for="exampleInputDescription">Contents</label>
@@ -66,15 +72,22 @@
 		<br>
 		<div class="card">
 			<div class="card-body">
-				<h5>Publish</h5>
+				<h5>Athour</h5>
+				<div class="input-group input-group-sm mb-2">
+			        
+			        <input type="text" class="form-control form-control-sm"  name="author" value="<?php echo @$getInfo->author;?>">
+			        
+			    </div>
+			    <div class="input-group input-group-sm mb-2">
+			        
+			        <input type="text" class="form-control form-control-sm"  name="tags" value="<?php echo @$getInfo->tags;?>">
+			        
+			    </div>
+			    
 			</div>
 		</div>
 		<br>
-		<div class="card">
-			<div class="card-body">
-				<h5>Category</h5>
-			</div>
-		</div>
+		
 	</div>
 </div>
 </form>

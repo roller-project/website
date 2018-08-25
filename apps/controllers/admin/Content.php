@@ -28,8 +28,11 @@ class Content extends Admin {
 			"url_rewrite" => $this->input->post("url_rewrite"),
 			"content" => $this->input->post("content"),
 			"description" => $this->input->post("description"),
+			"short_description" => $this->input->post("short_description"),
 			"thumbnail" => $this->input->post("thumbnail"),
 			"type"	=> $type,
+			"author"	=> $this->input->post("author"),
+			"tags"	=> $this->input->post("tags")
 		];
 		$data = $this->content_model->CreateOrUpdate($arv, $id);
 		$this->setFlash($data);
