@@ -101,3 +101,25 @@ $lang["roadmap_timeline"] = [
 	"<b>Smart Contracts Development</b><br>The contract application development phase is intended to give the user exclusive blockchain application features",
 	"<b>Development of Connected Services</b><br>3rd Generation Connected Technology Services Phase. As Automation, Security, IoT ..."
 ];
+
+
+$lang["slider"] = [
+	[
+	"image" => template_url("image/banner.jpg"),
+	"caption" => '<h3>Roller Platform</h3>
+          <p>Roller Platform là một hệ sinh thái tiền mã hóa mã nguồn mở phi tập trung, dựa trên nền tảng của Ethereum với ký hiệu của riêng là "ROL". <br>Mục tiêu chính của Roller là nghiên cứu, phát triển một cơ chế tự duy trì, tự quản lí, tự tài trợ hệ sinh thái blockchain và môi trường phát triển ứng dụng của blockchain. </p>'
+	],
+	[
+	"image" => template_url("image/banner.jpg"),
+	"caption" => '<h3>Ứng dụng</h3>
+            <p>Với các ứng dụng thiết thực từ Smart Contracts như. Tech Document, Share Contracts, ANN, Miner Controller, Security Web 4.0, IoT Services ... Roller sẽ mang đến cho người dùng cuối tiếp cận ứng dụng công nghệ trong thời kỳ công nghiệp 4.0</p>'
+	],
+	[
+	"image" => template_url("image/banner.jpg"),
+	"caption" => '<h3>Development</h3>
+          <p>Roller Platform được phát triển bởi các lập trình viên Việt Nam. Với các hệ thống liền mạch như Exchange, CMS, Masternode, etc....<br>
+            Với hệ thống CMS có nhiều Services được cung cấp miễn phí cho người dùng trên các ứng dụng của Roller. Chúng mang đến một cách nhìn tổng quan và thiết thực cuộc sống
+          </p>'
+	]
+
+];
