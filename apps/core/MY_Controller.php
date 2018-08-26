@@ -106,13 +106,13 @@ class BaseController extends CI_Controller{
 			$arvs["description"] = (isset($arv->site_description) ? $arv->site_description : $this->config->item("site_description"));
 			$arvs["keywords"] = (isset($arv->site_keywords) ? $arv->site_keywords : $this->config->item("site_keywords"));
 			$arvs["author"] = (isset($arv->author) ? $arv->author : $this->config->item("site_author"));
-			$arvs["thumbnail"] = (isset($arv->thumbnail) ? $arv->thumbnail : template_url("image/banner.jpg"));
+			$arvs["thumbnail"] = (isset($arv->thumbnail) ? store_url($arv->thumbnail) : template_url("image/banner.jpg"));
 		}else{
 			$arvs["title"] = (isset($arv["title"]) ? $arv["title"] : $this->config->item("site_name"));
 			$arvs["description"] = (isset($arv["description"]) ? $arv["description"] : $this->config->item("site_description"));
 			$arvs["keywords"] = (isset($arv["keywords"]) ? $arv["keywords"] : $this->config->item("site_keywords"));
 			$arvs["author"] = (isset($arv["author"]) ? $arv["author"] : $this->config->item("site_author"));
-			$arvs["thumbnail"] = (isset($arv["thumbnail"]) ? $arv["thumbnail"] : template_url("image/banner.jpg"));
+			$arvs["thumbnail"] = (isset($arv["thumbnail"]) ? store_url($arv["thumbnail"]) : template_url("image/banner.jpg"));
 		}
 		
 		return $arvs;
