@@ -87,7 +87,7 @@ function noDiacritics($string)
 
 function CreateSlugs($string){
 	$data = noDiacritics($string);
-	return strtolower(str_replace('--','-',$string));
+	return strtolower(str_replace('--','-',$data));
 }
 
 function makeSlugs($string, $maxlen=0)
