@@ -125,6 +125,9 @@ section{
 	padding-left: 15px;
 }
 
+#infodata{
+  background-color: #f6f6f6;
+}
 .icon{
 	border-radius: 100px;
 	border:2px solid #f7a35c;

@@ -29,6 +29,39 @@
   </div>
 </div>
 
+<?php
+$getdata = @json_decode(@file_get_contents("https://cms.roller.today/cmsApi"));
+?>
+<section id="infodata">
+  <div class="container">
+      <div class="row">
+          <div class="col-lg-2">
+              <h3>CMS</h3>
+              <span data-account><?php echo @$getdata->member;?> account</span>
+          </div>
+          <div class="col-lg-2">
+              <h3>Height</h3>
+              <span data-block><?php echo @$getdata->blockheight;?></span>
+          </div>
+          <div class="col-lg-2">
+              <h3>Hold</h3>
+              <span data-coinhold><?php echo @number_format($getdata->hold);?> ROL</span>
+          </div>
+          <div class="col-lg-2">
+              <h3>Masternode</h3>
+              <span data-masternode><?php echo @$getdata->masternode;?></span>
+          </div>
+          <div class="col-lg-2">
+              <h3>Application</h3>
+              <span data-apps>7</span>
+          </div>
+          <div class="col-lg-2">
+              <h3>Prices</h3>
+              <span data-prices><?php echo @$getdata->prices;?> $</span>
+          </div>
+      </div>
+  </div>
+</section>
 
 <section id="roadmap">
   <h2 class="text-center text-green title"><?php echo lang("roadmap_title");?></h2>
