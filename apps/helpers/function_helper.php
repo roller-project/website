@@ -85,6 +85,11 @@ function noDiacritics($string)
     return $newstring;
 }
 
+function CreateSlugs($string){
+	$data = noDiacritics($string);
+	return strtolower(str_replace('--','-',$string));
+}
+
 function makeSlugs($string, $maxlen=0)
 {
     $newStringTab=array();

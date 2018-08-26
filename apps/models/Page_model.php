@@ -85,10 +85,10 @@ class Page_model extends CI_Model{
 	public function renderURL($arv, $id){
 		$url = ($arv["url_rewrite"] ? $arv["url_rewrite"] : $arv["title"]);
 		if($id){
-			return makeSlugs(url_title($url,'-',true));
+			return CreateSlugs(url_title($url,'-',true));
 		}else{
 
-			return makeSlugs(url_title($url,'-',true));
+			return CreateSlugs(url_title($url,'-',true));
 		}
 	}
 
