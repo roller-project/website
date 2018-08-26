@@ -70,10 +70,10 @@ class Content_model extends CI_Model{
 	public function renderURL($arv, $id){
 		$url = ($arv["url_rewrite"] ? $arv["url_rewrite"] : $arv["title"]);
 		if($id){
-			return CreateSlugs(url_title($url,'-',true));
+			return CreateSlugs($url);
 		}else{
 
-			return CreateSlugs(url_title($url,'-',true));
+			return CreateSlugs($url);
 		}
 	}
 
