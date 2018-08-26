@@ -3,7 +3,7 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0, maximum-scale=1, minimum-scale=1, shrink-to-fit=no">
-  <title>Roller Platform</title>
+  <title><?php echo $header["title"];?></title>
   	<meta name="msapplication-TileColor" content="#da532c">
     <meta name="msapplication-config" content="<?php echo template_url("browserconfig.xml");?>">
     <meta name="theme-color" content="#ffffff">
@@ -11,16 +11,16 @@
 
 
     <meta name="twitter:url" content="<?php echo store_url();?>">
-    <meta name="twitter:title" content="Blockchain Assets Trading Platform">
-    <meta name="twitter:description" content="The first 300K registered members will be free of trading fees in the first year. With each member invited, you will receive an additional one month free trading fee.">
+    <meta name="twitter:title" content="<?php echo $header["title"];?>">
+    <meta name="twitter:description" content="<?php echo $header["description"];?>">
     <meta name="twitter:image" content="<?php echo template_url("image/banner.jpg");?>">
     <meta name="twitter:creator" content="aiodex">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="@smartexchange">
 
-    <meta property="og:title" content="Blockchain Assets Trading Platform">
+    <meta property="og:title" content="<?php echo $header["title"];?>">
     <meta property="og:image" content="<?php echo template_url("image/banner.jpg");?>">
-    <meta property="og:description" content="The first 300K registered members will be free of trading fees in the first year. With each member invited, you will receive an additional one month free trading fee.">
+    <meta property="og:description" content="<?php echo $header["description"];?>">
     <meta property="article:author" content="smartexchange">
     <meta property="og:url" content="<?php echo store_url();?>">
     <meta property="og:type" content="article">
@@ -35,8 +35,6 @@
   <link rel="stylesheet" type="text/css" media="all" href="<?php echo template_url("apps.css");?>">
   <script type="text/javascript" language="javascript" charset="utf-8" src="<?php echo template_url("apps.js");?>"></script>
   
-  <script src='//cdnjs.cloudflare.com/ajax/libs/socket.io/1.7.4/socket.io.min.js'></script>
- 
 
 <meta name="google-site-verification" content="M329jGz1izszNrlin_lnP_ssu8VrX0rRvwve1L8sVhk" />
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
