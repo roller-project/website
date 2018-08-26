@@ -13,18 +13,18 @@
     <meta name="twitter:url" content="<?php echo store_url();?>">
     <meta name="twitter:title" content="<?php echo $header["title"];?>">
     <meta name="twitter:description" content="<?php echo $header["description"];?>">
-    <meta name="twitter:image" content="<?php echo template_url("image/banner.jpg");?>">
-    <meta name="twitter:creator" content="aiodex">
+    <meta name="twitter:image" content="<?php echo $header["thumbnail"];?>">
+    <meta name="twitter:creator" content="rollerdavic">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="@smartexchange">
 
     <meta property="og:title" content="<?php echo $header["title"];?>">
-    <meta property="og:image" content="<?php echo template_url("image/banner.jpg");?>">
+    <meta property="og:image" content="<?php echo $header["thumbnail"];?>">
     <meta property="og:description" content="<?php echo $header["description"];?>">
     <meta property="article:author" content="smartexchange">
     <meta property="og:url" content="<?php echo store_url();?>">
     <meta property="og:type" content="article">
-    <meta property="article:publisher" content="https://www.facebook.com/smartexchange">
+    <meta property="article:publisher" content="https://www.facebook.com/bitcoindplust">
     <meta property="og:site_name" content="<?php echo store_url();?>">
 
   <link rel="shortcut icon" href="<?php echo store_url("favicon.ico");?>">
@@ -197,14 +197,12 @@
 
                   var yOffset = 100;
                   var currYOffSet = window.pageYOffset;
-                  if($(window).width() > 780){
-                    if(yOffset < currYOffSet) {
+                  if(yOffset < currYOffSet) {
                         myNavBar.add();
                     }
                     else if(currYOffSet < 50){
                         myNavBar.remove();
                     }
-                  }
 
               }
 
