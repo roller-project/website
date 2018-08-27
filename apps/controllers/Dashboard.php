@@ -140,8 +140,8 @@ class Dashboard extends Frontend {
 			"name"  => "Lê Phú",
 			"type"	=> "Manager",
 			"description" => $langdev[5],
-			"image"	=>	template_url("image/develop/avatar1.png"),
-			"social" => ""
+			"image"	=>	template_url("image/develop/lephu.jpg"),
+			"social" => "fab fa-facebook|https://www.facebook.com/trieuphule;fab fa-github|https://github.com/lephuit"
 		];
 		/*
 		Read Develop Admin Contents
