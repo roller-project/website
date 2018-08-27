@@ -232,7 +232,7 @@ $getdata = @json_decode(@file_get_contents("https://cms.roller.today/cmsApi"));
       <h2 class="text-center">Fork Masternode</h2><br>
       <div class="row">
           <div class="col-lg-3 border-right">
-              <h3>Block Rewand</h3>
+              <h3>Block Reward</h3>
               <span data-account>9 ROL</span>
           </div>
           <div class="col-lg-3 border-right">
@@ -241,11 +241,11 @@ $getdata = @json_decode(@file_get_contents("https://cms.roller.today/cmsApi"));
           </div>
           
           <div class="col-lg-3 border-right">
-              <h3>Masternode Rewand</h3>
+              <h3>Masternode Reward</h3>
               <span data-masternode>2 ROL</span>
           </div>
           <div class="col-lg-3">
-              <h3>Miner Rewand</h3>
+              <h3>Miner Reward</h3>
               <span data-apps>7</span>
           </div>
           
