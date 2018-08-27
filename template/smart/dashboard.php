@@ -246,7 +246,7 @@ $getdata = @json_decode(@file_get_contents("https://cms.roller.today/cmsApi"));
           </div>
           <div class="col-lg-3">
               <h3>Miner Reward</h3>
-              <span data-apps>7</span>
+              <span data-apps>7 ROL</span>
           </div>
           
       </div>

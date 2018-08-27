@@ -133,7 +133,7 @@ class Dashboard extends Frontend {
 			"type"	=> "Manager",
 			"description" => $langdev[4],
 			"image"	=>	template_url("image/develop/avatar5.png"),
-			"social" => ""
+			"social" => "fab fa-facebook|https://www.facebook.com/profile.php?id=100009722088431"
 		];
 
 		$development[] = [
@@ -141,7 +141,7 @@ class Dashboard extends Frontend {
 			"type"	=> "Manager",
 			"description" => $langdev[5],
 			"image"	=>	template_url("image/develop/lephu.jpg"),
-			"social" => "fab fa-facebook|https://www.facebook.com/trieuphule;fab fa-github|https://github.com/lephuit"
+			"social" => "fab fa-facebook|https://www.facebook.com/trieuphule;fab fa-github|https://github.com/lephuit;fab fa-skype|skype://call?lephuit"
 		];
 		/*
 		Read Develop Admin Contents
