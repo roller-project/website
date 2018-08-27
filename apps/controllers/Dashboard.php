@@ -107,7 +107,7 @@ class Dashboard extends Frontend {
 			"name"  => "Leslaw Mitraszewski",
 			"type"	=> "Manager",
 			"description" => $langdev[1],
-			"image"	=>	template_url("image/develop/lee.png"),
+			"image"	=>	template_url("image/develop/lee.jpg"),
 			"social" => "fab fa-facebook|https://www.facebook.com/lee.opencart"
 		];
 
