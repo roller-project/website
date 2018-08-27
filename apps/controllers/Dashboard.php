@@ -100,7 +100,7 @@ class Dashboard extends Frontend {
 			"type"	=> "CEO",
 			"description" => $langdev[0],
 			"image"	=>	template_url("image/develop/avatar.png"),
-			"social" => "fab fa-facebook|https://www.facebook.com/bitcoindplust"
+			"social" => "fab fa-facebook|https://www.facebook.com/bitcoindplust;fab fa-telegram|https://t.me/vnminer"
 		];
 
 		$development[] = [
