@@ -104,11 +104,11 @@ class Dashboard extends Frontend {
 		];
 
 		$development[] = [
-			"name"  => "Leszek Mitraszewski",
+			"name"  => "Leslaw Mitraszewski",
 			"type"	=> "Manager",
 			"description" => $langdev[1],
 			"image"	=>	template_url("image/develop/lee.png"),
-			"social" => ""
+			"social" => "fab fa-facebook|https://www.facebook.com/lee.opencart"
 		];
 
 		$development[] = [
