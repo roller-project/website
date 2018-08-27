@@ -226,6 +226,35 @@ $getdata = @json_decode(@file_get_contents("https://cms.roller.today/cmsApi"));
 
 </section>
 
+
+<section id="infodata">
+  <div class="container">
+      <h4>Fork Masternode</h4>
+      <div class="row">
+          <div class="col-lg-3">
+              <h3>Block Rewand</h3>
+              <span data-account>9 ROL</span>
+          </div>
+          <div class="col-lg-3">
+              <h3>Block Height</h3>
+              <span data-block>300100</span>
+          </div>
+          
+          <div class="col-lg-3">
+              <h3>Masternode Rewand</h3>
+              <span data-masternode>2 ROL</span>
+          </div>
+          <div class="col-lg-3">
+              <h3>Miner Rewand</h3>
+              <span data-apps>7</span>
+          </div>
+          
+      </div>
+      <br>
+      <a href="/blogs.html">Setup masternode guild</a>
+  </div>
+</section>
+
 <section id="team" class="border-bottom">
   
   <div class="container">
