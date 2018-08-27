@@ -92,7 +92,7 @@
 
 
 	      <li class="nav-item dropdown">
-	        <a class="nav-link btn btn-outline-primary btn-sm dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+	        <a class="nav-link btn btn-outline-warning btn-sm dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 	          <?php echo ucfirst(config_item("language"));?>
 	        </a>
 	        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
