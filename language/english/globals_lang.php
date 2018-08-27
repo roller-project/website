@@ -35,15 +35,15 @@ $lang["help_list_exchange"] = "";
 
 
 
-$lang["help"] = "Document";
+$lang["help"] = "Documentation";
 $lang["faq"] = "Faq's";
-$lang["contacts"] = "Contacts Us";
+$lang["contacts"] = "Contact";
 $lang["application"]	=	"Application";
 $lang["help_customer"] = "Community & Help";
 $lang["ecosystem"]	=	"Roller Ecosystem";
 $lang["report_project"] = "Financial Report";
 $lang["explorer"] = "Block Explorer";
-$lang["aboutus"] = "Community About";
+$lang["aboutus"] = "Community";
 $lang["development_plan"] = "Development plan";
 $lang["about_community"] = "About Community";
 /*
@@ -85,11 +85,11 @@ $lang["wallet_application"] = "Wallet Application";
 
 $lang["developteam"] = [
 	"Executive development of the Roller system",
-	"Development consultant for the operation of the Blockchain system",
-	"Executive Exchange Roller Development",
-	"Executive Development Masternode",
-	"Developing Smart Contracts",
-	"Executive Development Application"
+	"Consulting, Development operating Blockchain system",
+	"Executive, Development Exchange Roller",
+	"Executive, Development Masternode",
+	"Smart Contracts Development",
+	"Application Development"
 ];
 $lang["developteam_more"] = 'And some co-developed the blockchain system. If you have the blockchaign application idea in your life please send us an email to us via <a href="mainto:rollerdavic@gmail.com?subject=development">rollerdavic@gmail.com</a>. We always respect your comments and contribute to your development';
 
