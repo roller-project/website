@@ -227,9 +227,9 @@ $getdata = @json_decode(@file_get_contents("https://cms.roller.today/cmsApi"));
 </section>
 
 
-<section id="infodata">
+<section class="border-bottom border-top">
   <div class="container">
-      <h4>Fork Masternode</h4>
+      <h4 class="text-center">Fork Masternode</h4>
       <div class="row">
           <div class="col-lg-3">
               <h3>Block Rewand</h3>
@@ -251,7 +251,7 @@ $getdata = @json_decode(@file_get_contents("https://cms.roller.today/cmsApi"));
           
       </div>
       <br>
-      <a href="/blogs.html">Setup masternode guild</a>
+      <a class="btn btn-outline-success btn-lg" href="/blogs.html">Setup masternode guild</a>
   </div>
 </section>
 
