@@ -251,7 +251,8 @@ $getdata = @json_decode(@file_get_contents("https://cms.roller.today/cmsApi"));
           
       </div>
       <br>
-      <a class="btn btn-outline-success btn-lg" href="/blogs.html">Setup masternode guild</a>
+      <div class="text-center"><a class="btn btn-outline-warning btn-lg" href="/blogs.html">Setup masternode guild</a></div>
+      
   </div>
 </section>
 
