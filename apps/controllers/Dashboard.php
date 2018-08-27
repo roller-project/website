@@ -116,7 +116,7 @@ class Dashboard extends Frontend {
 			"type"	=> "Manager",
 			"description" => $langdev[2],
 			"image"	=>	template_url("image/develop/gianngoctrung.png"),
-			"social" => ""
+			"social" => "fab fa-facebook|https://www.facebook.com/GianNgocTrung"
 		];
 
 
