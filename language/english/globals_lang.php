@@ -91,7 +91,7 @@ $lang["developteam"] = [
 	"Smart Contracts Development",
 	"Application Development"
 ];
-$lang["developteam_more"] = 'And some co-developed the blockchain system. If you have the blockchaign application idea in your life please send us an email to us via <a href="mainto:rollerdavic@gmail.com?subject=development">rollerdavic@gmail.com</a>. We always respect your comments and contribute to your development';
+$lang["developteam_more"] = 'And some co-developed the blockchain system. If you have a blockchaign application idea in your life, please email us via <a href="mainto:rollerdavic@gmail.com?subject=development"> rollerdavic@gmail.com </a>. >. We always respect all your ideas for development.';
 
 $lang["roadmap_timeline"] = [
 	"<b>Launch the system</b><br>Launch the Blockchain system, build relevant data analysis systems, run the ( Maternode )",
@@ -111,7 +111,7 @@ $lang["slider"] = [
 	],
 	[
 	"image" => template_url("image/banner.jpg"),
-	"caption" => '<h3>Ứng dụng</h3>
+	"caption" => '<h3>Application</h3>
             <p>Với các ứng dụng thiết thực từ Smart Contracts như. Tech Document, Share Contracts, ANN, Miner Controller, Security Web 4.0, IoT Services ... Roller sẽ mang đến cho người dùng cuối tiếp cận ứng dụng công nghệ trong thời kỳ công nghiệp 4.0</p>'
 	],
 	[
