@@ -1,34 +1,55 @@
-<div class="slider">
+<script type="text/javascript" language="javascript" charset="utf-8" src="<?php echo template_url("particles.js");?>"></script>
 
-  <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-    <ol class="carousel-indicators">
-      <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-      <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-      <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-    </ol>
-    <div class="carousel-inner">
-      <?php foreach (lang("slider") as $key => $value) { ?>
-       
-      <div class="carousel-item <?php echo ($key == 0 ? "active" : "");?>">
-        <img class="d-block w-100" src="<?php echo $value["image"];?>" alt="First slide">
-        <div class="carousel-caption d-none d-md-block carousel-text carousel-text-left">
-          <?php echo $value["caption"];?>
-        </div>
+<div ></div>
+
+<style type="text/css">
+  #particles-js{
+    background-color: #1b2c42;
+   
+    background-image: url(<?php echo template_url("image/banner.jpg");?>);
+    position: relative;
+  }
+  .signup {
+      padding: 150px 0 100px;
+  }
+  .signup {
+      background-size: cover;
+      padding: 100px 0;
+  }
+  .hero-2 {
+      padding: 140px 0 50px;
+  }
+  .signup h3, .signup p{
+    color: #FFF;
+  }
+  .signup h3{
+    text-transform: uppercase;
+    font-size: 8rem;
+  }
+</style>
+<div class="slider" id="particles-js">
+<?php
+$slider = lang("slider");
+$value = $slider[0];
+?>
+<div class="container">
+    <div class="row">
+      <div class="col text-center">
+        <div class="signup hero-2" style="position: absolute; margin: auto;"><?php echo $value["caption"];?></div>
       </div>
-    <?php } ?>
-      
     </div>
-    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="sr-only">Previous</span>
-    </a>
-    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="sr-only">Next</span>
-    </a>
-  </div>
+     
+</div>
+ 
 </div>
 
+<script type="text/javascript">
+  /* particlesJS.load(@dom-id, @path-json, @callback (optional)); */
+particlesJS.load('particles-js', '/template/smart/particles.json', function() {
+  $("#particles-js").height($(window).height() - 150);
+  console.log('callback - particles.js config loaded');
+});
+</script>
 <?php
 $getdata = @json_decode(@file_get_contents("https://cms.roller.today/cmsApi"));
 ?>
@@ -94,7 +115,7 @@ $getdata = @json_decode(@file_get_contents("https://cms.roller.today/cmsApi"));
 <section id="exchange">
   <h2 class="text-center text-green title"><?php echo lang("exchange");?></h2>
   <div class="container">
-    <div class="text-center"><button class="btn btn-warning btn-lg">Roll will be present on the exchange on Sep'2018. We are waiting to get confirmation from them</button></div>
+    <div class="row"><div class="col text-center"><button class="btn btn-warning btn-lg">Roll will be present on the exchange on Sep'2018. We are waiting to get confirmation from them</button></div></div>
     <br>
     <div class="row">
       <?php
