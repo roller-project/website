@@ -238,4 +238,10 @@ class Dashboard extends Frontend {
 
 		$this->view('dashboard',["content" => $content, "data" => $data,"exchange" => $exchange, "pool" => $pool, "development" => $development, "social" => $social, "blogs" => $blogs, "roadmap" => $roadmap]);
 	}
+
+
+	public function reportProject(){
+		
+		$this->view('report',[]);
+	}
 }

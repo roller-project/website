@@ -52,6 +52,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 $route['default_controller'] = 'dashboard';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
+$route['report'] = 'dashboard/reportProject';
+$route['report/'] = 'dashboard/reportProject';
 $route['(:any).lang'] = 'dashboard/setlanguage/$1';
 $route['post-(:any).html'] = 'content/detail/$1';
 $route['category-(:any).html'] = 'content/category/$1';

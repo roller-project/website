@@ -149,12 +149,14 @@ $getdata = @json_decode(@file_get_contents("https://cms.roller.today/cmsApi"));
           <?php echo lang("info_symbol");?> : ROL<br>
           <?php echo lang("info_type");?> : Proof-of-Work<br>
           <?php echo lang("info_algorithm");?> : Dagger Hashimoto<br>
+          <?php echo lang("info_ico");?>
         </div>
         <div class="col">
           <?php echo lang("info_target");?> : 15 sec<br>
-          <?php echo lang("info_rewand");?> : 9 ROL<br>
+          <?php echo lang("info_rewand");?> : 7 ROL<br>
+          Masternode reward : 2 ROL<br>
           <?php echo lang("info_total");?> : 100.000.000 ROL<br>
-          <?php echo lang("info_ico");?> - <?php echo lang("info_premice");?>
+          <?php echo lang("info_premice");?>
         </div>
       </div>
       
@@ -162,7 +164,8 @@ $getdata = @json_decode(@file_get_contents("https://cms.roller.today/cmsApi"));
     </div>
     <div class="col-lg-5">
       <h4><?php echo lang("timefork");?></h4>
-    300.000 Masternode<br>
+    <b class="text-green">300.000 Masternode</b><br>
+    <b class="text-warning">900.000 Cold Staking</b><br>
     1.200.000 Smart Contract<br>
     2.100.000 Ecosystem<br>
     4.200.000 IoT Services<br>
@@ -252,24 +255,25 @@ $getdata = @json_decode(@file_get_contents("https://cms.roller.today/cmsApi"));
 
 <section class="border-bottom border-top">
   <div class="container">
-      <h2 class="text-center">Fork Masternode</h2><br>
+      <h2 class="text-center">Next Fork Cold Staking</h2><br>
       <div class="row">
-          <div class="col-lg-3 border-right">
-              <h3>Block Reward</h3>
-              <span data-account>9 ROL</span>
-          </div>
+          
           <div class="col-lg-3 border-right">
               <h3>Block Height</h3>
-              <span data-block>300100</span>
+              <span data-block>900.000</span>
           </div>
           
           <div class="col-lg-3 border-right">
               <h3>Masternode Reward</h3>
-              <span data-masternode>2 ROL</span>
+              <span data-masternode>2.5 ROL</span>
+          </div>
+          <div class="col-lg-3 border-right">
+              <h3>Cold Staking</h3>
+              <span data-account>0.5 ROL</span>
           </div>
           <div class="col-lg-3">
               <h3>Miner Reward</h3>
-              <span data-apps>7 ROL</span>
+              <span data-apps>6 ROL</span>
           </div>
           
       </div>
