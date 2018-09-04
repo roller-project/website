@@ -35,8 +35,6 @@ CREATE TABLE `account` (
 -- Dumping data for table `account`
 --
 
-INSERT INTO `account` (`id`, `email`, `password`, `token`, `status`, `is_admin`, `created_at`, `updated_at`) VALUES
-(1, 'thietkewebvip@gmail.com', 'a4c5a16a6fe4f39355cdd07021d0ef3c ', 'tokenID', 1, 0, '2018-07-07 15:58:55', '0000-00-00 00:00:00');
 
 -- --------------------------------------------------------
 
