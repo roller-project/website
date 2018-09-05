@@ -62,15 +62,3 @@
     -webkit-box-shadow: none;
     box-shadow: none;
 }
-
-header {
-    background-color: #fff;
-    box-shadow: 0 0 10px 0 #ccc;
-}
-
-footer{
-    padding-top: 20px;
-    padding-bottom: 20px;
-    margin-bottom: 20px;
-    background-color: #f2f2f2;
-}
