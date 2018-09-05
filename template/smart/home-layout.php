@@ -63,7 +63,7 @@
 	      </li>
 
 	      <li class="nav-item">
-	        <a class="nav-link" href="http://explorer.roller.today:3000/home" target="_bank">Explorer</a>
+	        <a class="nav-link" href="https://explorer.roller.today" target="_bank">Explorer</a>
 	      </li>
 
 	      <li class="nav-item">
