@@ -32,6 +32,7 @@
 
   
   <script type="text/javascript" language="javascript" charset="utf-8" src="<?php echo resource_url("js/apps.js");?>"></script>
+  <link rel="stylesheet" type="text/css" media="all" href="<?php echo template_url("bootstrap.css");?>">
   <link rel="stylesheet" type="text/css" media="all" href="<?php echo template_url("apps.css");?>">
   <script type="text/javascript" language="javascript" charset="utf-8" src="<?php echo template_url("apps.js");?>"></script>
   
@@ -41,7 +42,7 @@
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/v4-shims.css">
 <link rel="alternate" href="<?php echo store_url("vietnam.lang");?>" hreflang="vi" />
 <link rel="alternate" href="<?php echo store_url("english.lang");?>" hreflang="english" />
-
+<link rel="alternate" href="<?php echo store_url("korea.lang");?>" hreflang="korea" />
 </head>
 <body>
 	
@@ -98,6 +99,7 @@
 	        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
 	          <a class="dropdown-item" href="<?php echo store_url("vietnam.lang");?>">Vietnam</a>
 	          <a class="dropdown-item" href="<?php echo store_url("english.lang");?>">English</a>
+            <a class="dropdown-item" href="<?php echo store_url("korea.lang");?>">Korea</a>
 	          
 	        </div>
 	      </li>
