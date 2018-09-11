@@ -25,6 +25,12 @@ class Dashboard extends Frontend {
 	{
 		$exchange = [];
 		$exchange[] = [
+			"image" => template_url("image/exchange/bitexbay.png"),
+			"name"	=>	"Bitexbay",
+			"url"	=>	"https://www.bitexbay.com/Home/Orders/index/currency/ROL-BTC.html"
+		];
+
+		$exchange[] = [
 			"image" => template_url("image/exchange/s1.png"),
 			"name"	=>	"Aiodex",
 			"url"	=>	"https://aiodex.com/vote/coin/5b6458f3a315090673cbb57f#"
@@ -45,11 +51,7 @@ class Dashboard extends Frontend {
 			"name"	=>	"Huobi",
 			"url"	=>	"https://aiodex.com/vote/coin/5b6458f3a315090673cbb57f#"
 		];
-		$exchange[] = [
-			"image" => template_url("image/exchange/images.png"),
-			"name"	=>	"Karaken",
-			"url"	=>	"https://aiodex.com/vote/coin/5b6458f3a315090673cbb57f#"
-		];
+		
 
 		$exchange[] = [
 			"image" => template_url("image/exchange/Poloniex-logo.png"),
@@ -82,8 +84,8 @@ class Dashboard extends Frontend {
 
 
 		$pool[] = [
-			"name" => "Offical Pool",
-			"url"	=>	"http://pool.roller.today/"
+			"name" => "Sexy Pool",
+			"url"	=>	"http://roller.pool.sexy/"
 		];
 
 		$pool[] = [
@@ -170,7 +172,7 @@ class Dashboard extends Frontend {
 		];
 		$social[] = [
 			"icons" => "fab fa-medium",
-			"url" => "#"
+			"url" => "https://medium.com/@rollerplatform"
 		];
 		$social[] = [
 			"icons" => "fab fa-discord",

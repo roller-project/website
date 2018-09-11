@@ -165,7 +165,7 @@ $getdata = @json_decode(@file_get_contents("https://cms.roller.today/cmsApi"));
     <div class="col-lg-5">
       <h4><?php echo lang("timefork");?></h4>
     <b class="text-green">300.000 Masternode</b><br>
-    <b class="text-warning">900.000 Cold Staking</b><br>
+    <b class="text-warning">1.200.000 Smart Contracts</b><br>
     1.200.000 Smart Contract<br>
     2.100.000 Ecosystem<br>
     4.200.000 IoT Services<br>
@@ -260,20 +260,20 @@ $getdata = @json_decode(@file_get_contents("https://cms.roller.today/cmsApi"));
           
           <div class="col-lg-3 border-right">
               <h3>Block Height</h3>
-              <span data-block>900.000</span>
+              <span data-block>1.200.000</span>
           </div>
           
           <div class="col-lg-3 border-right">
               <h3>Masternode Reward</h3>
-              <span data-masternode>2.5 ROL</span>
+              <span data-masternode>3 ROL</span>
           </div>
           <div class="col-lg-3 border-right">
-              <h3>Cold Staking</h3>
-              <span data-account>0.5 ROL</span>
+              <h3>Hold Banking</h3>
+              <span data-account>1.5 ROL</span>
           </div>
           <div class="col-lg-3">
               <h3>Miner Reward</h3>
-              <span data-apps>6 ROL</span>
+              <span data-apps>4.5 ROL</span>
           </div>
           
       </div>

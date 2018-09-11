@@ -91,7 +91,7 @@ $lang["developteam"] = [
 	"Smart Contracts Development",
 	"Application Development"
 ];
-$lang["developteam_more"] = 'And some co-developed the blockchain system. If you have a blockchaign application idea in your life, please email us via <a href="mainto:rollerdavic@gmail.com?subject=development"> rollerdavic@gmail.com </a>. >. We always respect all your ideas for development.';
+$lang["developteam_more"] = 'And some co-developed the blockchain system. If you have a blockchaign application idea in your life, please email us via <a href="mainto:rollerdavic@gmail.com?subject=development"> rollerdavic@gmail.com </a>. We always respect all your ideas for development.';
 
 $lang["roadmap_timeline"] = [
 	"<b>Launch the system</b><br>Launch the Blockchain system, build relevant data analysis systems, run the ( Maternode )",
