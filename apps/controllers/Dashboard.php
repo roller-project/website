@@ -85,7 +85,7 @@ class Dashboard extends Frontend {
 
 		$pool[] = [
 			"name" => "Sexy Pool",
-			"url"	=>	"https://mining-rol.pool.sexy/"
+			"url"	=>	"https://rol.pool.sexy"
 		];
 
 		$pool[] = [
