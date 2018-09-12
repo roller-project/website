@@ -115,7 +115,7 @@ $getdata = @json_decode(@file_get_contents("https://cms.roller.today/cmsApi"));
 <section id="exchange">
   <h2 class="text-center text-green title"><?php echo lang("exchange");?></h2>
   <div class="container">
-    <div class="row"><div class="col text-center"><button class="btn btn-warning btn-lg">Roll will be present on the exchange on Sep'2018. We are waiting to get confirmation from them</button></div></div>
+    <div class="row"><div class="col text-center"><button class="btn btn-warning btn-lg">Roll List Bitexbay 2019-09-12, Start Trade 2019-09-25</button></div></div>
     <br>
     <div class="row">
       <?php
