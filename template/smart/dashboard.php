@@ -166,7 +166,7 @@ $getdata = @json_decode(@file_get_contents("https://cms.roller.today/cmsApi"));
       <h4><?php echo lang("timefork");?></h4>
     <b class="text-green">300.000 Masternode</b><br>
     <b class="text-warning">1.200.000 Smart Contracts</b><br>
-    1.200.000 Smart Contract<br>
+   
     2.100.000 Ecosystem<br>
     4.200.000 IoT Services<br>
 

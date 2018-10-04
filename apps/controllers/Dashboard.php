@@ -31,15 +31,15 @@ class Dashboard extends Frontend {
 		];
 
 		$exchange[] = [
-			"image" => template_url("image/exchange/s1.png"),
-			"name"	=>	"Aiodex",
-			"url"	=>	"https://aiodex.com/vote/coin/5b6458f3a315090673cbb57f#"
+			"image" => template_url("image/exchange/smarts.jpg"),
+			"name"	=>	"Smart Exchange",
+			"url"	=>	"https://smarts.exchange"
 		];
 
 		$exchange[] = [
-			"image" => template_url("image/exchange/cobinhood1.png"),
-			"name"	=>	"Cobinhood",
-			"url"	=>	"https://aiodex.com/vote/coin/5b6458f3a315090673cbb57f#"
+			"image" => template_url("image/exchange/kfchange.png"),
+			"name"	=>	"Kfchange",
+			"url"	=>	"https://kfchange.com/"
 		];
 		$exchange[] = [
 			"image" => template_url("image/exchange/Koinex.jpeg"),
